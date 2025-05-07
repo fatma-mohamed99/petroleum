@@ -64,11 +64,11 @@ const Navbar: React.FC = () => {
 
                         <div className="flex flex-col space-y-4">
                             <Link href="#" className=" hover:bg-secondary transition-colors px-3 py-2">About Us</Link>
-                            <Link href="#" className=" hover:bg-main transition-colors px-3 py-2">Specialties</Link>
-                            <Link href="#" className=" hover:bg-main transition-colors px-3 py-2">Experties</Link>
-                            <Link href="#" className=" hover:bg-main transition-colors px-3 py-2">Principle</Link>
-                            <Link href="#" className=" hover:bg-main transition-colors px-3 py-2">Suppliers</Link>
-                            <Link href="#" className=" hover:bg-main transition-colors px-3 py-2">Projects</Link>
+                            <Link href="#" className=" hover:bg-secondary transition-colors px-3 py-2">Specialties</Link>
+                            <Link href="#" className=" hover:bg-secondary transition-colors px-3 py-2">Experties</Link>
+                            <Link href="#" className=" hover:bg-secondary transition-colors px-3 py-2">Principle</Link>
+                            <Link href="#" className=" hover:bg-secondary transition-colors px-3 py-2">Suppliers</Link>
+                            <Link href="#" className=" hover:bg-secondary transition-colors px-3 py-2">Projects</Link>
                         </div>
                     </div>
                 )}
