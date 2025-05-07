@@ -43,7 +43,7 @@ const HeroCarousel: React.FC = () => {
 
 
     return (
-        <div className="relative h-screen max-h-[80rem] ">
+        <div className="relative h-screen max-h-[50rem] ">
             <Navbar />
 
             {/* ################################### */}

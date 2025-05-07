@@ -10,7 +10,7 @@ export default function HeroContent({ title }: HeroContentProps) {
             <div className=" max-w-xl  lg:max-w-5xl text-center  font-medium text-white ">
                 <p
                     className="bg-black/30 rounded-2xl p-2 md:text-header-md text-header-sm mb-6 w-full
-             text-center U-fromUnico mx-2 flex items-center justify-center font-medium "
+             text-center U-fromUnico mx-2 flex  items-center justify-center font-medium  "
                 >
                     NICO petroleum
                 </p>
