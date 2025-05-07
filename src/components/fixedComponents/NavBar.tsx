@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="text-main  cursor-pointer"
                         >
-                            <Menu size={24} />
+                            <Menu size={40} />
                         </button>
                     </div>
                 </div>
