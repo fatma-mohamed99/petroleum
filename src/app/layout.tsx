@@ -1,4 +1,5 @@
 
+import Footer from "@/components/fixedComponents/Footer";
 import "./globals.css";
 
 
@@ -14,6 +15,7 @@ export default function RootLayout({
 
       >
         {children}
+        <Footer/>
       </body>
     </html>
   );
