@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
                     <div className="lg:hidden">
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="text-main focus:outline-none cursor-pointer"
+                            className="text-main  cursor-pointer"
                         >
                             <Menu size={24} />
                         </button>

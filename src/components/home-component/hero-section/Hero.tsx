@@ -5,23 +5,18 @@ import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navbar from '@/components/fixedComponents/NavBar';
 import HeroContent from './HeroContent';
+import { carouselImages } from '@/consts/media';
 
-interface CarouselImage {
-    id: number;
-    src: string;
-    alt: string;
-    title: string;
-}
+// interface CarouselImage {
+//     id: number;
+//     src: string;
+//     alt: string;
+//     title: string;
+// }
 
 const HeroCarousel: React.FC = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
-    const carouselImages: CarouselImage[] = [
-        { id: 1, src: '/images/hero-img/slider1.webp', alt: 'Coastal view ', title: "Liquified Petroleum Gas (LPG) Spherical Tanks" },
-        { id: 2, src: '/images/hero-img/slider2.jpg', alt: 'Coastal view', title: "Liquified Petroleum Gas (pPG) Spherical Tanks" },
-        { id: 3, src: '/images/hero-img/slider4.jpg', alt: 'Coastal view', title: "Liquified Petroleum Gas (ppp) Spherical Tanks" },
-
-    ];
 
 
     useEffect(() => {
@@ -79,13 +74,13 @@ const HeroCarousel: React.FC = () => {
             {/* #################################### */}
             <button
                 onClick={goToPrevious}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/30 hover:bg-main cursor-pointer transition-colors"
+                className="hidden md:block  absolute left-4  top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/30 hover:bg-main cursor-pointer transition-colors"
             >
                 <ChevronLeft size={24} />
             </button>
             <button
                 onClick={goToNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/30 hover:bg-main cursor-pointer transition-colors"
+                className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/30 hover:bg-main cursor-pointer transition-colors"
             >
                 <ChevronRight size={24} />
             </button>
