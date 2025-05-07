@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-main: oklch(44.34% 0.096 69.43)  ;       
+  --color-secondary:   oklch(71.1% 0.082 68.96)
+  ;  
+  --text-header-sm: 1.5rem;   
+  --text-header-md: 2rem;     
+  --text-header-lg: 2.5rem;   
+
+  
+  --text-title-sm: 1.125rem;  
+  --text-title-md: 1.25rem;   
+  --text-title-lg: 1.5rem;    
+
+  --text-desc-sm: 0.875rem;   
+  --text-desc-md: 1rem;       
+  --text-desc-lg: 1.125rem;   
+}
