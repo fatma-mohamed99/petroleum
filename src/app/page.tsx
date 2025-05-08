@@ -1,6 +1,7 @@
 
 import Specialties from '@/components/home-component/specialties-section/Specialties';
 import HeroCarousel from './../components/home-component/hero-section/Hero';
+import ProjectSection from '@/components/home-component/project-section/ProjectSection';
 export default function Home() {
   return (
     <div className="grid w-full   ">
@@ -8,6 +9,7 @@ export default function Home() {
       <div className='w-full sm:w-11/12 md:w-10/12  mx-auto pt-20 pb-10 space-y-10 '>
       <Specialties/>
       <hr className="w-full h-1 text-main bg-main  rounded-2xl" />
+      <ProjectSection/>
 
       </div>
 
