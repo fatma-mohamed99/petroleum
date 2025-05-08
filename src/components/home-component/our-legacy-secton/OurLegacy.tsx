@@ -31,7 +31,7 @@ const OurLegacy: React.FC = () => {
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: false }}
-                    className="sm:max-w-3xl max-w-[95%] mx-auto  backdrop-contrast-75 bg-main/10 rounded-lg p-8 shadow-lg"
+                    className="sm:max-w-3xl max-w-[95%] mx-auto   bg-main/10 rounded-lg p-8 shadow-lg"
                 >
                     <p
                         className="text-title-lg leading-relaxed text-center font-normal text-textColor"
