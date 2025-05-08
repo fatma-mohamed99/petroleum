@@ -14,7 +14,7 @@ function Footer() {
           <div className="px-5">
             <p
               className=" text-lg md:text-2xl mb-6 w-full
-             text-center U-fromUnico mx-2 flex items-center justify-center"
+             text-center ali U-fromUnico mx-2 flex items-center justify-center"
             >
               NICO Media
             </p>

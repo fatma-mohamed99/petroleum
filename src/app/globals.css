@@ -8,6 +8,7 @@
   --color-main:oklch(44.34% 0.096 69.43)  ;       
   --color-secondary:   oklch(71.1% 0.082 68.96);
   --color-fixedComponentBg:#434343;  
+  --color-textColor:#434343;
   --text-header-sm: 1.5rem;   
   --text-header-md: 2rem;     
   --text-header-lg: 2.5rem;   

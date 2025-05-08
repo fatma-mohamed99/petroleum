@@ -14,11 +14,11 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     variant = 'filled',
 }) => {
 
-    const baseStyles = 'p-2 ';
+    const baseStyles = 'px-4 py-2 cursor-pointer ';
     const variantStyles =
         variant === 'outline'
-            ? 'border border-main text-main bg-transparent hover:bg-main/50'
-            : 'bg-main text-white hover:bg-secondary';
+            ? 'border border-main text-main bg-transparent   rounded-xl '
+            : 'bg-main text-white rounded-xl';
 
     return (
         <button
