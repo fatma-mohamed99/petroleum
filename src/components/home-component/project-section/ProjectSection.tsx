@@ -2,16 +2,19 @@ import { projects } from "@/consts/projects";
 import "../../../styles/projectSectionStyle.css"
 import ProjectCard from "./ProjectCard";
 function ProjectSection() {
-    return (
-        <div className="w-full  pb-10">
-         <p
+  return (
+    <div className="w-full  p-13">
+      <p
         className=" 
             text-header-sm md:text-header-md 
-            mb-10 w-full
+           
+            w-full
              text-center ali 
              U-fromUnico  flex
              font-bold
-             items-center justify-center"
+             items-center justify-center  pb-12"
+
+
       >
         NICO projects
       </p>
@@ -26,7 +29,7 @@ function ProjectSection() {
         </div>
       </div>
     </div>
-    );
+  );
 }
 
 export default ProjectSection;
