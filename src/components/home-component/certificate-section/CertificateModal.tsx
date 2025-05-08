@@ -84,19 +84,15 @@ const CertificateModal: React.FC<CertificateModalProps> = ({ certificate, isOpen
                                 </div>
                             </div>
 
-                            {/* Certificate display with elegant background pattern */}
                             <div className="bg-gray-50 p-8 min-h-[60vh] flex items-center justify-center relative">
 
 
-                                {/* Elegant frame for certificate */}
                                 <div className="relative z-10 p-6 rounded-lg shadow-lg border border-main/20">
-                                    {/* Gold corners */}
                                     <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-main" />
                                     <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-main" />
                                     <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-main" />
                                     <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-main" />
 
-                                    {/* Certificate image */}
                                     <motion.img
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
