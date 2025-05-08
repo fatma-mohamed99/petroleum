@@ -12,13 +12,13 @@ function ProjectSection() {
              text-center ali 
              U-fromUnico  flex
              font-bold
-             items-center justify-center  pb-12"
+             items-center justify-center  pb-14"
 
 
       >
         NICO projects
       </p>
-      <div className="w-full  my-10 flex justify-center  ">
+      <div className="w-full  my-10 md:my-25 flex justify-center  ">
         <div className=" card-3d">
           {projects.map((project) => (
             <ProjectCard

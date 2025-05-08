@@ -14,20 +14,20 @@ import FiscalMeteringStationforSLGP from "../../public/images/projects/FiscalMet
 
 export const projects:Project[] = [
     {
-      title: "Vitol Tank Terminal Vasiliko (VTTV), Cyprus",
+      title: "Vitol Tank Terminal Vasiliko (VTTV)",
       image: VitolTankTerminalVasilikoVTTVCyprus
     },
       {
-        title: "Increasing Capacity of Heavy Crude Oil Pipeline",
+        title: "Increasing Capacity of Crude Oil Pipeline",
         image: IncreasingCapacityofHeavyCrudeOilPipeline
       },
       {
-        title: "Homs Adra Gas oil pipeline with two tank terminals",
+        title: "Homs Adra Gas oil pipeline",
         image: HomsAdraGasoilpipelinewithtwotankterminals
 
       },
       {
-        title: "Fiscal Metering Station for AGP, Phase II",
+        title: "Fiscal Metering Station for AGP ",
         image: FiscalMeteringStationforAGPPhaseII
       },
       {
@@ -35,7 +35,7 @@ export const projects:Project[] = [
         image: ArabGasPipelinePhaseIIPart1
       },
       {
-        title: "Intermediate Pumping Station in Talkalakh",
+        title: "Intermediate Pumping Station ",
         image: IntermediatePumpingStationinTalkalakh,
       },
       {
@@ -47,7 +47,7 @@ export const projects:Project[] = [
         image: LPGSphericalTanksinSyria
       },
       {
-        title: "PR&MS; at Banias Power Plant",
+        title: "PR&MS at Banias Power Plant",
         image: PRMSatBaniasPowerPlant
       },
       {

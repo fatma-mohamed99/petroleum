@@ -1,160 +1,143 @@
+:root {
+  --z-radios: 170px;
+  --card-width: 80px;
+  --card-height: 100px;
+}
+@media (min-width: 440px) {
+  :root {
+    --z-radios: 220px;
+    --card-width: 100px;
+    --card-height: 115px;
+  }
+}
+@media (min-width: 735px) {
+  :root {
+    --z-radios: 280px;
+    --card-width: 120px;
+    --card-height: 150px;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --z-radios: 380px;
+    --card-width: 180px;
+    --card-height: 155px;
+  }
+}
+@media (min-width: 1700px) {
+  :root {
+    --z-radios: 400px;
+    --card-width: 200px;
+    --card-height: 200px;
+  }
+}
+@keyframes autoRun3d {
+  from {
+    transform: perspective(800px) rotateY(-360deg);
+  }
+  to {
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
 
-:root{
-    --z-radios:170px;
-    --card-width:80px;
-    --card-height:145px;
-    
-    
-    } 
-    @media (min-width:440px) {
-      :root{
-        --z-radios:220px;
-        --card-width:100px;
-    --card-height:150px;
-        
-        } 
-      
-    }
-    @media (min-width:735px) {
-      :root{
-        --z-radios:300px;
-        --card-width:150px;
-    --card-height:190px;
-        
-        } 
-      
-    }
-    @media (min-width:1024px) {
-      :root{
-        --z-radios:380px;
-        --card-width:180px;
-    --card-height:230px;
-        
-        } 
-      
-    }
-    @media (min-width:1700px) {
-      :root{
-        --z-radios:400px;
-        --card-width:200px;
-    --card-height:240px;
-        
-        } 
-      
-    }
-    @keyframes autoRun3d {
-        from {
-          transform: perspective(800px) rotateY(-360deg);
-        }
-        to {
-          transform: perspective(800px) rotateY(0deg);
-        }
-      }
-      
-      @keyframes animateBrightness {
-        10% {
-          
-        }
-        50% {
-          filter: brightness(0);
-        }
-        90% {
-          filter: brightness(1);
-        }
-      }
-      
-      .card-3d {
-        position: relative;
-        width: 340px;
-        height: 400px;
-        transform-style: preserve-3d;
-        transform: perspective(800px);
-        animation: autoRun3d 48s linear infinite;
-        will-change: transform;
-      }
-    
-      
-      .card-3d div {
-        position: absolute;
-        width:var(--card-width);
-        height:var(--card-height);
-        background-color:var(--color-fixedComponentBg);
-        color:white;
-        
-        border-radius: 0.5rem;
-        top: 50%;
-        left: 50%;
-        transform-origin: center center;
-        animation: animateBrightness 48s linear infinite;
-        transition-duration:4000ms;
-        will-change: transform, filter;
-      }
-      
-      .card-3d:hover {
-        animation-play-state: paused !important;
-      }
-      
-      .card-3d:hover div {
-      
-        animation-play-state: paused !important;
-      }
-      
-      .card-3d div:nth-child(1) {
-        transform: translate(-50%, -50%) rotateY(0deg) translateZ(var(--z-radios));
-        animation-delay: -0s;
-      }
-      
-      .card-3d div:nth-child(2) {
-        transform: translate(-50%, -50%) rotateY(30deg) translateZ(var(--z-radios));
-        animation-delay: -4s;
-      }
-      
-      .card-3d div:nth-child(3) {
-        transform: translate(-50%, -50%) rotateY(60deg) translateZ(var(--z-radios));
-        animation-delay: -8s;
-      }
-      
-      .card-3d div:nth-child(4) {
-        transform: translate(-50%, -50%) rotateY(90deg) translateZ(var(--z-radios));
-        animation-delay:-12s;
-      }
-      
-      .card-3d div:nth-child(5) {
-        transform: translate(-50%, -50%) rotateY(120deg) translateZ(var(--z-radios));
-        animation-delay: -16s;
-      }
-      
-      .card-3d div:nth-child(6) {
-        transform: translate(-50%, -50%) rotateY(150deg) translateZ(var(--z-radios));
-        animation-delay: -20s;
-      }
-      
-      .card-3d div:nth-child(7) {
-        transform: translate(-50%, -50%) rotateY(180deg) translateZ(var(--z-radios));
-        animation-delay: -24s;
-      }
-      
-      .card-3d div:nth-child(8) {
-        transform: translate(-50%, -50%) rotateY(210deg) translateZ(var(--z-radios));
-        animation-delay: -28s;
-      }
-      
-      .card-3d div:nth-child(9) {
-        transform: translate(-50%, -50%) rotateY(240deg) translateZ(var(--z-radios));
-        animation-delay: -32s;
-      }
-      
-      .card-3d div:nth-child(10) {
-        transform: translate(-50%, -50%) rotateY(270deg) translateZ(var(--z-radios));
-        animation-delay: -36s;
-      }
-      .card-3d div:nth-child(11) {
-        transform: translate(-50%, -50%) rotateY(300deg) translateZ(var(--z-radios));
-        animation-delay: -40s;
-      }
-      
-      .card-3d div:nth-child(12) {
-        transform: translate(-50%, -50%) rotateY(330deg) translateZ(var(--z-radios));
-        animation-delay: -44s;
-      }
-      
+@keyframes animateBrightness {
+  10% {
+  }
+  50% {
+    filter: brightness(0);
+  }
+  90% {
+    filter: brightness(1);
+  }
+}
+
+.card-3d {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+  animation: autoRun3d 84s linear infinite;
+  will-change: transform;
+}
+
+.card-3d div {
+  position: absolute;
+  width: var(--card-width);
+  height: var(--card-height);
+ 
+  border-radius: 0.5rem;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  animation: animateBrightness 84s linear infinite;
+  transition-duration: 8400ms;
+  will-change: transform, filter;
+}
+
+.card-3d:hover {
+  animation-play-state: paused !important;
+}
+
+.card-3d:hover div {
+  animation-play-state: paused !important;
+}
+
+.card-3d div:nth-child(1) {
+  transform: translate(-50%, -50%) rotateY(0deg) translateZ(var(--z-radios));
+  animation-delay: -0s;
+}
+
+.card-3d div:nth-child(2) {
+  transform: translate(-50%, -50%) rotateY(30deg) translateZ(var(--z-radios));
+  animation-delay: -7s;
+}
+
+.card-3d div:nth-child(3) {
+  transform: translate(-50%, -50%) rotateY(60deg) translateZ(var(--z-radios));
+  animation-delay: -14s;
+}
+
+.card-3d div:nth-child(4) {
+  transform: translate(-50%, -50%) rotateY(90deg) translateZ(var(--z-radios));
+  animation-delay: -21s;
+}
+
+.card-3d div:nth-child(5) {
+  transform: translate(-50%, -50%) rotateY(120deg) translateZ(var(--z-radios));
+  animation-delay: -28s;
+}
+
+.card-3d div:nth-child(6) {
+  transform: translate(-50%, -50%) rotateY(150deg) translateZ(var(--z-radios));
+  animation-delay: -35s;
+}
+
+.card-3d div:nth-child(7) {
+  transform: translate(-50%, -50%) rotateY(180deg) translateZ(var(--z-radios));
+  animation-delay: -42s;
+}
+
+.card-3d div:nth-child(8) {
+  transform: translate(-50%, -50%) rotateY(210deg) translateZ(var(--z-radios));
+  animation-delay: -49s;
+}
+
+.card-3d div:nth-child(9) {
+  transform: translate(-50%, -50%) rotateY(240deg) translateZ(var(--z-radios));
+  animation-delay: -56s;
+}
+
+.card-3d div:nth-child(10) {
+  transform: translate(-50%, -50%) rotateY(270deg) translateZ(var(--z-radios));
+  animation-delay: -63s;
+}
+.card-3d div:nth-child(11) {
+  transform: translate(-50%, -50%) rotateY(300deg) translateZ(var(--z-radios));
+  animation-delay: -70s;
+}
+
+.card-3d div:nth-child(12) {
+  transform: translate(-50%, -50%) rotateY(330deg) translateZ(var(--z-radios));
+  animation-delay: -77s;
+}
