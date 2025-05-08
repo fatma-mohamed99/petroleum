@@ -2,6 +2,7 @@
 import Specialties from '@/components/home-component/specialties-section/Specialties';
 import HeroCarousel from './../components/home-component/hero-section/Hero';
 import OurLegacy from '@/components/home-component/our-legacy-secton/OurLegacy';
+import ProjectSection from '@/components/home-component/project-section/ProjectSection';
 export default function Home() {
   return (
     <div className="grid w-full   ">
@@ -13,6 +14,9 @@ export default function Home() {
 
         <Specialties />
         <hr className="w-full h-1 text-main bg-main  rounded-2xl" />
+        <Specialties />
+        <hr className="w-full h-1 text-main bg-main  rounded-2xl" />
+        <ProjectSection />
 
       </div>
 

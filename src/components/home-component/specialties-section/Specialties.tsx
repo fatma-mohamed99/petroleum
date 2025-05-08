@@ -9,6 +9,7 @@ function Specialties() {
         className=" 
         text-header-sm md:text-header-md mb-10 w-full
              text-center ali 
+             font-bold
              U-fromUnico  flex
              items-center justify-center"
       >
