@@ -33,22 +33,33 @@
 }
 @keyframes autoRun3d {
   from {
-    transform: perspective(800px) rotateY(-360deg);
+    transform: perspective(1500px) rotateY(-360deg);
   }
   to {
-    transform: perspective(800px) rotateY(0deg);
+    transform: perspective(1500px) rotateY(0deg);
   }
 }
 
 @keyframes animateBrightness {
-  10% {
-  }
-  50% {
-    filter: brightness(0);
-  }
-  90% {
+  0%, 100% {
     filter: brightness(1);
   }
+  50% {
+    filter: brightness(0.8);
+  }
+}
+
+.project-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  filter: none !important;
 }
 
 .card-3d {
@@ -56,10 +67,14 @@
   width: 150px;
   height: 150px;
   transform-style: preserve-3d;
-  transform: perspective(800px);
-  animation: autoRun3d 84s linear infinite;
+  transform: perspective(1000px);
+  animation: autoRun3d 120s linear infinite; 
   will-change: transform;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 
 .card-3d div {
   position: absolute;
@@ -70,9 +85,16 @@
   top: 50%;
   left: 50%;
   transform-origin: center center;
-  animation: animateBrightness 84s linear infinite;
-  transition-duration: 8400ms;
-  will-change: transform, filter;
+  animation: animateBrightness 120s linear infinite;
+  transition-duration: 800ms;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transform-origin: center center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .card-3d:hover {
@@ -81,6 +103,7 @@
 
 .card-3d:hover div {
   animation-play-state: paused !important;
+  filter: brightness(1.1);
 }
 
 .card-3d div:nth-child(1) {
@@ -90,54 +113,54 @@
 
 .card-3d div:nth-child(2) {
   transform: translate(-50%, -50%) rotateY(30deg) translateZ(var(--z-radios));
-  animation-delay: -7s;
+  animation-delay: -10s;
 }
 
 .card-3d div:nth-child(3) {
   transform: translate(-50%, -50%) rotateY(60deg) translateZ(var(--z-radios));
-  animation-delay: -14s;
+  animation-delay: -20s;
 }
 
 .card-3d div:nth-child(4) {
   transform: translate(-50%, -50%) rotateY(90deg) translateZ(var(--z-radios));
-  animation-delay: -21s;
+  animation-delay: -30s;
 }
 
 .card-3d div:nth-child(5) {
   transform: translate(-50%, -50%) rotateY(120deg) translateZ(var(--z-radios));
-  animation-delay: -28s;
+  animation-delay: -40s;
 }
 
 .card-3d div:nth-child(6) {
   transform: translate(-50%, -50%) rotateY(150deg) translateZ(var(--z-radios));
-  animation-delay: -35s;
+  animation-delay: -50s;
 }
 
 .card-3d div:nth-child(7) {
   transform: translate(-50%, -50%) rotateY(180deg) translateZ(var(--z-radios));
-  animation-delay: -42s;
+  animation-delay: -60s;
 }
 
 .card-3d div:nth-child(8) {
   transform: translate(-50%, -50%) rotateY(210deg) translateZ(var(--z-radios));
-  animation-delay: -49s;
+  animation-delay: -70s;
 }
 
 .card-3d div:nth-child(9) {
   transform: translate(-50%, -50%) rotateY(240deg) translateZ(var(--z-radios));
-  animation-delay: -56s;
+  animation-delay: -80s;
 }
 
 .card-3d div:nth-child(10) {
   transform: translate(-50%, -50%) rotateY(270deg) translateZ(var(--z-radios));
-  animation-delay: -63s;
+  animation-delay: -90s;
 }
 .card-3d div:nth-child(11) {
   transform: translate(-50%, -50%) rotateY(300deg) translateZ(var(--z-radios));
-  animation-delay: -70s;
+  animation-delay: -100s;
 }
 
 .card-3d div:nth-child(12) {
   transform: translate(-50%, -50%) rotateY(330deg) translateZ(var(--z-radios));
-  animation-delay: -77s;
+  animation-delay: -110s;
 }

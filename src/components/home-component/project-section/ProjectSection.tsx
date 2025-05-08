@@ -3,7 +3,7 @@ import "../../../styles/projectSectionStyle.css"
 import ProjectCard from "./ProjectCard";
 function ProjectSection() {
   return (
-    <div className="w-full  p-13">
+    <div className="w-full  py-10 bg-main/10  rounded-full">
       <p
         className=" 
             text-header-sm md:text-header-md 

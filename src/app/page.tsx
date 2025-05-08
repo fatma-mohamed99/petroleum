@@ -17,9 +17,14 @@ export default function Home() {
 
         <Specialties />
         <hr className="w-full h-1 text-main bg-main  rounded-2xl" />
+        <div className='w-full sm:w-11/12 md:w-10/12  mx-auto  space-y-15 my-15 '>
 
-        <ProjectSection />
+          <ProjectSection />
+          <hr className="w-full h-1 text-main bg-main  rounded-2xl" />
+          <Specialties />
 
+
+        </div>
       </div>
 
     </div>
