@@ -4,10 +4,10 @@ import { specialties } from "@/consts/specialties";
 
 function Specialties() {
   return (
-    <div className="  py-10">
+    <div className="py-10">
       <p
         className=" 
-        text-header-sm md:text-header-md mb-10 w-full
+        text-header-sm md:text-header-md pb-14 w-full
              text-center ali 
              font-bold
              U-fromUnico  flex
