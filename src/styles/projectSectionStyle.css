@@ -1,34 +1,29 @@
 :root {
-  --z-radios: 170px;
-  --card-width: 80px;
-  --card-height: 100px;
+  --z-radios:200px;
+  --card-width:80px;
 }
 @media (min-width: 440px) {
   :root {
-    --z-radios: 220px;
-    --card-width: 100px;
-    --card-height: 115px;
+    --z-radios: 250px;
+    --card-width: 120px;
   }
 }
 @media (min-width: 735px) {
   :root {
     --z-radios: 280px;
-    --card-width: 120px;
-    --card-height: 150px;
+    --card-width: 140px;
   }
 }
 @media (min-width: 1024px) {
   :root {
-    --z-radios: 380px;
+    --z-radios: 450px;
     --card-width: 180px;
-    --card-height: 155px;
   }
 }
 @media (min-width: 1700px) {
   :root {
     --z-radios: 400px;
     --card-width: 200px;
-    --card-height: 200px;
   }
 }
 @keyframes autoRun3d {
@@ -64,7 +59,7 @@
 
 .card-3d {
   position: relative;
-  width: 150px;
+  width: 100%;
   height: 150px;
   transform-style: preserve-3d;
   transform: perspective(1000px);
@@ -79,8 +74,7 @@
 .card-3d div {
   position: absolute;
   width: var(--card-width);
-  height: var(--card-height);
- 
+  height: max-content;
   border-radius: 0.5rem;
   top: 50%;
   left: 50%;
