@@ -1,0 +1,122 @@
+import { motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
+import { X } from 'lucide-react';
+
+
+
+interface Certificate {
+    id: number;
+    thumbnail: string;
+    fullImage: string;
+    title: string;
+}
+
+
+
+interface CertificateModalProps {
+    certificate: Certificate | null;
+    isOpen: boolean;
+    onClose: () => void;
+}
+
+
+
+
+
+
+const CertificateModal: React.FC<CertificateModalProps> = ({ certificate, isOpen, onClose }) => {
+    if (!certificate) return null;
+
+    return (
+        <AnimatePresence>
+            {isOpen && (
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="fixed inset-0 bg-black/15 backdrop-blur-xs z-50 flex items-center justify-center p-4"
+                    onClick={onClose}
+                >
+                    <div className="absolute top-40 left-0 right-0 h-px bg-gradient-to-r from-transparent via-main/30 to-transparent"></div>
+                    <div className="absolute bottom-40 left-0 right-0 h-px bg-gradient-to-r from-transparent via-main/30 to-transparent"></div>
+                    <motion.div
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: 1 }}
+                        exit={{ scaleX: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary to-transparent"
+                    />
+
+                    <motion.div
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: 1 }}
+                        exit={{ scaleX: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-main to-transparent"
+                    />
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 25
+                        }}
+                        className="relative w-full max-w-4xl "
+                        onClick={(e: React.MouseEvent) => e.stopPropagation()}
+                    >
+                        <div className="absolute inset-0 p-1 rounded-xl bg-gradient-to-br from-main/15 via-main/10 to-main/10 animate-pulse" />
+
+                        <div className=" rounded-xl o shadow-2xl relative z-10">
+                            {/* Header with gold gradient */}
+                            <div className="bg-gradient-to-r from-mainظ20 to-main/10 p-2 flex items-center justify-between">
+                                <h3 className="font-bold text-xl text-textColor drop-shadow-sm">{certificate.title}</h3>
+
+                                {/* Close button */}
+                                <div
+                                    className="bg-white/20 hover:bg-white/30 text-white cursor-pointer p-2 rounded-full transition-colors"
+                                    onClick={onClose}
+                                >
+                                    <X className="w-6 h-6" />
+                                </div>
+                            </div>
+
+                            {/* Certificate display with elegant background pattern */}
+                            <div className="bg-gray-50 p-8 min-h-[60vh] flex items-center justify-center relative">
+
+
+                                {/* Elegant frame for certificate */}
+                                <div className="relative z-10 p-6 rounded-lg shadow-lg border border-main/20">
+                                    {/* Gold corners */}
+                                    <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-main" />
+                                    <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-main" />
+                                    <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-main" />
+                                    <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-main" />
+
+                                    {/* Certificate image */}
+                                    <motion.img
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ delay: 0.3, duration: 0.5 }}
+                                        src={certificate.fullImage}
+                                        alt={`${certificate.title} Certificate`}
+                                        className="max-w-full max-h-[60vh] object-contain drop-shadow-md"
+                                    />
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </motion.div>
+                </motion.div>
+            )}
+        </AnimatePresence>
+    );
+};
+
+
+
+export default CertificateModal
