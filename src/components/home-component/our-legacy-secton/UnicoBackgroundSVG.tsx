@@ -1,7 +1,6 @@
-// ImprovedUnicoBackgroundSVG.tsx
 import React from 'react';
 
-const ImprovedUnicoBackgroundSVG: React.FC = () => {
+const UnicoBackgroundSVG: React.FC = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -370,4 +369,4 @@ const ImprovedUnicoBackgroundSVG: React.FC = () => {
     );
 };
 
-export default ImprovedUnicoBackgroundSVG;
+export default UnicoBackgroundSVG;
