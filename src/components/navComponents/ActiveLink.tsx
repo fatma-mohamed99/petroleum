@@ -6,11 +6,11 @@ import { ReactNode } from "react";
 function ActiveLink({
   targetPath,
   children,
-  onClickFun= undefined
+  onClickFun = undefined
 }: {
   targetPath: string;
   children: ReactNode;
-  onClickFun?:()=>void
+  onClickFun?: () => void
 }) {
   const currentPath = usePathname();
   const isActiveLink = currentPath === targetPath;
@@ -29,10 +29,9 @@ function ActiveLink({
         duration-200
         font-medium hover:-translate-y-0.5
         
-         ${
-        isActiveLink &&
+         ${isActiveLink &&
         "font-bold  border-b-2  border-Text  scale-y-110   "
-      } `}
+        } `}
     >
       {children}
     </Link>

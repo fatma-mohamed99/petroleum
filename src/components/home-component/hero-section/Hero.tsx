@@ -73,15 +73,15 @@ const HeroCarousel: React.FC = () => {
             {/* #################################### */}
             <button
                 onClick={goToPrevious}
-                className="hidden md:block  absolute left-4  top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/30 hover:bg-main cursor-pointer transition-colors"
+                className="hidden md:block  absolute left-4  top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/30 hover:bg-black/60 cursor-pointer transition-colors"
             >
-                <ChevronLeft size={24} />
+                <ChevronLeft size={30} />
             </button>
             <button
                 onClick={goToNext}
-                className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/30 hover:bg-main cursor-pointer transition-colors"
+                className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/30 hover:bg-black/60 cursor-pointer transition-colors"
             >
-                <ChevronRight size={24} />
+                <ChevronRight size={30} />
             </button>
 
 
