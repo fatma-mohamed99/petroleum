@@ -3,22 +3,33 @@ import Image from "next/image";
 
 function ProjectCard({ projectData }: { projectData: Project }) {
   return (
-    <div className="bg-main/80 brightness-110 border-2 border-main/40 relative">
+    <div className="bg-main/80 brightness-110 border-2 
+     border-main/40 relative min-h-24 ">
       <article>
-        <section className="w-full overflow-hidden rounded-t-sm ">
+        <section className="w-full overflow-hidden rounded-t-sm    ">
           <Image
             alt={`${projectData.title}logo`}
             src={projectData.image}
-            width={600}
-            height={600}
-            className="w-full h-full"
+            width={800}
+            height={800}
+            className="w-full min-h-24 sm:h-9/10"
           />
-          <div className="absolute -top-11/12 left-0 w-full bg-fixedComponentBg/60 py-2 backdrop-blur-sm">
-            <p className="project-title text-xs md:text-sm lg:text-base text-white text-center font-bold 
-              tracking-wide px-2">
+           <article className="absolute bottom-0
+           hidden sm:block
+            left-0 w-full bg-black/10  backdrop-blur-sm h-4 pt-1 md:h-6
+           
+            ">
+            <p
+            title={projectData.title}
+            
+            className=" project-title text-[8px] text-nowrap truncate
+              text-white text-center font-bold 
+              px-1
+               lg:text-xs
+              tracking-wide ">
               {projectData.title}
             </p>
-          </div>
+          </article>
         </section>
       </article>
     </div>
