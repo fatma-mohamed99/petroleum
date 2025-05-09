@@ -3,7 +3,8 @@ import "../../../styles/projectSectionStyle.css"
 import ProjectCard from "./ProjectCard";
 function ProjectSection() {
   return (
-    <div className="w-full  py-10 bg-main/10  sm:rounded-full  overflow-hidden ">
+    <div className="w-full  py-10 bg-main/10
+       overflow-hidden  rounded-sm">
       <p
         className=" 
             text-header-sm md:text-header-md 
