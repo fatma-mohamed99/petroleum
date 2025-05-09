@@ -17,8 +17,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     const baseStyles = 'px-4 py-2 cursor-pointer ';
     const variantStyles =
         variant === 'outline'
-            ? 'border border-main text-main bg-transparent   rounded-xl '
-            : 'bg-main text-white rounded-xl';
+            ? 'border border-main text-textColor bg-transparent   rounded-sm '
+            : 'bg-main text-white rounded-sm';
 
     return (
         <button
