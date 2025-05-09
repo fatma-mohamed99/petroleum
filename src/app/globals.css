@@ -6,9 +6,11 @@
 /* {4e6e5d,} */
 
 @theme {
-/* --color-main: #003b5c; */
+/* --color-main: #003b5c; الازرق*/
 --color-bgCard:#003b5c0F ;       
---color-main: #4e6e5d;
+/* --color-main: #4e6e5d; /الزيتى يا فاطمة*/
+
+--color-main: #434343; 
   --color-fixedComponentBg:#ffffff;  
   --color-textColor:#1e1e1e;
   --text-header-sm: 1.5rem;   
