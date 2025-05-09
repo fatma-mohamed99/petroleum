@@ -60,6 +60,7 @@
 .card-3d {
   position: relative;
   width: 100%;
+  
   height: 150px;
   transform-style: preserve-3d;
   transform: perspective(1000px);

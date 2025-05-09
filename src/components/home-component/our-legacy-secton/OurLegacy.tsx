@@ -27,7 +27,7 @@ const OurLegacy: React.FC = () => {
              text-center ali 
              U-fromUnico  flex
              font-bold
-             items-center justify-center -mt-9 "
+             items-center justify-center -mt-5 "
 
 
                     >

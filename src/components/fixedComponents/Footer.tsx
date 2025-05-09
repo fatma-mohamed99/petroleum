@@ -60,10 +60,10 @@ function Footer() {
         <hr className="w-full h-0.5 bg-main my-6" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-  
+
           <div className="flex flex-col items-center">
             <h3 className="text-xl md:text-2xl font-semibold mb-6">
-              About <span className="U-fromUnico">NICO</span>
+              About Us
             </h3>
             <div className="flex flex-wrap justify-center gap-1 lg:gap-6 w-full max-w-md">
               {aboutUsLinks.map((link) => (
@@ -82,7 +82,7 @@ function Footer() {
 
           <div className="flex flex-col items-center">
             <h3 className="text-xl md:text-2xl font-semibold mb-6">
-              Connect <span className="U-fromUnico">With Us</span>
+              Connect Us
             </h3>
             <div className="flex flex-col gap-3 w-full max-w-md items-center">
               <div className="flex items-center gap-3 justify-center md:justify-start">
@@ -95,8 +95,8 @@ function Footer() {
               </div>
               <div className="flex items-center gap-3 justify-center md:justify-start">
                 <Mail size={18} className="text-main" />
-                <a 
-                  href="mailto:info@unico-petroleum.com" 
+                <a
+                  href="mailto:info@unico-petroleum.com"
                   className="hover:text-main transition-colors duration-300"
                 >
                   info@unico-petroleum.com

@@ -13,11 +13,17 @@ export default function Home() {
 
       </div>
       <div className='  space-y-10 py-20 '> <OurLegacy /></div>
-      {/* <hr className="w-full  sm:w-11/12 md:w-10/12  mx-auto h-1 text-main bg-main  rounded-2xl" /> */}
+      <div className='w-full sm:w-11/12 md:w-10/12  mx-auto  '>
+        <hr className="ww-full sm:w-11/12 md:w-10/12  mx-auto h-1 text-main bg-main  rounded-2xl" />
+
+      </div>
+
       <div className='w-full sm:w-11/12 md:w-10/12  mx-auto pt-20 pb-10 space-y-10 '>
 
 
         <div className='w-full sm:w-11/12 md:w-10/12  mx-auto  space-y-15 my-15 '>
+
+
           <CertificatesSection />
 
           <hr className="w-full h-1 text-main bg-main  rounded-2xl" />

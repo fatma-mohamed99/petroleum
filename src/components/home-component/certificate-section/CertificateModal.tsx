@@ -72,10 +72,10 @@ const CertificateModal: React.FC<CertificateModalProps> = ({ certificate, isOpen
 
                         <div className=" rounded-xl o shadow-2xl relative z-10">
                             <div className="bg-gradient-to-r  to-main/10 p-2 flex items-center justify-between">
-                                <h3 className="font-bold text-xl text-textColor drop-shadow-sm">{certificate.title}</h3>
+                                <h3 className="font-bold text-xl text-white drop-shadow-sm">{certificate.title}</h3>
 
                                 <div
-                                    className="bg-white/20 hover:bg-white/30 text-textColor cursor-pointer p-2 rounded-full transition-colors"
+                                    className="bg-black/20 text-white hover:bg-white/30  cursor-pointer p-2 rounded-full transition-colors"
                                     onClick={onClose}
                                 >
                                     <X className="w-6 h-6" />
@@ -97,7 +97,7 @@ const CertificateModal: React.FC<CertificateModalProps> = ({ certificate, isOpen
                                         transition={{ delay: 0.3, duration: 0.5 }}
                                         src={certificate.fullImage}
                                         alt={`${certificate.title} Certificate`}
-                                        className="max-w-full max-h-[60vh] object-contain drop-shadow-md"
+                                        className="max-w-full max-h-[67vh]  object-contain drop-shadow-md"
                                     />
                                 </div>
 
