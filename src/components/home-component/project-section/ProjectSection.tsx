@@ -16,7 +16,6 @@ function ProjectSection() {
               "
 
 
-
       >
         NICO projects
       </p>

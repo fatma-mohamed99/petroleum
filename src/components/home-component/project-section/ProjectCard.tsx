@@ -22,7 +22,8 @@ function ProjectCard({ projectData }: { projectData: Project }) {
             <p
             title={projectData.title}
             
-            className=" project-title text-[8px] text-nowrap truncate
+            className=" project-title text-[8px] 
+            text-nowrap truncate
               text-white text-center font-bold 
               px-1
                lg:text-xs
