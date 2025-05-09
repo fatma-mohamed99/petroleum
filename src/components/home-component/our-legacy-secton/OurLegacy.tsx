@@ -56,7 +56,7 @@ const OurLegacy: React.FC = () => {
                         </span> */}
 
 
-                        <span className='text-main font-bold'>Unico</span>       petroleum   developed a reputation across the region as a reliable provider of <b className='mx-1'>EPCC</b>services in the Oil and Gas industry. Its commitment to the highest standards of quality, safety, and service level has been evident in the variety of projects it has completed on time and within budget and continues to be at the heart of the company's vision for the future
+                        <span className='text-main font-bold'>Unico</span>       petroleum   developed a reputation across the region as a reliable provider of <b className='mx-1'>EPCC</b>services in the Oil and Gas industry. Its commitment to the highest standards of quality, safety, and service level has been evident in the variety of projects it has completed on time and within budget and continues to be at the heart of the company vision for the future
                     </p>
                 </motion.div>
             </div>
