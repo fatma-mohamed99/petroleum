@@ -12,11 +12,13 @@ export default function Home() {
         <HeroCarousel />
 
       </div>
+      {/* ###################################### */}
       <div className='  space-y-10 py-20 '> <OurLegacy /></div>
       <div className='w-full sm:w-11/12 md:w-10/12  mx-auto  '>
         <hr className="w-full sm:w-11/12 md:w-10/12  mx-auto h-1 text-white  bg-main/10  rounded-2xl" />
 
       </div>
+      {/* ###################################### */}
 
       <div className='w-full sm:w-11/12 md:w-10/12  mx-auto pt-20 pb-10 space-y-10 '>
 
@@ -26,14 +28,34 @@ export default function Home() {
 
           <CertificatesSection />
 
-          <hr className="w-full h-1 text-white  bg-main/10   rounded-2xl" />
-          <ProjectSection />
-          <hr className="w-full h-1 text-white  bg-main/10   rounded-2xl" />
+
+
+
+
+        </div>
+      </div>
+      {/* ###################################### */}
+
+
+      <div className='inset-0  space-y-10 py-20 bg-main/10 '>    <ProjectSection /> </div>
+      <div className='w-full sm:w-11/12 md:w-10/12  mx-auto  '>
+
+      </div>
+      {/* ###################################### */}
+
+      <div className='w-full sm:w-11/12 md:w-10/12  mx-auto pt-20 pb-10 space-y-10 '>
+
+
+        <div className='w-full sm:w-11/12 md:w-10/12  mx-auto  space-y-15 my-15 '>
+
+
           <Specialties />
 
 
         </div>
       </div>
+      {/* ###################################### */}
+
 
     </div>
   );
