@@ -41,14 +41,14 @@ function Footer() {
             <div className="flex flex-wrap gap-4 justify-center">
               <button
                 onClick={() => openPdfInNewTab(brochurePath)}
-                className="bg-main cursor-pointer  hover:bg-main/80 text-white px-5 py-2.5 rounded-md text-sm transition duration-300 flex gap-2 items-center shadow-md hover:shadow-xl"
+                className="bg-black/40 cursor-pointer  hover:bg-black/80 text-white px-5 py-2.5 rounded-md text-sm transition duration-300 flex gap-2 items-center shadow-md hover:shadow-xl"
                 aria-label="View brochure"
               >
                 <View size={18} /> View
               </button>
               <button
                 onClick={() => downloadPdf(brochurePath, "brochure")}
-                className="border-2 cursor-pointer  border-main text-white px-5 py-2.5 rounded-md text-sm transition duration-300 flex gap-2 items-center shadow-md hover:shadow-xl hover:bg-black/40"
+                className="border-2 cursor-pointer   text-white px-5 py-2.5 rounded-md text-sm transition duration-300 flex gap-2 items-center shadow-md hover:shadow-xl hover:bg-black/40"
                 aria-label="Download brochure"
               >
                 <FileDown size={18} /> Download
