@@ -9,14 +9,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-    
-           <div className="relative min-h-12 mb-10">
+    <>    
+       <div className="relative min-h-8 mb-5">
            <Navbar />
-            </div> 
-
-        
-    
+       </div>     
         {children}
     
     </>

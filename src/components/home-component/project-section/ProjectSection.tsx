@@ -13,7 +13,6 @@ function ProjectSection() {
               "
 
 
-
       >
         Unico projects
       </p>
