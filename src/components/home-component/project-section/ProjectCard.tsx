@@ -3,8 +3,8 @@ import Image from "next/image";
 
 function ProjectCard({ projectData }: { projectData: Project }) {
   return (
-    <div className="bg-main/80 brightness-110 border-2 
-     border-main/40 relative min-h-24 ">
+    <div className="bg-main/80 brightness-110 rounded-b-sm
+      relative min-h-24 ">
       <article>
         <section className="w-full overflow-hidden rounded-t-sm    ">
           <Image
@@ -14,15 +14,15 @@ function ProjectCard({ projectData }: { projectData: Project }) {
             height={800}
             className="w-full min-h-24 sm:h-9/10"
           />
-           <article className="absolute bottom-0
+          <article className="absolute bottom-0
            hidden sm:block
             left-0 w-full bg-black/10  backdrop-blur-sm h-4 pt-1 md:h-6
            
             ">
             <p
-            title={projectData.title}
-            
-            className=" project-title text-[8px] 
+              title={projectData.title}
+
+              className=" project-title text-[8px] 
             text-nowrap truncate
               text-white text-center font-bold 
               px-1
