@@ -24,23 +24,13 @@ const Navbar: React.FC = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (
-                isMenuOpen &&
-                menuRef.current &&
-                !menuRef.current.contains(event.target as Node)
-            ) {
-                setIsMenuOpen(false);
-            }
-        };
 
-        document.addEventListener('mousedown', handleClickOutside);
 
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, [isMenuOpen]);
+
+       const toggleMenu = () => {
+        setIsMenuOpen(prev=>!prev);
+    };
+
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 text-textColor 
         ${scrolled ? 'bg-fixedComponentBg  shadow-main/50 shadow-sm ' : 'bg-white/70 '}
@@ -69,8 +59,8 @@ const Navbar: React.FC = () => {
                     {/* ########################## */}
                     <div className="lg:hidden">
                         <button
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className={`${scrolled ? "text-white" : "text-textColor"}  z-20 cursor-pointer`}
+                            onClick={toggleMenu}
+                            className={`text-textColor  z-20 cursor-pointer`}
                         >
                             <Menu size={40} />
                         </button>
