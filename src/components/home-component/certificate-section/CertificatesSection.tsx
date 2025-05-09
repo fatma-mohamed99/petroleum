@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, X } from 'lucide-react';
+
 import CertificateCard from './CertificationCard';
 import CertificateModal from './CertificateModal';
 
@@ -96,7 +95,7 @@ const CertificatesSection: React.FC = () => {
                 <div
                     className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 align-middle justify-center gap-8 max-w-5xl mx-auto"
                 >
-                    {certificateImages.map((cert, index) => (
+                    {certificateImages.map((cert) => (
                         <div
                             key={cert.id}
 

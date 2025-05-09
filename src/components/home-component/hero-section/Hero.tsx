@@ -5,7 +5,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navbar from '@/components/fixedComponents/NavBar';
 import HeroContent from './HeroContent';
 import { carouselImages } from '@/consts/media';
-import UnicoBackgroundSVG from '../our-legacy-secton/UnicoBackgroundSVG';
 
 // interface CarouselImage {
 //     id: number;
@@ -27,7 +26,7 @@ const HeroCarousel: React.FC = () => {
         }, 5000);
 
         return () => clearInterval(interval);
-    }, [carouselImages.length]);
+    }, []);
 
     const goToPrevious = () => {
         setCurrentImageIndex((prevIndex) =>
