@@ -3,13 +3,15 @@
   --color-Chart-main:oklch(44.34% 0.096 69.43) ;
 
 }
+/* {4e6e5d,} */
 
 @theme {
-  --color-main:oklch(44.34% 0.096 69.43)  ;      
-    --color-bgCard:oklch(44.34% 0.096 69.43/6%)  ;       
-  --color-secondary:oklch(71.1% 0.082 68.96);
+--color-main: #003b5c;
+--color-bgCard:#003b5c0F ;       
+--color-secondary: #4e6e5d;
+
   --color-fixedComponentBg:#434343;  
-  --color-textColor:#434343;
+  --color-textColor:#1e1e1e;
   --text-header-sm: 1.5rem;   
   --text-header-md: 2rem;     
   --text-header-lg: 2.5rem;   
