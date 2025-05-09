@@ -9,8 +9,12 @@ function ProjectSection() {
             text-header-sm md:text-header-md 
            
             w-full
-        
+             text-center  
+            flex
+             font-semibold
+             items-center justify-center 
               "
+
 
 
       >
