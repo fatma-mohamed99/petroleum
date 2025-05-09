@@ -21,7 +21,7 @@ function ProjectSection() {
       >
         Unico projects
       </p>
-      <div className="w-full  my-14 mx-auto  ">
+      <div className="w-full  mb-10 mt-5 md:mt-14 md:mb-14  mx-auto  ">
         <div className=" card-3d">
           {projects.map((project) => (
             <ProjectCard

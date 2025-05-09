@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function ProjectCard({ projectData }: { projectData: Project }) {
   return (
-    <div className="bg-main/80 brightness-110 rounded-b-sm
+    <div className="bg-main/80 brightness-110 rounded-sm
       relative min-h-24 ">
       <article>
         <section className="w-full overflow-hidden rounded-t-sm    ">
@@ -15,7 +15,7 @@ function ProjectCard({ projectData }: { projectData: Project }) {
             className="w-full min-h-24 sm:h-9/10"
           />
           <article className="absolute bottom-0
-           hidden sm:block
+        
             left-0 w-full bg-black/10  backdrop-blur-sm h-4 pt-1 md:h-6
            
             ">
