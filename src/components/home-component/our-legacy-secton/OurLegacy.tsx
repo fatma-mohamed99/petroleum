@@ -59,7 +59,7 @@ export default function UnicoLegacySection() {
                 </div>
 
                 <div className="max-w-3xl mx-auto mb-10 rounded-md  p-6">
-                    <p className="text-desc-lg leading-relaxed md:text-center text-start font-normal text-textColor">
+                    <p className="text-desc-lg leading-relaxed text-center  font-normal text-textColor">
                         Over the years, <span className='text-main font-bold'>Unico</span> petroleum developed a reputation across the region
                         as a reliable provider of <b className='mx-1'>EPCC</b> services in the Oil and Gas industry.
                         Its commitment to the highest standards of quality, safety, and service level has been evident
