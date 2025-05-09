@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       <div className='  space-y-10 py-20 '> <OurLegacy /></div>
       <div className='w-full sm:w-11/12 md:w-10/12  mx-auto  '>
-        <hr className="ww-full sm:w-11/12 md:w-10/12  mx-auto h-1 text-main bg-main  rounded-2xl" />
+        <hr className="w-full sm:w-11/12 md:w-10/12  mx-auto h-1 text-white  bg-main/10  rounded-2xl" />
 
       </div>
 
@@ -26,9 +26,9 @@ export default function Home() {
 
           <CertificatesSection />
 
-          <hr className="w-full h-1 text-main bg-main  rounded-2xl" />
+          <hr className="w-full h-1 text-white  bg-main/10   rounded-2xl" />
           <ProjectSection />
-          <hr className="w-full h-1 text-main bg-main  rounded-2xl" />
+          <hr className="w-full h-1 text-white  bg-main/10   rounded-2xl" />
           <Specialties />
 
 

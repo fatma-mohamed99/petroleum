@@ -16,7 +16,7 @@ export default function HeroContent({ title }: HeroContentProps) {
                 </p> */}
                 <h1 className=" md:text-header-md text-header-sm bg-black/40 rounded-lg px-6 py-2 text-white flex  items-center justify-center   mb-6">{title}
                     <span className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Link href="#" className="      px-2  text-2xl font-medium  hover:bg-white/50 rounded-lg  text-gray-300 underline transition-colors my-auto">
+                        <Link href="#" className="      px-2  text-2xl font-medium  hover:text-white rounded-lg  text-gray-300 underline transition-colors my-auto">
                             Read more
                         </Link>
 

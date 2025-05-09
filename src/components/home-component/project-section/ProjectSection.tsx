@@ -12,7 +12,7 @@ function ProjectSection() {
             w-full
              text-center  
             flex
-             font-semibold
+             font-medium
              items-center justify-center 
               "
 

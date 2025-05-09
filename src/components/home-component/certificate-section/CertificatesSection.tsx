@@ -68,17 +68,12 @@ const CertificatesSection: React.FC = () => {
 
                     <p
                         className=" 
-            text-header-sm md:text-header-md 
-           
-            w-full
-            
-           
-             font-bold
+         text-header-sm md:text-header-md font-medium text-center mb-6
                "
 
 
                     >
-                        Unico certificates
+                        certificates
                     </p>
 
 
