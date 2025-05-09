@@ -8,19 +8,21 @@ function SpecialtyCard({ cardData }: { cardData: SpecialtyCard }) {
   const { title, imageSrc, shortDescription } = cardData;
   return (
     <div
-      className="relative flex w-full sm:w-6/13 max-w-[380px] min-h-fit sm:min-h-[362px] lg:min-h-[390px] xl:min-h-fit justify-between  lg:w-3/10
-         flex-col rounded-xl bg-main/10 bg-clip-border text-gray-700
+      className="relative flex w-full sm:w-6/13 max-w-[380px] min-h-fit sm:min-h-[362px] lg:min-h-[390px] xl:min-h-fit
+       justify-between  lg:w-3/10
+       
+         flex-col rounded-sm  bg-clip-border text-textColor
          hover:-translate-y-1 transition-all 
-         shadow-md"
+         shadow-sm shadow-textColor"
     >
       <div
-        className="relative  mx-4 -mt-6 h-40 overflow-hidden rounded-xl
-         bg-blue-gray-500 bg-clip-border text-white shadow-lg 
-         shadow-main "
+        className="relative  mx-4 -mt-6 h-40 overflow-hidden rounded-sm
+         bg-blue-gray-500 bg-clip-border text-white  
+         "
       >
         <Image
           src={imageSrc}
-          alt={""}
+          alt={title}
           width={400}
           height={200}
           className="w-full h-full"
