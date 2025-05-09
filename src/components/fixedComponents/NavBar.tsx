@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
     }, [isMenuOpen]);
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 text-textColor 
-        ${scrolled ? 'bg-fixedComponentBg  shadow-main/50 shadow-lg text-white' : 'bg-white/70 text-textColor '}
+        ${scrolled ? 'bg-fixedComponentBg  shadow-main/50 shadow-sm ' : 'bg-white/70 '}
         
         `}>
 
