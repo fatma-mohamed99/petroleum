@@ -7,16 +7,22 @@ import type { SpecialtyCard } from "@/types/SpecialtyCard ";
 function SpecialtyCard({ cardData }: { cardData: SpecialtyCard }) {
   const { title, imageSrc, shortDescription } = cardData;
   return (
-    <div
-      className="relative flex  max-w-[340px] min-w-[310px] min-h-[336px] max
-       justify-between  lg:w-3/10
-       
+    <div 
+      className="relative
+       flex max-w-[360px]
+       min-h-[340px] 
+       sm:w-9/19
+       lg:w-5/16
+       xl:max-w-[360px]
+       justify-between  
          flex-col rounded-sm  bg-clip-border text-textColor
          hover:-translate-y-1 transition-all 
          shadow-sm shadow-textColor"
     >
       <div
-        className="relative  mx-4 -mt-6 h-40 overflow-hidden rounded-sm
+        className="relative  mx-4 
+        -mt-6 h-40
+         overflow-hidden rounded-sm
          bg-blue-gray-500 bg-clip-border text-white  
          "
       >
@@ -31,7 +37,7 @@ function SpecialtyCard({ cardData }: { cardData: SpecialtyCard }) {
       <div className="p-6 flex-1">
         <h5
           className="mb-2 break-words block font-sans text-xl
-          
+          text-nowrap
           font-semibold leading-snug tracking-normal 
           text-blue-gray-900 antialiased"
         >
