@@ -38,8 +38,8 @@ const CertificateModal: React.FC<CertificateModalProps> = ({ certificate, isOpen
                     className="fixed inset-0 bg-black/15 backdrop-blur-xs z-50 flex items-center justify-center p-4"
                     onClick={onClose}
                 >
-                    <div className="absolute top-40 left-0 right-0 h-px bg-gradient-to-r from-transparent via-main/30 to-transparent"></div>
-                    <div className="absolute bottom-40 left-0 right-0 h-px bg-gradient-to-r from-transparent via-main/30 to-transparent"></div>
+                    {/* <div className="absolute top-40 left-0 right-0 h-px bg-gradient-to-r from-transparent via-main/30 to-transparent"></div>
+                    <div className="absolute bottom-40 left-0 right-0 h-px bg-gradient-to-r from-transparent via-main/30 to-transparent"></div> */}
                     <motion.div
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
@@ -65,29 +65,27 @@ const CertificateModal: React.FC<CertificateModalProps> = ({ certificate, isOpen
                             stiffness: 300,
                             damping: 25
                         }}
-                        className="relative w-full max-w-4xl "
+                        className="relative w-fit max-w-4xl "
                         onClick={(e: React.MouseEvent) => e.stopPropagation()}
                     >
                         <div className="absolute inset-0 p-1 rounded-xl bg-gradient-to-br from-main/15 via-main/10 to-main/10 animate-pulse" />
 
                         <div className=" rounded-xl o shadow-2xl relative z-10">
-                            {/* Header with gold gradient */}
-                            <div className="bg-gradient-to-r from-mainظ20 to-main/10 p-2 flex items-center justify-between">
+                            <div className="bg-gradient-to-r  to-main/10 p-2 flex items-center justify-between">
                                 <h3 className="font-bold text-xl text-textColor drop-shadow-sm">{certificate.title}</h3>
 
-                                {/* Close button */}
                                 <div
-                                    className="bg-white/20 hover:bg-white/30 text-white cursor-pointer p-2 rounded-full transition-colors"
+                                    className="bg-white/20 hover:bg-white/30 text-textColor cursor-pointer p-2 rounded-full transition-colors"
                                     onClick={onClose}
                                 >
                                     <X className="w-6 h-6" />
                                 </div>
                             </div>
 
-                            <div className="bg-gray-50 p-8 min-h-[60vh] flex items-center justify-center relative">
+                            <div className="bg-white/40 p-2  flex items-center justify-center relative">
 
 
-                                <div className="relative z-10 p-6 rounded-lg shadow-lg border border-main/20">
+                                <div className="relative z-10 p-6 rounded-lg shadow-lg border bg-white border-main/20">
                                     <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-main" />
                                     <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-main" />
                                     <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-main" />

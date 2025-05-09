@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 
 
@@ -34,19 +35,22 @@ const CertificateCard: React.FC<CertificateCardProps> = ({ certificate, onClick 
                             className="w-full h-full relative flex items-center justify-center"
 
                         >
-                            <img
+                            <Image
                                 src={certificate.thumbnail}
                                 alt={`${certificate.title} Certificate`}
+                                fill
                                 className="object-contain max-h-full max-w-full z-10 relative"
                             />
 
-                            <motion.div
-                                className="absolute inset-0 bg-gradient-to-tr from-transparent via-main/20 to-transparent"
-                                initial={{ x: -250, opacity: 0 }}
-                                whileHover={{ x: 250, opacity: 1 }}
-                                transition={{ duration: 1, ease: "easeOut" }}
-                            />
+
                         </motion.div>
+                        <div className="h-full w-0 bg-gradient-to-tr from-transparent via-main/20 to-transparent absolute -top-2 left-0 group-hover:w-full transition-all duration-700 ease-out" />
+                        {/* <motion.div
+                            className="absolute inset-0 bg-gradient-to-tr from-transparent via-main/20 to-transparent"
+                            initial={{ x: -250, opacity: 0 }}
+                            whileHover={{ x: 250, opacity: 1 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                        /> */}
                     </div>
 
                     <div className="mt-4 relative">

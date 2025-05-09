@@ -41,11 +41,10 @@ const UnicoBackgroundSVG: React.FC = () => {
             </defs>
 
             {/* Background */}
-            <rect width="100%" height="100%" fill="url(#bgGradient)" />
+
 
             {/* Sky and horizon */}
-            <rect x="0" y="0" width="100%" height="120" fill="#94a3b8" opacity="0.3" />
-            <rect x="0" y="120" width="100%" height="20" fill="#94a3b8" opacity="0.1" />
+
 
             {/* Main Horizontal Pipeline */}
             <g>

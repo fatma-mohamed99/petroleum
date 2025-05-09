@@ -18,8 +18,8 @@
 
   --text-desc-sm: 0.875rem;   
   --text-desc-md: 1rem;       
-  --text-desc-lg: 1.125rem;   
-}
+  --text-desc-lg: 1.125rem;
+ --breakpoint-3xl: 125rem;}
 .U-fromUnico::before {
   content: "U";
   color: var(--color-Chart-main);
@@ -30,3 +30,5 @@
 .footerBg{
   background-image: url("../../public/assets/footerBgImage.svg");
 }
+
+ 

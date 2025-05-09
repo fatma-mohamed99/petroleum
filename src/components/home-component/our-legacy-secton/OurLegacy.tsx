@@ -7,7 +7,7 @@ import UnicoBackgroundSVG from './UnicoBackgroundSVG';
 const OurLegacy: React.FC = () => {
     return (
         <section className="relative w-full min-h-[35rem] py-16">
-            <div className="absolute inset-0 w-full h-full opacity-20 mx-auto bg-black/40 ">
+            <div className="absolute inset-0 w-full h-full opacity-20 mx-auto  ">
                 <UnicoBackgroundSVG />
             </div>
 
@@ -19,11 +19,20 @@ const OurLegacy: React.FC = () => {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <h2
-                        className="text-header-md md:text-header-lg font-bold mb-2 mt-2 text-textColor"
+                    <p
+                        className=" 
+            text-header-sm md:text-header-md 
+           
+            w-full
+             text-center ali 
+             U-fromUnico  flex
+             font-bold
+             items-center justify-center -mt-9 "
+
+
                     >
-                        Our Legacy
-                    </h2>
+                        NICO Legacy
+                    </p>
                 </motion.div>
 
                 <motion.div
@@ -31,7 +40,7 @@ const OurLegacy: React.FC = () => {
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: false }}
-                    className="sm:max-w-3xl max-w-[95%] mx-auto   bg-main/10 rounded-lg p-8 shadow-lg"
+                    className="sm:max-w-3xl max-w-[95%] mx-auto   bg-main/10 backdrop-blur-[1.9px] rounded-lg p-8 shadow-lg"
                 >
                     <p
                         className="text-title-lg leading-relaxed text-center font-normal text-textColor"
@@ -47,7 +56,7 @@ const OurLegacy: React.FC = () => {
                         </span> */}
 
 
-                        <span className='text-main font-semibold'>Unico</span>       petroleum   developed a reputation across the region as a reliable provider of EPCC services in the Oil and Gas industry. Its commitment to the highest standards of quality, safety, and service level has been evident in the variety of projects it has completed on time and within budget and continues to be at the heart of the company's vision for the future
+                        <span className='text-main font-bold'>Unico</span>       petroleum   developed a reputation across the region as a reliable provider of <b className='mx-1'>EPCC</b>services in the Oil and Gas industry. Its commitment to the highest standards of quality, safety, and service level has been evident in the variety of projects it has completed on time and within budget and continues to be at the heart of the company's vision for the future
                     </p>
                 </motion.div>
             </div>

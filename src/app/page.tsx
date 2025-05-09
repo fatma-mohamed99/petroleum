@@ -7,8 +7,12 @@ import CertificatesSection from '@/components/home-component/certificate-section
 export default function Home() {
   return (
     <div className="grid w-full   ">
-      <HeroCarousel />
-      <div className='  space-y-10 py-20 bg-black/10'> <OurLegacy /></div>
+      <div className='inset-0 '>
+
+        <HeroCarousel />
+
+      </div>
+      <div className='  space-y-10 py-20 '> <OurLegacy /></div>
       {/* <hr className="w-full  sm:w-11/12 md:w-10/12  mx-auto h-1 text-main bg-main  rounded-2xl" /> */}
       <div className='w-full sm:w-11/12 md:w-10/12  mx-auto pt-20 pb-10 space-y-10 '>
 
