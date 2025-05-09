@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+// import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navbar from '@/components/fixedComponents/NavBar';
 import HeroContent from './HeroContent';
 import { carouselImages } from '@/consts/media';
@@ -28,17 +28,17 @@ const HeroCarousel: React.FC = () => {
         return () => clearInterval(interval);
     }, []);
 
-    const goToPrevious = () => {
-        setCurrentImageIndex((prevIndex) =>
-            prevIndex === 0 ? carouselImages.length - 1 : prevIndex - 1
-        );
-    };
+    // const goToPrevious = () => {
+    //     setCurrentImageIndex((prevIndex) =>
+    //         prevIndex === 0 ? carouselImages.length - 1 : prevIndex - 1
+    //     );
+    // };
 
-    const goToNext = () => {
-        setCurrentImageIndex((prevIndex) =>
-            prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
-        );
-    };
+    // const goToNext = () => {
+    //     setCurrentImageIndex((prevIndex) =>
+    //         prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
+    //     );
+    // };
 
 
     return (
