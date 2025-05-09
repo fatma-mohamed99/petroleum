@@ -85,7 +85,7 @@ const CertificatesSection: React.FC = () => {
 
                     <p
 
-                        className="text-textColor max-w-2xl text-title-sm mx-auto px-2"
+                        className="text-textColor  max-w-2xl text-title-sm mx-auto px-2"
                     >
                         UNICO Petroleum is proudly certified with international quality management standards,
                         demonstrating our commitment to excellence in the oil and gas industry.

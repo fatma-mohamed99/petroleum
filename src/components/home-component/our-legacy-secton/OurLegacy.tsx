@@ -43,7 +43,7 @@ const OurLegacy: React.FC = () => {
                     className="sm:max-w-3xl max-w-[95%] mx-auto   bg-main/10 backdrop-blur-[1.9px] rounded-lg p-8 shadow-lg"
                 >
                     <p
-                        className="text-title-lg leading-relaxed text-center font-normal text-textColor"
+                        className="text-title-lg leading-relaxed md:text-center text-start font-normal text-textColor"
 
                     >
                         Over the years,
