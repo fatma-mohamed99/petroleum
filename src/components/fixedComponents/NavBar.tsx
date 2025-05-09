@@ -43,13 +43,13 @@ const Navbar: React.FC = () => {
     }, [isMenuOpen]);
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 text-textColor 
-        ${scrolled ? 'bg-fixedComponentBg  shadow-main/50 shadow-lg text-white' : 'bg-transparent text-textColor '}
+        ${scrolled ? 'bg-fixedComponentBg  shadow-main/50 shadow-lg text-white' : 'bg-white/70 text-textColor '}
         
         `}>
 
             <div className="container mx-auto px-5 py-3">
                 <div className="flex justify-between items-center">
-                    <div className=" relative rounded-full w-32 h-14 bg-main/20 ">
+                    <div className=" relative rounded-full w-32 h-14 ">
 
                         <Image
                             src="/logo.png"

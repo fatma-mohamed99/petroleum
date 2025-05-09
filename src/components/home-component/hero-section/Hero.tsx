@@ -44,11 +44,11 @@ const HeroCarousel: React.FC = () => {
     return (
         <div className="relative  h-screen max-h-[50rem] ">
 
-            <div className="absolute inset-0 w-full h-full overflow-hidden">
+            {/* <div className="absolute inset-0 w-full h-full overflow-hidden">
                 {carouselImages.map((image, index) => (
                     <div
                         key={`bg-${image.id}`}
-                        className={`absolute inset-0 transition-opacity duration-1000 ${currentImageIndex === index ? 'opacity-100' : 'opacity-0'
+                        className={`absolute inset-0 transition-opacity duration-1000 ${currentImageIndex === index ? 'opacity-100' : 'opacity-z'
                             }`}
                     >
                         <div className="relative w-full h-full">
@@ -60,11 +60,11 @@ const HeroCarousel: React.FC = () => {
                                 className="blur-sm"
                                 priority={index === 0}
                             />
-                            <div className="absolute inset-0 bg-black/30"></div> {/* Overlay with opacity */}
+                            <div className="absolute inset-0 bg-white"></div>
                         </div>
                     </div>
                 ))}
-            </div>
+            </div> */}
 
 
             {/* <div className="absolute grid grid-cols-3 inset-0 w-full h-full mx-auto bg-black/5  "> */}
@@ -86,7 +86,7 @@ const HeroCarousel: React.FC = () => {
                 {carouselImages.map((image, index) => (
                     <div
                         key={image.id}
-                        className={`absolute inset-0 transition-opacity duration-1000 ${currentImageIndex === index ? 'opacity-100' : 'opacity-0'
+                        className={`absolute inset-0 transition-opacity  duration-1000 ${currentImageIndex === index ? 'opacity-100' : 'opacity-0'
                             }`}
                     >
                         <div className="relative w-full h-full">
@@ -94,12 +94,13 @@ const HeroCarousel: React.FC = () => {
                                 src={image.src}
                                 alt={image.alt}
                                 layout="fill"
+                                className='rounded-b-sm'
                                 objectFit="cover"
                                 priority={index === 0}
                             />
                             {/* <div className="absolute inset-0 bg-gradient-to-l from-main/15 to-secondary/15"></div> */}
                             {/* #################################### */}
-                            <button
+                            {/* <button
                                 onClick={goToPrevious}
                                 className="hidden md:block  absolute left-4  z-50 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/30 hover:bg-black/60 cursor-pointer transition-colors"
                             >
@@ -110,14 +111,15 @@ const HeroCarousel: React.FC = () => {
                                 className="hidden md:block absolute right-4 z-50 top-1/2 -translate-y-1/2 text-white p-2 rounded-full bg-black/30 hover:bg-black/60 cursor-pointer transition-colors"
                             >
                                 <ChevronRight size={30} />
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 ))}
+
+                {/* #################################### */}
+                <HeroContent title={carouselImages[currentImageIndex].title} />
             </div>
 
-            {/* #################################### */}
-            <HeroContent title={carouselImages[currentImageIndex].title} />
 
 
 

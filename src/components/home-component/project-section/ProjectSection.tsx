@@ -9,16 +9,13 @@ function ProjectSection() {
             text-header-sm md:text-header-md 
            
             w-full
-             text-center  
-             U-fromUnico  flex
-             font-bold
-             items-center justify-center 
+        
               "
 
 
 
       >
-        NICO projects
+        Unico projects
       </p>
       <div className="w-full  my-14 mx-auto  ">
         <div className=" card-3d">

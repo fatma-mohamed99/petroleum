@@ -71,14 +71,14 @@ const CertificatesSection: React.FC = () => {
             text-header-sm md:text-header-md 
            
             w-full
-             text-center ali 
-             U-fromUnico  flex
+            
+           
              font-bold
-             items-center justify-center  "
+               "
 
 
                     >
-                        NICO certificates
+                        Unico certificates
                     </p>
 
 
