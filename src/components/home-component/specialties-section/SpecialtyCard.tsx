@@ -8,7 +8,7 @@ function SpecialtyCard({ cardData }: { cardData: SpecialtyCard }) {
   const { title, imageSrc, shortDescription } = cardData;
   return (
     <div
-      className="relative flex w-full sm:w-6/13 max-w-[380px] min-h-fit sm:min-h-[362px] lg:min-h-[390px] xl:min-h-fit
+      className="relative flex  max-w-[340px] min-w-[310px] min-h-[336px] max
        justify-between  lg:w-3/10
        
          flex-col rounded-sm  bg-clip-border text-textColor
