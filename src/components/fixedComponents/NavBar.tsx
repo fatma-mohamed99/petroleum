@@ -27,13 +27,13 @@ const Navbar: React.FC = () => {
 
 
 
-       const toggleMenu = () => {
-        setIsMenuOpen(prev=>!prev);
+    const toggleMenu = () => {
+        setIsMenuOpen(prev => !prev);
     };
 
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 text-textColor 
-        ${scrolled ? 'bg-fixedComponentBg  shadow-main/50 shadow-sm ' : 'bg-white/70 '}
+        ${scrolled ? 'bg-fixedComponentBg  shadow-main/50 shadow-sm ' : 'lg:bg-white/70 bg-white/30  '}
         
         `}>
 
