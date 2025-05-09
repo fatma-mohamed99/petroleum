@@ -22,7 +22,7 @@ function Footer() {
                 <Link
                   href={link.href}
                   key={link.id}
-                  className="p-3 rounded-full bg-black/30 text-white hover:bg-main/70 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+                  className="p-3 cursor-pointer  rounded-full bg-black/30 text-white hover:bg-main/70 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Visit our ${link.id} page`}
@@ -41,14 +41,14 @@ function Footer() {
             <div className="flex flex-wrap gap-4 justify-center">
               <button
                 onClick={() => openPdfInNewTab(brochurePath)}
-                className="bg-main hover:bg-main/80 text-white px-5 py-2.5 rounded-md text-sm transition duration-300 flex gap-2 items-center shadow-md hover:shadow-xl"
+                className="bg-main cursor-pointer  hover:bg-main/80 text-white px-5 py-2.5 rounded-md text-sm transition duration-300 flex gap-2 items-center shadow-md hover:shadow-xl"
                 aria-label="View brochure"
               >
                 <View size={18} /> View
               </button>
               <button
                 onClick={() => downloadPdf(brochurePath, "brochure")}
-                className="border-2 border-main text-white px-5 py-2.5 rounded-md text-sm transition duration-300 flex gap-2 items-center shadow-md hover:shadow-xl hover:bg-black/40"
+                className="border-2 cursor-pointer  border-main text-white px-5 py-2.5 rounded-md text-sm transition duration-300 flex gap-2 items-center shadow-md hover:shadow-xl hover:bg-black/40"
                 aria-label="Download brochure"
               >
                 <FileDown size={18} /> Download
@@ -70,7 +70,7 @@ function Footer() {
                 <Link
                   href={link.target}
                   key={link.title}
-                  className="px-4 py-2 rounded-xl bg-black/30 text-sm hover:bg-main/70 text-white transition duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+                  className="px-4 py-2 cursor-pointer rounded-xl bg-black/30 text-sm hover:bg-main/70 text-white transition duration-300 transform hover:-translate-y-1 hover:shadow-lg"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -97,7 +97,7 @@ function Footer() {
                 <Mail size={18} className="text-main" />
                 <a
                   href="mailto:info@unico-petroleum.com"
-                  className="hover:text-main transition-colors duration-300"
+                  className="hover:text-main cursor-pointer  transition-colors duration-300"
                 >
                   info@unico-petroleum.com
                 </a>
