@@ -13,7 +13,7 @@ function SpecialtyCard({ cardData, isMiddle = false }: { cardData: SpecialtyCard
         justify-between
         flex-col
         bg-clip-border 
-        ${isMiddle ? 'bg-main text-white' : 'text-textColor'}
+        ${isMiddle ? 'bg-main/10 text-textColor' : 'text-textColor'}
         hover:-translate-y-1 transition-all
         shadow-sm shadow-textColor`}
     >
@@ -37,13 +37,13 @@ function SpecialtyCard({ cardData, isMiddle = false }: { cardData: SpecialtyCard
           className={`mb-2 break-words block font-sans text-xl
           text-nowrap
           font-semibold leading-snug tracking-normal
-          ${isMiddle ? 'text-white' : 'text-blue-gray-900'} antialiased`}
+          antialiased`}
         >
           {title}
         </h5>
         <p
           className={`block font-sans text-base
-          font-light leading-relaxed ${isMiddle ? 'text-white/90' : 'text-inherit'} antialiased`}
+          font-light leading-relaxed  antialiased`}
         >
           {shortDescription}
         </p>

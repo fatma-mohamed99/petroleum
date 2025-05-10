@@ -9,9 +9,8 @@ function Specialties() {
 
   const totalCards = specialties.length;
 
-
-
-  const [cardsToShow, setCardsToShow] = useState(3);
+  // Always start with one card by default
+  const [cardsToShow, setCardsToShow] = useState(1);
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,8 +18,10 @@ function Specialties() {
 
       if (width >= 1280) {
         setCardsToShow(3);
-      } else if (width >= 768) {
+      } else if (width >= 1024) {
         setCardsToShow(2);
+      } else if (width <= 1024) {
+        setCardsToShow(1);
       } else {
         setCardsToShow(1);
       }
@@ -31,10 +32,6 @@ function Specialties() {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-
-
-
 
   const getVisibleSpecialties = () => {
     const visible = [];
@@ -56,7 +53,7 @@ function Specialties() {
   };
 
   useEffect(() => {
-    let interval: ReturnType<typeof setInterval> | undefined;
+    let interval: any;
     if (isAutoplay) {
       interval = setInterval(() => {
         nextSlide();
@@ -70,13 +67,14 @@ function Specialties() {
 
   return (
     <div className="py-10">
-      <p className="text-header-lg  w-full text-center font-medium flex items-center justify-center">
+      <p className="text-header-lg w-full text-center font-medium flex items-center justify-center">
         Our Specialties
       </p>
 
-      <p className="text-desc-lg leading-relaxed text-center mb-15 mt-5 max-w-2xl mx-auto  font-normal text-textColor">
+      <p className="text-desc-lg leading-relaxed text-center mb-15 mt-5 max-w-2xl mx-auto font-normal text-textColor">
         We offer a wide range of engineering specialties tailored to meet the needs of the oil and gas industry with precision and innovation.
       </p>
+
       <div
         className="relative w-full max-w-6xl mx-auto"
         onMouseEnter={handleMouseEnter}
@@ -88,11 +86,11 @@ function Specialties() {
               {getVisibleSpecialties().map((specialty, idx) => (
                 <div
                   key={`${specialty.title}-${idx}`}
-                  className="md:w-[40%] xl:w-1/3 sm:w-2/3 w-[95%] flex-shrink-0 flex flex-col"
+                  className="w-[95] sm:w-[95] md:w-2/3 lg:w-1/3 xl:w-1/3 flex-shrink-0 flex flex-col"
                 >
                   <SpecialtyCard
                     cardData={specialty}
-                    isMiddle={idx === 1}
+                    isMiddle={cardsToShow === 1 || (cardsToShow === 3 && idx === 1)}
                   />
                 </div>
               ))}
@@ -105,7 +103,7 @@ function Specialties() {
             <button
               key={index}
               onClick={() => goToCard(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${index === currentIndex ? "bg-main" : "bg-gray-300"
+              className={`w-3 h-3 rounded-full transition-colors ${index === currentIndex ? "bg-main" : "bg-main/10"
                 }`}
               aria-label={`View ${specialty.title}`}
             />
