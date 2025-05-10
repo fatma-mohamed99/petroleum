@@ -1,11 +1,13 @@
-import React from 'react';
+"use client"
+import ReusablePage from '@/components/reusable-page/ReusablePage';
+import { aboutUsData } from '@/types/reusable';
 
-function AboutUs() {
+export default function AboutUs() {
     return (
-        <div className='min-h-screen'>
-            AboutUs
-        </div>
+        <ReusablePage
+            pageTitle="About Us"
+            pageData={aboutUsData}
+            defaultTab="overview"
+        />
     );
 }
-
-export default AboutUs;

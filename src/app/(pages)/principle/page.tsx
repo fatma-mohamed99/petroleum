@@ -1,11 +1,13 @@
-import React from 'react';
+"use client"
+import ReusablePage from '@/components/reusable-page/ReusablePage';
+import { PrincipleData } from '@/types/reusable';
 
-function Principle() {
+export default function Principle() {
     return (
-        <div className='min-h-screen'>
-            Principle
-        </div>
+        <ReusablePage
+            pageTitle="Our Principle"
+            pageData={PrincipleData}
+            defaultTab="crude-oil-gathering-stations"
+        />
     );
 }
-
-export default Principle;

@@ -1,11 +1,13 @@
-import React from 'react';
+"use client"
+import ReusablePage from '@/components/reusable-page/ReusablePage';
+import { expertiseData } from '@/types/reusable';
 
-function Expertise() {
+export default function Expertise() {
     return (
-        <div className='min-h-screen'>
-            Expertise
-        </div>
+        <ReusablePage
+            pageTitle="Our Expertise"
+            pageData={expertiseData}
+            defaultTab="basic-detailed-design"
+        />
     );
 }
-
-export default Expertise;

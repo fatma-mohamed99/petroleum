@@ -1,11 +1,13 @@
-import React from 'react';
+"use client"
+import ReusablePage from '@/components/reusable-page/ReusablePage';
+import { SpecialtiesData } from '@/types/reusable';
 
-function Specialties() {
+export default function Specialties() {
     return (
-        <div className='min-h-screen'>
-            Specialties
-        </div>
+        <ReusablePage
+            pageTitle="Our Specialties"
+            pageData={SpecialtiesData}
+            defaultTab="introduction"
+        />
     );
 }
-
-export default Specialties;
