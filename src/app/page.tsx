@@ -10,35 +10,29 @@ export default function Home() {
         <HeroCarousel />
       </div>
       {/* ###################################### */}
-      <div className=" py-12 my-5 ">
-      
+      <div className=" py-12 my-8 ">
         <OurLegacy />
       </div>
-      
 
       {/* ###################################### */}
-      <div className="w-full bg-main/5">
-
-      <div className="w-full  sm:w-11/12 md:w-10/12   mx-auto py-12 my-7">
+      <div className="w-full bg-main/5 py-10  my-10">
+        <div className="w-full  sm:w-11/12 md:w-10/12   mx-auto ">
           <CertificatesSection />
-      </div>
-
+        </div>
       </div>
       {/* ###################################### */}
 
-
-      <div className="py-12 my-5   ">
+      <div className="py-12 my-10  ">
         <ProjectSection />
       </div>
 
       {/* ###################################### */}
-      <div className="w-full bg-main/5">
-
-      <div className="w-full sm:w-11/12 md:w-10/12  mx-auto py-12  ">
+      <div className="w-full  my-10">
+        <div className="w-full sm:w-11/12 md:w-10/12  mx-auto py-12  ">
           <Specialties />
+        </div>
+        {/* ###################################### */}
       </div>
-      {/* ###################################### */}
-    </div>
     </div>
   );
 }

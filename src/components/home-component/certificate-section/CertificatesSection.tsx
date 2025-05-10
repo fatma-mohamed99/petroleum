@@ -44,7 +44,7 @@ const CertificatesSection: React.FC = () => {
     };
 
     return (
-        <section className="relative -mt-14 pb-15">
+        <section className="relative mt-14 pb-15">
 
 
 
