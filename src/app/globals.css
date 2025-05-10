@@ -1,13 +1,13 @@
 @import "tailwindcss";
 :root{
-  --color-Chart-main:oklch(44.34% 0.096 69.43) ;
+  --color-Chart-main:#434343 ;
 
 }
 /* {4e6e5d,} */
 
 @theme {
 /* --color-main: #003b5c; الازرق*/
---color-bgCard:#003b5c0F ;       
+--color-bgCard:#43434300 ;       
 /* --color-main: #4e6e5d; /الزيتى يا فاطمة*/
 
 --color-main: #434343; 
