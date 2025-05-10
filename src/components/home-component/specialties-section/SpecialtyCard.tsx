@@ -13,7 +13,7 @@ function SpecialtyCard({ cardData, isMiddle = false }: { cardData: SpecialtyCard
         justify-between
         flex-col
         bg-clip-border 
-        ${isMiddle ? 'bg-main/10 text-textColor' : 'text-textColor'}
+        ${isMiddle ? 'bg-main/5 text-textColor' : 'text-textColor'}
         hover:-translate-y-1 transition-all
         shadow-sm shadow-textColor`}
     >
@@ -21,7 +21,7 @@ function SpecialtyCard({ cardData, isMiddle = false }: { cardData: SpecialtyCard
         className="relative mx-4
         -mt-6 h-40
         overflow-hidden
-        bg-blue-gray-500 bg-clip-border text-white
+         bg-clip-border text-white
         "
       >
         <Image
