@@ -53,7 +53,7 @@ function ProjectSection() {
                 </button>
               </div>
             </div>
-            <div className="flex justify-between items-center 
+            <div className="flex justify-around items-center 
             px-2 md:py-5 sm:px-10 md:px-6">
               <div className="flex gap-0.5 items-center">
                 {paginationItems.map((item, idx) =>
