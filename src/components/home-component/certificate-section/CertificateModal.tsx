@@ -68,24 +68,24 @@ const CertificateModal: React.FC<CertificateModalProps> = ({ certificate, isOpen
                         className="relative w-fit max-w-4xl "
                         onClick={(e: React.MouseEvent) => e.stopPropagation()}
                     >
-                        <div className="absolute inset-0 p-1 rounded-xl bg-gradient-to-br from-main/15 via-main/10 to-main/10 animate-pulse" />
+                        <div className="absolute inset-0 p-1 bg-gradient-to-br from-main/15 via-main/10 to-main/10 animate-pulse" />
 
-                        <div className=" rounded-xl o shadow-2xl relative z-10">
-                            <div className="bg-gradient-to-r  to-main/10 p-2 flex items-center justify-between">
-                                <h3 className="font-bold text-xl text-white drop-shadow-sm">{certificate.title}</h3>
+                        <div className=" o shadow-2xl relative z-10">
+                            <div className="bg-gradient-to-r  to-main/10 p-1 ml-1 flex items-center justify-between">
+                                <h3 className="font-bold text-title-md text-white drop-shadow-sm">{certificate.title}</h3>
 
                                 <div
-                                    className="bg-black/20 text-white hover:bg-white/30  cursor-pointer p-2 rounded-full transition-colors"
+                                    className="bg-black/20 text-white hover:bg-white/30  cursor-pointer p-1 mr-1 transition-colors"
                                     onClick={onClose}
                                 >
-                                    <X className="w-6 h-6" />
+                                    <X className="w-4 h-4" />
                                 </div>
                             </div>
 
                             <div className="bg-white/40 p-2  flex items-center justify-center relative">
 
 
-                                <div className="relative z-10 p-6 rounded-lg shadow-lg border bg-white border-main/20">
+                                <div className="relative z-10 p-6  shadow-lg border bg-white border-main/20">
                                     <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-main" />
                                     <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-main" />
                                     <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-main" />

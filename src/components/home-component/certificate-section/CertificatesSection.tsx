@@ -68,7 +68,7 @@ const CertificatesSection: React.FC = () => {
 
                     <p
                         className=" 
-         text-header-sm md:text-header-md font-medium text-center mb-6
+      text-header-lg font-medium text-center mb-6
                "
 
 

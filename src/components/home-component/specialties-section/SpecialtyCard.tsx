@@ -7,22 +7,22 @@ import type { SpecialtyCard } from "@/types/SpecialtyCard ";
 function SpecialtyCard({ cardData }: { cardData: SpecialtyCard }) {
   const { title, imageSrc, shortDescription } = cardData;
   return (
-    <div 
+    <div
       className="relative
        flex max-w-[360px]
        min-h-[340px] 
        sm:w-9/19
        lg:w-5/16
-       xl:max-w-[360px]
+       xl:max-w-[360pFx]
        justify-between  
-         flex-col rounded-sm  bg-clip-border text-textColor
-         hover:-translate-y-1 transition-all 
+         flex-col   bg-clip-border text-textColor
+F         hover:-translate-y-1 transition-all 
          shadow-sm shadow-textColor"
     >
       <div
         className="relative  mx-4 
         -mt-6 h-40
-         overflow-hidden rounded-sm
+         overflow-hidden 
          bg-blue-gray-500 bg-clip-border text-white  
          "
       >

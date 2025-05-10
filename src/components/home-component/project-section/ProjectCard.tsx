@@ -8,7 +8,7 @@ function ProjectCard({ projectData }: { projectData: Project }) {
     <div className="bg-main/80 brightness-110 rounded-sm
       relative min-h-24 ">
       <article>
-        <section className="w-full overflow-hidden rounded-t-sm    ">
+        <section className="w-full overflow-hidden     ">
           <Image
             alt={`${projectData.title}logo`}
             src={projectData.image}

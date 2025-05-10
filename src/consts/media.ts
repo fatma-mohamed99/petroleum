@@ -32,10 +32,60 @@ export const media = [
 // ################################hero-section ########################################
 
 
-
+// Updated carousel images with custom button text
 export const carouselImages = [
-  { id: 1, src: '/images/hero-img/slider1.webp', alt: 'Coastal view ', title: "Liquified Petroleum Gas (LPG) Spherical Tanks" },
-  { id: 2, src: '/images/hero-img/slider2.jpg', alt: 'Coastal view', title: "Liquified Petroleum Gas (pPG) Spherical Tanks" },
-  { id: 3, src: '/images/hero-img/slider4.jpg', alt: 'Coastal view', title: "Liquified Petroleum Gas (ppp) Spherical Tanks" },
-
+  {
+    id: 1,
+    src: '/images/hero-img/slider1.webp',
+    alt: 'About Us',
+    title: "Engineering Excellence Since 2005",
+    description: "Trusted EPCC partner across the Levant region",
+    pageLink: "/about-us",
+    buttonText: "Discover Our Story"
+  },
+  {
+    id: 2,
+    src: '/images/hero-img/slider2.jpg',
+    alt: 'Specialties',
+    title: "Complete Oil & Gas Solutions",
+    description: "From pipelines to tank farms and metering stations",
+    pageLink: "/specialties",
+    buttonText: "Explore Services"
+  },
+  {
+    id: 3,
+    src: '/images/hero-img/slider3.jpg',
+    alt: 'Expertise',
+    title: "End-to-End Project Management",
+    description: "Design, procurement, construction, and commissioning",
+    pageLink: "/expertise",
+    buttonText: "View Capabilities"
+  },
+  {
+    id: 4,
+    src: '/images/hero-img/slider4.jpg',
+    alt: 'Principle',
+    title: "Values That Drive Success",
+    description: "Honesty, accountability, and continuous improvement",
+    pageLink: "/principle",
+    buttonText: "Our Principles"
+  },
+  {
+    id: 5,
+    src: '/images/hero-img/slider5.jpg',
+    alt: 'Projects',
+    title: "Successful Regional Projects",
+    description: "Over 25 completed oil & gas installations",
+    pageLink: "/projects",
+    buttonText: "See Our Work"
+  },
+  {
+    id: 6,
+    src: '/images/hero-img/slider6.jpg',
+    alt: 'Suppliers',
+    title: "Industry-Leading Partnerships",
+    description: "Working with top-tier equipment and material providers",
+    pageLink: "/suppliers",
+    buttonText: "Our Network"
+  },
 ];

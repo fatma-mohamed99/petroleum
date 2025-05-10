@@ -7,7 +7,7 @@ function Specialties() {
     <div className="py-10">
       <p
         className=" 
-        text-header-sm md:text-header-md pb-14 w-full
+        text-header-lg pb-14 w-full
              text-center ali 
              font-medium
       flex

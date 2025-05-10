@@ -1,30 +1,27 @@
 export const pages = [
+
   {
-    title: "Home",
-    target: "/"
+    title: "About Us",
+    target: "/about-us"
   },
-    {
-      title: "About Us",
-      target: "/about-us"
-    },
-    {
-      title: "Specialties",
-      target: "/specialties"
-    },
-    {
-      title: "Expedites",
-      target: "/expertise"
-    },
-    {
-      title: "Projects ",
-      target: "/projects"
-    },
-    {
-      title: "Principle",
-      target: "/principle"
-    },
-    {
-      title: "Suppliers",
-      target: "/suppliers"
-    }
-  ];
+  {
+    title: "Specialties",
+    target: "/specialties"
+  },
+  {
+    title: "Expertise",
+    target: "/expertise"
+  },
+  {
+    title: "Projects ",
+    target: "/projects"
+  },
+  {
+    title: "Principle",
+    target: "/principle"
+  },
+  {
+    title: "Suppliers",
+    target: "/suppliers"
+  }
+];
