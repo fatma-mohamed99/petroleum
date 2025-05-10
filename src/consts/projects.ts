@@ -16,7 +16,7 @@ import FiscalMeteringStationforSLGP from "../../public/images/projects/FiscalMet
 
 
 export const projects: Project[] = [
-  {
+  { id:"1",
     title: "Vitol Tank Terminal Vasiliko",
     image: VitolTankTerminalVasilikoVTTVCyprus,
     shortDesc: "Fuel terminal in Cyprus with 200,000 m³ capacity and multiple tank types.",
@@ -30,7 +30,7 @@ export const projects: Project[] = [
       "Cone roof storage, irrigation, and fire water tanks"
     ]
   },
-  {
+  {id:"2",
     title: "Crude Oil Pipeline Capacity",
     image: IncreasingCapacityofHeavyCrudeOilPipeline,
     shortDesc: "Upgraded heavy crude pipeline with loop lines and control systems.",
@@ -45,7 +45,8 @@ export const projects: Project[] = [
       "SCADA Control System"
     ]
   },
-  {
+   {id:"3",
+
     title: "Homs Adra Gas Pipeline",
     image: HomsAdraGasoilpipelinewithtwotankterminals,
     shortDesc: "Gas oil pipeline with two tank terminals and advanced pumping stations.",
@@ -60,7 +61,8 @@ export const projects: Project[] = [
       "Control, Firefighting and Utility systems included"
     ]
   },
-  {
+    {id:"4",
+
     title: "Fiscal Station for AGP",
     image: FiscalMeteringStationforAGPPhaseII,
     shortDesc: "Fiscal Metering Station at Turkish border for 9 MSCM/day gas.",
@@ -73,7 +75,7 @@ export const projects: Project[] = [
       "Pig Launching / Receiving Stations"
     ]
   },
-  {
+  {id:"5",
     title: "Arab Gas Pipeline Phase II",
     image: ArabGasPipelinePhaseIIPart1,
     shortDesc: "36” x 60 km gas pipeline from Aleppo to Turkish border.",
@@ -88,7 +90,7 @@ export const projects: Project[] = [
       "Fiscal Metering Station for 9 MSCM/day"
     ]
   },
-  {
+  {id:"6",
     title: "Talkalakh Pumping Station",
     image: IntermediatePumpingStationinTalkalakh,
     shortDesc: "Intermediate pumping station with fuel storage and control systems.",
@@ -103,7 +105,7 @@ export const projects: Project[] = [
       "MV Electrical, Firefighting and Utility systems"
     ]
   },
-  {
+  {id:"7",
     title: "Al-Raqa Tank Farm",
     image: AlRaqaTankFarm,
     shortDesc: "Large tank farm with rail and truck loading stations.",
@@ -117,7 +119,7 @@ export const projects: Project[] = [
       "Control, Firefighting and Utility systems"
     ]
   },
-  {
+  {id:"8",
     title: "LPG Spherical Tanks Syria",
     image: LPGSphericalTanksinSyria,
     shortDesc: "LPG spherical tanks with horizontal pumps in Adra and multiple cities.",
@@ -131,7 +133,7 @@ export const projects: Project[] = [
       "Firefighting system"
     ]
   },
-  {
+  {id:"9",
     title: "PRMS Banias Power Plant",
     image: PRMSatBaniasPowerPlant,
     shortDesc: "Pressure Reduction & Metering Station at end of 24” gas line.",
@@ -145,7 +147,8 @@ export const projects: Project[] = [
       "PRMS capacity: 5 MSCM/day"
     ]
   },
-  {
+    {id:"10",
+
     title: "Areeka Tank Farm Project",
     image: AreekaTankFarm,
     shortDesc: "Mid-size fuel tank farm with truck loading system.",
@@ -159,7 +162,7 @@ export const projects: Project[] = [
       "Control and Utility systems"
     ]
   },
-  {
+  {id:"11",
     title: "Ezra Tank Farm Project",
     image: EzraTankFarm,
     shortDesc: "Large dual-site tank farm with 280,000 Ton capacity.",
@@ -173,7 +176,8 @@ export const projects: Project[] = [
       "Control, firefighting, and utility systems"
     ]
   },
-  {
+   {id:"12",
+
     title: "Fiscal Station for SLGP",
     image: FiscalMeteringStationforSLGP,
     shortDesc: "Fiscal metering for SLGP with advanced instrumentation.",
