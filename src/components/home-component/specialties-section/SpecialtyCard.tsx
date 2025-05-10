@@ -3,25 +3,26 @@ import Image from "next/image";
 import React from "react";
 import type { SpecialtyCard as SpecialtyCardType } from "@/types/SpecialtyCard ";
 
-function SpecialtyCard({ cardData, isMiddle = true }: { cardData: SpecialtyCardType, isMiddle?: boolean }) {
+function SpecialtyCard({ cardData, }: { cardData: SpecialtyCardType }) {
   const { title, imageSrc, shortDescription } = cardData;
   return (
     <div
-      className={`relative 
-        flex 
+      className={`relative
+        flex
+        w-full
         min-h-[340px]
         justify-between
         flex-col
         bg-clip-border 
-        ${isMiddle ? 'bg-main/5 text-textColor' : 'text-textColor'}
+    text-textColor
         hover:-translate-y-1 transition-all
         shadow-sm shadow-textColor`}
     >
       <div
         className="relative mx-4
         -mt-6 h-40
-        overflow-hidden
-         bg-clip-border text-white
+        overflow-hidden 
+        bg-clip-border text-white
         "
       >
         <Image
@@ -29,13 +30,12 @@ function SpecialtyCard({ cardData, isMiddle = true }: { cardData: SpecialtyCardT
           alt={title}
           width={400}
           height={200}
-          className="w-full h-full"
+          className="w-full h-full object-cover"
         />
       </div>
       <div className="p-6 flex-1">
         <h5
           className={`mb-2 break-words block font-sans text-xl
-          text-nowrap
           font-semibold leading-snug tracking-normal
           antialiased`}
         >
@@ -43,7 +43,7 @@ function SpecialtyCard({ cardData, isMiddle = true }: { cardData: SpecialtyCardT
         </h5>
         <p
           className={`block font-sans text-base
-          font-light leading-relaxed  antialiased`}
+          font-light leading-relaxed antialiased`}
         >
           {shortDescription}
         </p>
