@@ -88,7 +88,7 @@ function Specialties() {
               {getVisibleSpecialties().map((specialty, idx) => (
                 <div
                   key={`${specialty.title}-${idx}`}
-                  className="md:w-1/2 xl:w-1/3 sm:w-2/3 w-[95%] flex-shrink-0 flex flex-col"
+                  className="md:w-[40%] xl:w-1/3 sm:w-2/3 w-[95%] flex-shrink-0 flex flex-col"
                 >
                   <SpecialtyCard
                     cardData={specialty}
