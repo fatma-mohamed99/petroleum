@@ -53,8 +53,7 @@ function Specialties() {
   };
 
   useEffect(() => {
-    let interval: any;
-    if (isAutoplay) {
+    let interval: ReturnType<typeof setInterval>; if (isAutoplay) {
       interval = setInterval(() => {
         nextSlide();
       }, 5000);
