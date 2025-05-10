@@ -71,14 +71,14 @@ const CertificateModal: React.FC<CertificateModalProps> = ({ certificate, isOpen
                         <div className="absolute inset-0 p-1 bg-gradient-to-br from-main/15 via-main/10 to-main/10 animate-pulse" />
 
                         <div className=" o shadow-2xl relative z-10">
-                            <div className="bg-gradient-to-r  to-main/10 p-2 flex items-center justify-between">
-                                <h3 className="font-bold text-xl text-white drop-shadow-sm">{certificate.title}</h3>
+                            <div className="bg-gradient-to-r  to-main/10 p-1 ml-1 flex items-center justify-between">
+                                <h3 className="font-bold text-title-md text-white drop-shadow-sm">{certificate.title}</h3>
 
                                 <div
-                                    className="bg-black/20 text-white hover:bg-white/30  cursor-pointer p-2  transition-colors"
+                                    className="bg-black/20 text-white hover:bg-white/30  cursor-pointer p-1 mr-1 transition-colors"
                                     onClick={onClose}
                                 >
-                                    <X className="w-6 h-6" />
+                                    <X className="w-4 h-4" />
                                 </div>
                             </div>
 
