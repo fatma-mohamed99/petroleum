@@ -45,7 +45,10 @@ export default function ReusablePage({
                                 {pageData.map(item => (
                                     <button
                                         key={item.id}
-                                        onClick={() => setSelectedTab(item.id)}
+                                        onClick={() => {
+                                            setSelectedTab(item.id);
+                                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                                        }}
                                         className={`p-4  xl:text-title-md text-title-md lg:text-title-sm text-left transition-all duration-300 border-l-4 flex items-center ${selectedTab === item.id
                                             ? 'border-textColor bg-main/20 font-medium text-textColor'
                                             : 'border-transparent hover:bg-main/20 hover:border-gray-200'
