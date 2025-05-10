@@ -49,7 +49,7 @@ function SpecialtyCard({ cardData, isMiddle = false }: { cardData: SpecialtyCard
         </p>
       </div>
       <div className="p-6 pt-0 text-center sm:text-start">
-        <CustomButton className={isMiddle ? 'bg-white text-main hover:bg-white/50 ' : 'bg-main text-white'}>
+        <CustomButton >
           More Detail
         </CustomButton>
       </div>
