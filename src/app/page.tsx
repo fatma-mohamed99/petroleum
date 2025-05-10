@@ -20,7 +20,7 @@ export default function Home() {
       </div>
       {/* ###################################### */}
 
-      <div className='w-full sm:w-11/12 md:w-10/12  mx-auto pt-20 pb-10 space-y-10 '>
+      <div className='w-full   mx-auto pt-20 pb-10 space-y-10 '>
 
 
         <div className='w-full sm:w-11/12 md:w-10/12  mx-auto  space-y-15 my-15 '>
@@ -43,7 +43,7 @@ export default function Home() {
       </div>
       {/* ###################################### */}
 
-      <div className='w-full sm:w-11/12 md:w-10/12  mx-auto pt-20 pb-10 space-y-10 '>
+      <div className='w-full  mx-auto pt-20 pb-10 space-y-10 '>
 
 
         <div className='w-full sm:w-11/12 md:w-10/12  mx-auto  space-y-15 my-15 '>
