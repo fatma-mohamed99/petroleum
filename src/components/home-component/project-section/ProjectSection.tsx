@@ -21,15 +21,16 @@ function ProjectSection() {
   );
 
   return (
-    <div className="min-h-full">
-      <p className="text-header-lg w-full text-center flex font-medium items-center justify-center ">
+    <div className="">
+      <p className="text-header-lg w-full text-center
+       flex font-medium items-center justify-center ">
         Unico projects
       </p>
       <p className="max-w-3xl mx-auto mb-10 my-5    text-desc-lg leading-relaxed text-center  font-normal text-textColor">
    With 20+ years in Oil & Gas, UNICO has delivered 25+ projects across the Levant region, specializing in storage tanks, pipelines,
     and pumping stations with international standards
       </p>
-      <div className="w-11/12 md:w-full lg:w-10/12 xl:w-9/12   mx-auto text-textColor bg-main/5 md:max-h-[400px]">
+      <div className="w-10/12 sm:w-8/12 md:w-full lg:w-10/12 xl:w-9/12   mx-auto text-textColor bg-main/5 md:max-h-[400px]">
         <div className="flex justify-between flex-col-reverse md:flex-row">
           <div className="w-full md:w-1/2 py-4 md:py-8 space-y-10 bg-white/20 md:bg-transparent">
             <div className="space-y-2 md:space-y-4 w-full md:px-6 flex flex-col justify-center md:justify-start text-center md:text-start">
