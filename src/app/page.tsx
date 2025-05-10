@@ -32,13 +32,17 @@ export default function Home() {
       </div>
 
       {/* ###################################### */}
-      <div className="w-full bg-main/5">
+<<<<<<< HEAD
+  <div className="w-full bg-main/5">
 
-        <div className="w-full sm:w-11/12 md:w-10/12  mx-auto py-12  ">
-          <Specialties />
-        </div>
-        {/* ###################################### */}
+=======
+      <div className="w-full  my-10">
+>>>>>>> f3ffd11c701cf0a526f20256e7121a7ef59d13af
+      <div className="w-full sm:w-11/12 md:w-10/12  mx-auto py-12  ">
+        <Specialties />
       </div>
+      {/* ###################################### */}
     </div>
+  </div>
   );
 }
