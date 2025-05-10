@@ -26,11 +26,11 @@ const CertificateCard: React.FC<CertificateCardProps> = ({ certificate, onClick 
             className="relative group"
             onClick={onClick}
         >
-            <div className="md:mx-0 mx-5 bg-white rounded-lg overflow-hidden cursor-pointer relative shadow-lg transform transition-all duration-500 ">
-                {/* <div className="absolute inset-0 rounded-lg p-[2px] bg-gradient-to-br from-main via-main/10 to-main opacity-0 group-hover:opacity-100 transition-opacity duration-500" /> */}
+            <div className="md:mx-0 mx-5 bg-white  overflow-hidden cursor-pointer relative shadow-lg transform transition-all duration-500 ">
+                {/* <div className="absolute inset-0  p-[2px] bg-gradient-to-br from-main via-main/10 to-main opacity-0 group-hover:opacity-100 transition-opacity duration-500" /> */}
 
-                <div className="relative bg-white rounded-lg overflow-hidden p-4 z-10">
-                    <div className="h-64 flex items-center justify-center overflow-hidden bg-gray-50 rounded-lg">
+                <div className="relative bg-white  overflow-hidden p-4 z-10">
+                    <div className="h-64 flex items-center justify-center overflow-hidden bg-gray-50 ">
                         <motion.div
                             className="w-full h-full relative flex items-center justify-center"
 

@@ -11,12 +11,12 @@ function SpecialtyCard({ cardData }: { cardData: SpecialtyCard }) {
       className="relative flex  max-w-[340px] min-w-[310px] min-h-[336px] max
        justify-between  lg:w-3/10
        
-         flex-col rounded-sm  bg-clip-border text-textColor
+         flex-col   bg-clip-border text-textColor
          hover:-translate-y-1 transition-all 
          shadow-sm shadow-textColor"
     >
       <div
-        className="relative  mx-4 -mt-6 h-40 overflow-hidden rounded-sm
+        className="relative  mx-4 -mt-6 h-40 overflow-hidden 
          bg-blue-gray-500 bg-clip-border text-white  
          "
       >

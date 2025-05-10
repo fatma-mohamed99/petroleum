@@ -14,16 +14,16 @@ export default function HeroContent({ title }: HeroContentProps) {
                 >
                     NICO petroleum
                 </p> */}
-                <h1 className=" lg:text-header-md text-start text-header-sm  bg-black/40 rounded-lg px-6 py-2 text-white   items-center justify-center   mb-6">{title}
+                <h1 className=" lg:text-header-md text-start text-header-sm  bg-black/40  px-6 py-2 text-white   items-center justify-center   mb-6">{title}
 
-                    <Link href="#" className=" inline text-nowrap     px-2  text-2xl font-medium  hover:text-white rounded-lg  text-gray-300 underline transition-colors my-auto">
+                    <Link href="#" className=" inline text-nowrap     px-2  text-2xl font-medium  hover:text-white   text-gray-300 underline transition-colors my-auto">
                         Read more
                     </Link>
 
                 </h1>
 
                 {/* <div className="flex flex-col sm:flex-row justify-center gap-4">
-                    <Link href="#" className="     rounded-lg px-4 py-2 text-2xl font-medium bg-main hover:bg-main/50 text-white  transition-colors">
+                    <Link href="#" className="      px-4 py-2 text-2xl font-medium bg-main hover:bg-main/50 text-white  transition-colors">
                         Read more
                     </Link>
 

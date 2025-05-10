@@ -94,7 +94,6 @@ const HeroCarousel: React.FC = () => {
                                 src={image.src}
                                 alt={image.alt}
                                 layout="fill"
-                                className='rounded-b-sm'
                                 objectFit="cover"
                                 priority={index === 0}
                             />

@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 function ProjectSection() {
   return (
     <div className="w-full  py-10
-       overflow-hidden  rounded-sm">
+       overflow-hidden ">
       <p
         className=" 
             text-header-sm md:text-header-md 
