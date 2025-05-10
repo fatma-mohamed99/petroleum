@@ -37,13 +37,13 @@ export default function Home() {
       {/* ###################################### */}
 
 
-      <div className='inset-0  space-y-10 py-0 lg:py-20 bg-main/10 '>    <ProjectSection /> </div>
+      <div className='inset-0  space-y-10 py-0 lg:py-20  '>    <ProjectSection /> </div>
       <div className='w-full sm:w-11/12 md:w-10/12  mx-auto  '>
 
       </div>
       {/* ###################################### */}
 
-      <div className='w-full  mx-auto pt-20 pb-10 space-y-10 '>
+      <div className='w-full  mx-auto pt-20 pb-10 space-py-10 '>
 
 
         <div className='w-full sm:w-11/12 md:w-10/12  mx-auto  space-y-15 my-15 '>

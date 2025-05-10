@@ -3,6 +3,8 @@ import Image from "next/image";
 
 function ProjectCard({ projectData }: { projectData: Project }) {
   return (
+
+    
     <div className="bg-main/80 brightness-110 rounded-sm
       relative min-h-24 ">
       <article>

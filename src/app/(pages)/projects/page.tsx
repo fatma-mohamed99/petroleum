@@ -3,12 +3,11 @@ import { projects } from "@/consts/projects";
 
 function Projects() {
   return (
-    <div className="w-full pb-10">
+    <div className="w-full py-10">
       <h1
         className=" 
-            text-header-sm md:text-header-md 
+            text-header-md 
             lg:text-header-lg
-           
             w-full
              text-center  
              U-fromUnico  flex
