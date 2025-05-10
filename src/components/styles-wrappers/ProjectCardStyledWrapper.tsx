@@ -10,7 +10,7 @@ export const ProjectCardStyledWrapper = styled.div`
     background-color: var(--color-bgCard);
 
     text-align: center;
-    border-radius: 4rem 0.5rem 0.5rem 0.5rem;
+    border-radius: .4rem;
     border: 3px solid var(--color-main);
     position: relative;
     overflow: hidden;
@@ -27,6 +27,7 @@ export const ProjectCardStyledWrapper = styled.div`
     white-space: nowrap;
     width: 100%;
     padding: 5px 0;
+    min-height: 40px;
   }
 
   .card__paragraph {
@@ -49,7 +50,6 @@ export const ProjectCardStyledWrapper = styled.div`
     left: -5%;
     top: 10px;
     position: relative;
-    border-radius: 0 0 2rem 2rem;
     transition: all;
     cursor: pointer;
     transition-duration: 300ms;
@@ -61,13 +61,13 @@ export const ProjectCardStyledWrapper = styled.div`
 
   .card__ribbon-label {
     display: block;
-    width: 150px;
-    aspect-ratio: 3/1;
+    width: 200px;
+    aspect-ratio: 4/1;
     border: 4px solid var(--color-main);
     background-color: #fff;
     position: relative;
     transform: translateY(-50%);
-    border-radius: 20%;
+    border-radius: 8px;
     display: grid;
     cursor: pointer;
     place-items: center;

@@ -14,13 +14,12 @@ const ProjectCard = ({projectData}:{projectData:Project}) => {
      
           <p className="card__title">{projectData.title}</p>
           <p className="card__paragraph">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
-            perferendis eaque dolore repellat numquam. Dolores.
+          {projectData.shortDesc}
           </p>
         </div>
         <div className="card__ribbon">
-          <CustomButton  variant='outline' className="card__ribbon-label" >
-            Details
+          <CustomButton  variant='outline'  className="card__ribbon-label " >
+            Discover More
           </CustomButton>
         </div>
       </div>
