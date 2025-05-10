@@ -53,7 +53,7 @@ export default function UnicoLegacySection() {
         <section className="w-full py-12 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-1">
-                    <p className="text-header-sm md:text-header-md font-medium text-center  ">
+                    <p className="text-header-lg font-medium text-center  ">
                         Our Legacy
                     </p>
                 </div>

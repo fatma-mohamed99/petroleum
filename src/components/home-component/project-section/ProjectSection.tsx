@@ -7,7 +7,7 @@ function ProjectSection() {
        overflow-hidden ">
       <p
         className=" 
-            text-header-sm md:text-header-md 
+          text-header-lg
            
             w-full
              text-center  
