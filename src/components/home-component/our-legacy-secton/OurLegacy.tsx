@@ -58,7 +58,7 @@ export default function UnicoLegacySection() {
                     </p>
                 </div>
 
-                <div className="max-w-3xl mx-auto mb-10   p-6">
+                <div className="max-w-3xl mx-auto mb-12   p-6">
                     <p className="text-desc-lg leading-relaxed text-center  font-normal text-textColor">
                         Over the years, <span className='text-main font-bold'>Unico</span> petroleum developed a reputation across the region
                         as a reliable provider of <b className='mx-1'>EPCC</b> services in the Oil and Gas industry.
@@ -68,7 +68,7 @@ export default function UnicoLegacySection() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 lg:max-w-6xl mx-auto">
                     {features.map((feature, index) => (
                         <FeatureCard
                             key={index}
