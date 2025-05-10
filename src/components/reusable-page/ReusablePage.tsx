@@ -32,21 +32,21 @@ export default function ReusablePage({
     const selectedItem = pageData.find(item => item.id === selectedTab) || pageData[0];
 
     return (
-        <div className="bg-white min-h-screen py-12">
-            <div className="container mx-auto px-4 md:px-8">
+        <div className="bg-white min-h-screen py-12 mx-3">
+            <div className="container mx-auto max-w-7xl px-4 lg:px-0 2xl:px-5">
                 <div className="text-center my-10 mb-14">
                     <h1 className="text-4xl font-bold text-textColor">{pageTitle}</h1>
                 </div>
 
-                <div className="flex flex-col lg:flex-row gap-8">
-                    <div className="lg:w-1/4 order-2 lg:order-1">
-                        <div className="bg-main/5 shadow-md border border-gray-100 overflow-hidden sticky top-8">
+                <div className="flex flex-col lg:flex-row gap-4">
+                    <div className="lg:w-1/4 order-2 lg:order-1flex-1">
+                        <div className="bg-main/5 shadow-md border border-gray-100 overflow-hidden sticky top-22">
                             <nav className="flex flex-col">
                                 {pageData.map(item => (
                                     <button
                                         key={item.id}
                                         onClick={() => setSelectedTab(item.id)}
-                                        className={`p-4 text-title-lg text-left transition-all duration-300 border-l-4 flex items-center ${selectedTab === item.id
+                                        className={`p-4  xl:text-title-md text-title-md lg:text-title-sm text-left transition-all duration-300 border-l-4 flex items-center ${selectedTab === item.id
                                             ? 'border-textColor bg-main/20 font-medium text-textColor'
                                             : 'border-transparent hover:bg-main/20 hover:border-gray-200'
                                             }`}
