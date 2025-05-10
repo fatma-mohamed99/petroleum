@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import type { SpecialtyCard as SpecialtyCardType } from "@/types/SpecialtyCard ";
 
-function SpecialtyCard({ cardData, isMiddle = false }: { cardData: SpecialtyCardType, isMiddle?: boolean }) {
+function SpecialtyCard({ cardData, isMiddle = true }: { cardData: SpecialtyCardType, isMiddle?: boolean }) {
   const { title, imageSrc, shortDescription } = cardData;
   return (
     <div
@@ -49,7 +49,7 @@ function SpecialtyCard({ cardData, isMiddle = false }: { cardData: SpecialtyCard
         </p>
       </div>
       <div className="p-6 pt-0 text-center sm:text-start">
-        <CustomButton >
+        <CustomButton className="text-white">
           More Detail
         </CustomButton>
       </div>
