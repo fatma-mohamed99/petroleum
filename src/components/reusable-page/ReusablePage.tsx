@@ -32,10 +32,10 @@ export default function ReusablePage({
     const selectedItem = pageData.find(item => item.id === selectedTab) || pageData[0];
 
     return (
-        <div className="bg-white min-h-screen py-12 mx-3">
+        <div className="bg-gray-50 min-h-screen py-12 mx-3">
             <div className="container mx-auto max-w-7xl px-4 lg:px-0 2xl:px-5">
-                <div className="text-center my-10 mb-14">
-                    <h1 className="text-4xl font-bold text-textColor">{pageTitle}</h1>
+                <div className="text-center  mb-8">
+                    <h1 className="text-header-lg font-bold text-textColor">{pageTitle}</h1>
                 </div>
 
                 <div className="flex flex-col lg:flex-row gap-4">
