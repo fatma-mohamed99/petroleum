@@ -58,7 +58,7 @@ export default function HeroContent({
                         <button
                             key={`dot-${index}`}
                             onClick={() => setCurrentImageIndex(index)}
-                            className={`w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full text-sm md:text-base lg:text-lg flex items-center justify-center transition-colors ${currentImageIndex === index
+                            className={`cursor-pointer w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full text-sm md:text-base lg:text-lg flex items-center justify-center transition-colors ${currentImageIndex === index
                                 ? 'bg-white text-black'
                                 : 'bg-black/40 text-white hover:bg-black/60'
                                 }`}

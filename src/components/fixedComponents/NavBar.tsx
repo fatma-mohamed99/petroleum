@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Menu } from 'lucide-react';
 import Image from 'next/image';
 import NavLinks from '../navComponents/NavLinks';
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -37,21 +38,24 @@ const Navbar: React.FC = () => {
         
         `}>
 
-            <div className="container mx-auto max-w-[95%] md:max-w-[85%]  xl:max-w-[75%] 2xl:max-w-[65%] px-5 py-3">
+            <div className="container mx-auto max-w-[95%] md:max-w-[85%]  xl:max-w-[75%] 2xl:max-w-[55.5%] px-5 py-3">
                 <div className="flex justify-between items-center">
-                    <div className=" relative rounded-full w-32 h-14 ">
+                    <div className=" relative min-w-32 min-h-14 flex-1 flex items-start ">
 
-                        <Image
-                            src="/logo.png"
-                            alt="Logo"
-                            fill
-                            className=" absolute object-contain "
-                        />
+                        <Link href="/" className='cursor-pointer'>
+                            <Image
+                                src="/logo.png"
+                                alt="Logo"
+                                width={100}
+                                height={100}
+                                className="object-contain cursor-pointer"
+                            />
+                        </Link>
                     </div>
 
                     {/* ####################### */}
-                    <div className="hidden lg:flex font-semibold items-start 
-                    xl:text-title-lg text-title-md space-x-6   
+                    <div className="hidden lg:flex font-medium items-start 
+                    xl:text-title-lg md:text-title-md text-title-md space-x-6  md:space-x-4  
 ">
                         <NavLinks />
                     </div>
