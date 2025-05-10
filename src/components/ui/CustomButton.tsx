@@ -18,7 +18,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     const variantStyles =
         variant === 'outline'
             ? 'border border-main text-textColor bg-transparent    '
-            : 'bg-main text-white ';
+            : 'bg-main  ';
 
     return (
         <button
