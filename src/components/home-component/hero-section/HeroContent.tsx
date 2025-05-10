@@ -1,35 +1,91 @@
-import React from 'react'
+import React from 'react';
 import Link from 'next/link';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 interface HeroContentProps {
     title: string;
+    description?: string;
+    pageLink: string;
+    buttonText: string;
+    currentImageIndex: number;
+    setCurrentImageIndex: (index: number) => void;
+    totalImages: number;
+    onPrevious: () => void;
+    onNext: () => void;
 }
-export default function HeroContent({ title }: HeroContentProps) {
+
+export default function HeroContent({
+    title,
+    description,
+    pageLink,
+    buttonText,
+    currentImageIndex,
+    setCurrentImageIndex,
+    totalImages,
+    onPrevious,
+    onNext
+}: HeroContentProps) {
     return (
+        <div className="w-full h-full flex flex-col  justify-between">
+            {/* Main content area */}
+            <div className="flex-1 flex items-center">
+                <div className="w-full max-w-xl text-white z-10 p-4 md:p-6 lg:p-8">
+                    <h1 className="text-3xl mt-[24px] md:text-4xl lg:text-5xl font-bold mb-2">
+                        {title}
+                    </h1>
 
-        <div className="absolute inset-0 flex flex-col items-start justify-end p-5  ">
-            <div className=" max-w-fit text-center  font-medium text-white ">
-                {/* <p
-                    className="bg-black/40 rounded-2xl p-2 md:text-header-md text-header-sm mb-6 w-full
-             text-center U-fromUnico mx-2 flex  items-center justify-center font-medium  "
-                >
-                    NICO petroleum
-                </p> */}
-                <h1 className=" lg:text-header-md text-start text-header-sm  bg-black/40  px-6 py-2 text-white   items-center justify-center   mb-6">{title}
+                    {description && (
+                        <p className="text-base md:text-lg lg:text-xl">
+                            {description}
+                        </p>
+                    )}
 
-                    <Link href="#" className=" inline text-nowrap     px-2  text-2xl font-medium  hover:text-white   text-gray-300 underline transition-colors my-auto">
-                        Read more
-                    </Link>
+                    <div className="mt-6 md:mt-8 lg:mt-10 ">
+                        <Link
+                            href={pageLink}
+                            className="inline-block px-6 py-3 bg-white hover:bg-gray-200 text-black font-medium transition-colors"
+                        >
+                            {buttonText}
+                        </Link>
+                    </div>
+                </div>
+            </div>
 
-                </h1>
+            <div className="w-full flex flex-col-reverse md:flex-row justify-between items-center gap-4 p-4 mb-8 md:p-6 lg:p-8">
+                {/* Pagination  */}
+                <div className="flex space-x-2 order-2 md:order-1">
+                    {Array.from({ length: totalImages }).map((_, index) => (
+                        <button
+                            key={`dot-${index}`}
+                            onClick={() => setCurrentImageIndex(index)}
+                            className={`w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full text-sm md:text-base lg:text-lg flex items-center justify-center transition-colors ${currentImageIndex === index
+                                ? 'bg-white text-black'
+                                : 'bg-black/40 text-white hover:bg-black/60'
+                                }`}
+                        >
+                            {index + 1}
+                        </button>
+                    ))}
+                </div>
 
-                {/* <div className="flex flex-col sm:flex-row justify-center gap-4">
-                    <Link href="#" className="      px-4 py-2 text-2xl font-medium bg-main hover:bg-main/50 text-white  transition-colors">
-                        Read more
-                    </Link>
-
-                </div> */}
+                {/* Navigation arrows */}
+                <div className=" hidden sm:flex space-x-2 order-1 md:order-2">
+                    <button
+                        onClick={onPrevious}
+                        className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center bg-black/40 hover:bg-black/60 text-white cursor-pointer transition-colors"
+                        aria-label="Previous slide"
+                    >
+                        <ChevronLeft size={20} />
+                    </button>
+                    <button
+                        onClick={onNext}
+                        className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center bg-black/40 hover:bg-black/60 text-white cursor-pointer transition-colors"
+                        aria-label="Next slide"
+                    >
+                        <ChevronRight size={20} />
+                    </button>
+                </div>
             </div>
         </div>
-
-    )
+    );
 }
