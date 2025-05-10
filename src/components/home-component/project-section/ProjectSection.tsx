@@ -27,8 +27,8 @@ function ProjectSection() {
         Unico projects
       </p>
       <p className="max-w-3xl mx-auto mb-10 my-5    text-desc-lg leading-relaxed text-center  font-normal text-textColor">
-   With 20+ years in Oil & Gas, UNICO has delivered 25+ projects across the Levant region, specializing in storage tanks, pipelines,
-    and pumping stations with international standards
+        With 20+ years in Oil & Gas, UNICO has delivered 25+ projects across the Levant region, specializing in storage tanks, pipelines,
+        and pumping stations with international standards
       </p>
       <div className="w-10/12 sm:w-8/12 md:w-full lg:w-10/12 xl:w-9/12   mx-auto text-textColor bg-main/5 md:max-h-[400px]">
         <div className="flex justify-between flex-col-reverse md:flex-row">
@@ -70,10 +70,9 @@ function ProjectSection() {
                       className={`p-1 cursor-pointer rounded-full w-7 h-7  sm:w-9 sm:h-9 border-2
                         flex justify-center items-center transition-all duration-500
                         text-sm sm:text-base
-                        ${
-                          item.index === activeProjectIndex
-                            ? "bg-main  text-white scale-105 border-white"
-                            : "bg-white border-main"
+                        ${item.index === activeProjectIndex
+                          ? "bg-main  text-white scale-105 border-white"
+                          : "bg-white border-main"
                         }`}
                     >
                       {item.index + 1}
