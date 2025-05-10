@@ -24,12 +24,11 @@ async function ProjectDetail({
     project;
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1
-            className="text-4xl font-bold text-main mb-4"
-            style={{ color: "var(--color-main)" }}
+            className="text-header-lg font-bold text-main mb-4"
           >
             {title}
           </h1>
@@ -45,10 +44,13 @@ async function ProjectDetail({
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-          <div className="lg:col-span-2 h-full">
-            <div className=" overflow-hidden shadow-xl h-full relative ">
-              <Image src={image} alt={title} className="object-cover" fill />
+        <div className="grid grid-cols-1 lg:grid-cols-3 
+                       gap-8 items-stretch">
+          <div className="  lg:col-span-2 h-full">
+            <div className=" shadow-xl h-full  relative min-h-60 sm:min-h-72 md:min-h-96">
+              <Image src={image} alt={title} className="object-cover" fill 
+             priority 
+              />
             </div>
           </div>
           <div className="lg:col-span-1 h-full">
@@ -78,7 +80,6 @@ async function ProjectDetail({
         <div className="mt-12 bg-white  shadow-lg p-8">
           <h2
             className="text-2xl font-semibold mb-6 flex items-center"
-            style={{ color: "var(--color-main)" }}
           >
             <FolderOpen className="w-6 h-6 mr-2" />
             Project Specifications
