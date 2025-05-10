@@ -49,8 +49,8 @@ const CertificatesSection: React.FC = () => {
 
 
 
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-16 relative">
+            <div className="container mx-auto ">
+                <div className="text-center mb-10 relative">
                     {/* <motion.div
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
@@ -68,7 +68,7 @@ const CertificatesSection: React.FC = () => {
 
                     <p
                         className=" 
-      text-header-lg font-medium text-center mb-6
+      text-header-lg font-medium text-center mb-5
                "
 
 
@@ -80,7 +80,7 @@ const CertificatesSection: React.FC = () => {
 
                     <p
 
-                        className="text-textColor  max-w-2xl text-title-sm mx-auto px-2"
+                        className="text-textColor  max-w-2xl text-title-sm mx-auto "
                     >
                         UNICO Petroleum is proudly certified with international quality management standards,
                         demonstrating our commitment to excellence in the oil and gas industry.

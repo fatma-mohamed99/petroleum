@@ -70,11 +70,11 @@ function Specialties() {
 
   return (
     <div className="py-10">
-      <p className="text-header-lg pb-2 mb-4 w-full text-center font-medium flex items-center justify-center">
+      <p className="text-header-lg  w-full text-center font-medium flex items-center justify-center">
         Our Specialties
       </p>
 
-      <p className="text-desc-lg leading-relaxed text-center mb-22 max-w-2xl mx-auto  font-normal text-textColor">
+      <p className="text-desc-lg leading-relaxed text-center mb-15 mt-5 max-w-2xl mx-auto  font-normal text-textColor">
         We offer a wide range of engineering specialties tailored to meet the needs of the oil and gas industry with precision and innovation.
       </p>
       <div

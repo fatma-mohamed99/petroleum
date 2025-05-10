@@ -22,10 +22,14 @@ function ProjectSection() {
 
   return (
     <div className="min-h-full">
-      <p className="text-header-lg w-full text-center flex font-medium items-center justify-center py-8">
+      <p className="text-header-lg w-full text-center flex font-medium items-center justify-center ">
         Unico projects
       </p>
-      <div className="w-11/12 md:w-full lg:w-11/12 xl:w-10/12   mx-auto text-textColor bg-main/5 md:max-h-[400px]">
+      <p className="max-w-3xl mx-auto mb-10 my-5    text-desc-lg leading-relaxed text-center  font-normal text-textColor">
+   With 20+ years in Oil & Gas, UNICO has delivered 25+ projects across the Levant region, specializing in storage tanks, pipelines,
+    and pumping stations with international standards
+      </p>
+      <div className="w-11/12 md:w-full lg:w-10/12 xl:w-9/12   mx-auto text-textColor bg-main/5 md:max-h-[400px]">
         <div className="flex justify-between flex-col-reverse md:flex-row">
           <div className="w-full md:w-1/2 py-4 md:py-8 space-y-10 bg-white/20 md:bg-transparent">
             <div className="space-y-2 md:space-y-4 w-full md:px-6 flex flex-col justify-center md:justify-start text-center md:text-start">
@@ -34,7 +38,8 @@ function ProjectSection() {
               </h3>
               <p
                 className="text-desc-sm lg:text-desc-lg  md:text-desc-md 
-               text-textColor/90 md:text-textColor/80 mx-auto md:mx-0 w-3/4 md:5/6 lg:w-3/4 min-h-[84px]  md:min-h-30  lg:min-h-28"
+               text-textColor/90 md:text-textColor/80 mx-auto md:mx-0 
+               w-3/4 md:5/6 lg:w-3/4 min-h-[84px]  md:min-h-30  lg:min-h-28"
               >
                 {longDesc}
               </p>
@@ -62,11 +67,11 @@ function ProjectSection() {
                       onClick={() => handleActiveProject(item.index)}
                       key={`pagination-${item.index}`}
                       className={`p-1 cursor-pointer rounded-full w-7 h-7  sm:w-9 sm:h-9 border-2
-                        flex justify-center items-center transition-all duration-300
+                        flex justify-center items-center transition-all duration-500
                         text-sm sm:text-base
                         ${
                           item.index === activeProjectIndex
-                            ? "bg-main -translate-y-5 text-white scale-105 border-white"
+                            ? "bg-main  text-white scale-105 border-white"
                             : "bg-white border-main"
                         }`}
                     >
