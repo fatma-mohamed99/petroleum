@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
         
         `}>
 
-            <div className="container mx-auto max-w-[95%] md:max-w-[85%]  xl:max-w-[75%] 2xl:max-w-[56%] px-5 py-3">
+            <div className="container mx-auto max-w-[95%] md:max-w-[85%]  xl:max-w-[75%] 2xl:max-w-[65%] px-5 py-3">
                 <div className="flex justify-between items-center">
                     <div className=" relative rounded-full w-32 h-14 ">
 

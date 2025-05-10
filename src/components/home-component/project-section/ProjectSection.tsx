@@ -22,7 +22,7 @@ function ProjectSection() {
 
   return (
     <div className="min-h-full">
-      <p className="text-header-sm md:text-header-md w-full text-center flex font-medium items-center justify-center py-8">
+      <p className="text-header-lg w-full text-center flex font-medium items-center justify-center py-8">
         Unico projects
       </p>
       <div className="w-11/12 md:w-full lg:w-11/12 xl:w-10/12   mx-auto text-textColor bg-main/5 md:max-h-[400px]">
