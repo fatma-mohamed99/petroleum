@@ -53,7 +53,8 @@ function ProjectSection() {
                 </button>
               </div>
             </div>
-            <div className="flex justify-between items-center md:py-5 px-10 md:px-6">
+            <div className="flex justify-between items-center 
+            px-2 md:py-5 sm:px-10 md:px-6">
               <div className="flex gap-0.5 items-center">
                 {paginationItems.map((item, idx) =>
                   item.type === "ellipsis" ? (
@@ -67,9 +68,9 @@ function ProjectSection() {
                     <button
                       onClick={() => handleActiveProject(item.index)}
                       key={`pagination-${item.index}`}
-                      className={`p-1 cursor-pointer rounded-full w-7 h-7  sm:w-9 sm:h-9 border-2
+                      className={`p-1 cursor-pointer rounded-full w-6 h-6  sm:w-9 sm:h-9 border-2
                         flex justify-center items-center transition-all duration-500
-                        text-sm sm:text-base
+                        text-xs sm:text-base
                         ${item.index === activeProjectIndex
                           ? "bg-main  text-white scale-105 border-white"
                           : "bg-white border-main"
@@ -80,16 +81,16 @@ function ProjectSection() {
                   )
                 )}
               </div>
-              <div className="flex gap-4">
+              <div className="flex  gap-2 sm:gap-4">
                 <button
                   onClick={handlePrevProject}
-                  className="w-8 h-8 sm:w-10 sm:h-10 cursor-pointer flex justify-center items-center rounded-full border-2 border-main"
+                  className="w-7 h-7 sm:w-10 sm:h-10 cursor-pointer flex justify-center items-center rounded-full border-2 border-main"
                 >
                   <ChevronLeft />
                 </button>
                 <button
                   onClick={handleNextProject}
-                  className="w-8 h-8 sm:w-10 sm:h-10 cursor-pointer flex justify-center items-center rounded-full border-2 border-main"
+                  className="w-7 h-7 sm:w-10 sm:h-10 cursor-pointer flex justify-center items-center rounded-full border-2 border-main"
                 >
                   <ChevronRight />
                 </button>
