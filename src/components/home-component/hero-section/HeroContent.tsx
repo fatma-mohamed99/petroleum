@@ -58,7 +58,7 @@ export default function HeroContent({
                         <button
                             key={`dot-${index}`}
                             onClick={() => setCurrentImageIndex(index)}
-                            className={`cursor-pointer border border-secondary shadow-sn shadow-secondary text-header-lg w-8 h-8 md:w-10 md:h-10 lg:w-20 lg:h-20 rounded-full text-sm md:text-base lg:text-lg flex items-center justify-center transition-colors ${currentImageIndex === index
+                            className={`cursor-pointer border border-main shadow-sm shadow-secondary text-header-lg w-8 h-8 md:w-10 md:h-10 lg:w-20 lg:h-20 rounded-full text-sm md:text-base lg:text-lg flex items-center justify-center transition-colors ${currentImageIndex === index
                                 ? 'bg-secondary/50 text-black'
                                 : 'bg-main/50 text-white hover:bg-main/60'
                                 }`}
