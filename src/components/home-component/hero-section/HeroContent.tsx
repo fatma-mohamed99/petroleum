@@ -29,13 +29,13 @@ export default function HeroContent({
         <div className="w-full h-full flex flex-col  justify-between">
             {/* Main content area */}
             <div className="flex-1 flex items-center">
-                <div className="w-full max-w-2xl text-white z-10 p-4 md:p-6 lg:p-8">
-                    <h1 className="text-header-sm mt-[34px] md:text-header-lg lg:text-4xl font-bold mb-2">
+                <div className="w-full max-w-2xl text-white z-10 p-4 md:p-6 lg:p-8  text-shadow-main text-shadow-md">
+                    <h1 className="text-header-sm mt-[34px] md:text-header-lg lg:text-4xl font-bold mb-2 ">
                         {title}
                     </h1>
 
                     {description && (
-                        <p className="text-base md:text-lg lg:text-xl">
+                        <p className="text-desc-sm md:text-desc-md lg:text-text-desc-lg   font-extralight ">
                             {description}
                         </p>
                     )}
@@ -43,8 +43,9 @@ export default function HeroContent({
                     <div className="mt-6 md:mt-8 lg:mt-10 ">
                         <Link
                             href={pageLink}
-                            className="inline-block px-6 py-3 bg-white hover:bg-gray-200 text-black font-medium transition-colors"
+                            className="inline-block px-6 py-3 bg-main/30 text-white border hover:bg-main/60 font-semibold text-title-md transition-colors"
                         >
+
                             {buttonText}
                         </Link>
                     </div>
