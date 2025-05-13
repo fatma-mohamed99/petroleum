@@ -33,8 +33,8 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 text-textColor 
-        ${scrolled ? 'bg-fixedComponentBg  shadow-main/50 shadow-sm ' : ' bg-main/30  '}
+        <nav className={`absolute top-0 left-0 right-0 z-50 transition-all duration-300 text-textColor 
+       
         
         `}>
 
