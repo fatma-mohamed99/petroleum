@@ -58,9 +58,9 @@ export default function HeroContent({
                         <button
                             key={`dot-${index}`}
                             onClick={() => setCurrentImageIndex(index)}
-                            className={`cursor-pointer w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full text-sm md:text-base lg:text-lg flex items-center justify-center transition-colors ${currentImageIndex === index
-                                ? 'bg-white text-black'
-                                : 'bg-black/40 text-white hover:bg-black/60'
+                            className={`cursor-pointer border-2 border-secondary shadow-2xl shadow-secondary text-header-lg w-8 h-8 md:w-10 md:h-10 lg:w-20 lg:h-20 rounded-full text-sm md:text-base lg:text-lg flex items-center justify-center transition-colors ${currentImageIndex === index
+                                ? 'bg-white text-secondary'
+                                : 'bg-main/50 text-white hover:bg-main/60'
                                 }`}
                         >
                             {index + 1}
@@ -72,17 +72,17 @@ export default function HeroContent({
                 <div className=" hidden sm:flex space-x-2 order-1 md:order-2">
                     <button
                         onClick={onPrevious}
-                        className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center bg-black/40 hover:bg-black/60 text-white cursor-pointer transition-colors"
+                        className="w-8 h-8 md:w-10 md:h-10 lg:w-20 lg:h-20 rounded-full flex items-center justify-center bg-black/40 hover:bg-black/60 text-white cursor-pointer transition-colors"
                         aria-label="Previous slide"
                     >
-                        <ChevronLeft size={20} />
+                        <ChevronLeft size={30} />
                     </button>
                     <button
                         onClick={onNext}
-                        className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center bg-black/40 hover:bg-black/60 text-white cursor-pointer transition-colors"
+                        className="w-8 h-8 md:w-10 md:h-10 lg:w-20 lg:h-20 rounded-full flex items-center justify-center bg-black/40 hover:bg-black/60 text-white cursor-pointer transition-colors"
                         aria-label="Next slide"
                     >
-                        <ChevronRight size={20} />
+                        <ChevronRight size={30} />
                     </button>
                 </div>
             </div>
