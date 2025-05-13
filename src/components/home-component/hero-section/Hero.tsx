@@ -31,7 +31,7 @@ const HeroCarousel: React.FC = () => {
     };
 
     return (
-        <div className="relative h-screen max-h-[40rem] w-full">
+        <div className="relative h-screen max-h-[70rem] w-full">
             <Navbar />
 
             <div className="relative w-full h-full">
@@ -55,7 +55,7 @@ const HeroCarousel: React.FC = () => {
                 ))}
 
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-full max-w-[90%] md:max-w-[85%]  xl:max-w-[75%] 2xl:max-w-[56%] h-full">
+                    <div className="w-full max-w-[90%] md:max-w-[85%]  xl:max-w-[75%] 2xl:max-w-[70%] h-full">
                         <HeroContent
                             title={carouselImages[currentImageIndex].title}
                             description={carouselImages[currentImageIndex].description}

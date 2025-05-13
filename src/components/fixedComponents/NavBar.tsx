@@ -34,11 +34,11 @@ const Navbar: React.FC = () => {
 
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 text-textColor 
-        ${scrolled ? 'bg-fixedComponentBg  shadow-main/50 shadow-sm ' : 'lg:bg-white/70 bg-white/50  '}
+        ${scrolled ? 'bg-fixedComponentBg  shadow-main/50 shadow-sm ' : ' bg-main/30  '}
         
         `}>
 
-            <div className="container mx-auto max-w-[95%] md:max-w-[85%]  xl:max-w-[75%] 2xl:max-w-[55.5%] px-5 py-3">
+            <div className="container mx-auto max-w-[95%] md:max-w-[85%]  xl:max-w-[75%] 2xl:max-w-[70%] px-5 py-3">
                 <div className="flex justify-between items-center">
                     <div className=" relative min-w-32 min-h-14 flex-1 flex items-start ">
 
@@ -54,8 +54,7 @@ const Navbar: React.FC = () => {
                     </div>
 
                     {/* ####################### */}
-                    <div className="hidden lg:flex font-medium items-start 
-                    xl:text-title-lg md:text-title-md text-title-md space-x-6  md:space-x-4  
+                    <div className="hidden lg:flex 
 ">
                         <NavLinks />
                     </div>

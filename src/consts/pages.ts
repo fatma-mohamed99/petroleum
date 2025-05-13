@@ -25,3 +25,23 @@ export const pages = [
     target: "/suppliers"
   }
 ];
+export const suppages = [
+
+  {
+    title: "News",
+    target: "/News"
+  },
+  {
+    title: "Careers",
+    target: "/Careers"
+  },
+  {
+    title: "Brochure",
+    target: "/Brochure"
+  },
+  {
+    title: "Contact Us",
+    target: "/Contact Us"
+  },
+
+];
