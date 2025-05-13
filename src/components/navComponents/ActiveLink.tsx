@@ -21,9 +21,7 @@ function ActiveLink({
       onClick={onClickFun}
       className={`
         px-1 py-1 text-nowrap
-        text-lg md:
-        lg:text-xl
-        xl:text-2xl
+      
         z-30   
         transition-all
         duration-200

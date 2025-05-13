@@ -29,8 +29,8 @@ export default function HeroContent({
         <div className="w-full h-full flex flex-col  justify-between">
             {/* Main content area */}
             <div className="flex-1 flex items-center">
-                <div className="w-full max-w-xl text-white z-10 p-4 md:p-6 lg:p-8">
-                    <h1 className="text-3xl mt-[24px] md:text-4xl lg:text-5xl font-bold mb-2">
+                <div className="w-full max-w-2xl text-white z-10 p-4 md:p-6 lg:p-8">
+                    <h1 className="text-header-sm mt-[34px] md:text-header-lg lg:text-4xl font-bold mb-2">
                         {title}
                     </h1>
 
@@ -58,9 +58,9 @@ export default function HeroContent({
                         <button
                             key={`dot-${index}`}
                             onClick={() => setCurrentImageIndex(index)}
-                            className={`cursor-pointer w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full text-sm md:text-base lg:text-lg flex items-center justify-center transition-colors ${currentImageIndex === index
-                                ? 'bg-white text-black'
-                                : 'bg-black/40 text-white hover:bg-black/60'
+                            className={`cursor-pointer border border-white shadow-sm shadow-main text-header-lg w-8 h-8 md:w-10 md:h-10 lg:w-20 lg:h-20 rounded-full  flex items-center justify-center transition-colors ${currentImageIndex === index
+                                ? 'bg-white text-main'
+                                : 'bg-main/30 text-white hover:bg-main/60'
                                 }`}
                         >
                             {index + 1}
@@ -72,17 +72,17 @@ export default function HeroContent({
                 <div className=" hidden sm:flex space-x-2 order-1 md:order-2">
                     <button
                         onClick={onPrevious}
-                        className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center bg-black/40 hover:bg-black/60 text-white cursor-pointer transition-colors"
+                        className="w-8 h-8 md:w-10 md:h-10 lg:w-20 lg:h-20 border border-white shadow-sm shadow-main rounded-full flex items-center justify-center bg-main/30 hover:bg-main text-white cursor-pointer transition-colors"
                         aria-label="Previous slide"
                     >
-                        <ChevronLeft size={20} />
+                        <ChevronLeft size={30} />
                     </button>
                     <button
                         onClick={onNext}
-                        className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center bg-black/40 hover:bg-black/60 text-white cursor-pointer transition-colors"
+                        className="w-8 h-8 md:w-10 md:h-10 lg:w-20 lg:h-20 border border-white shadow-sm shadow-main rounded-full flex items-center justify-center bg-main/30 hover:bg-main text-white cursor-pointer transition-colors"
                         aria-label="Next slide"
                     >
-                        <ChevronRight size={20} />
+                        <ChevronRight size={30} />
                     </button>
                 </div>
             </div>

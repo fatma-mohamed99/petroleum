@@ -10,7 +10,8 @@
 --color-bgCard:#43434300 ;       
 /* --color-main: #4e6e5d; /الزيتى يا فاطمة*/
 
---color-main: #434343; 
+--color-main: #1c398e; 
+--color-secondary: #dc931a;
   --color-fixedComponentBg:#ffffff;  
   --color-textColor:#1e1e1e;
   --text-header-sm: 1.25rem;   
@@ -19,6 +20,7 @@
   --text-title-sm: 1.125rem;  
   --text-title-md: 1.25rem;   
   --text-title-lg: 1.5rem;    
+  --font-helvetica:  "helvetica" , 'Arial', 'sans-serif'; 
 
   --text-desc-sm: 0.875rem;   
   --text-desc-md: 1rem;       

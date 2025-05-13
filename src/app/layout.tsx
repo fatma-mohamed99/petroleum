@@ -11,10 +11,11 @@ export const metadata = {
 }
 import { IBM_Plex_Sans } from 'next/font/google';
 
-const ibmPlex = IBM_Plex_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-});
+// const ibmPlex = IBM_Plex_Sans({
+//   subsets: ['latin'],
+//   weight: ['400', '500', '700'],
+
+// });
 
 export default function RootLayout({
   children,
@@ -23,9 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ibmPlex.className}>
+      <body className="font-helvetica">
 
-      
+
         {children}
         <Footer />
       </body>

@@ -69,23 +69,6 @@ export const carouselImages = [
     description: "Honesty, accountability, and continuous improvement",
     pageLink: "/principle",
     buttonText: "Our Principles"
-  },
-  {
-    id: 5,
-    src: '/images/hero-img/slider5.jpg',
-    alt: 'Projects',
-    title: "Successful Regional Projects",
-    description: "Over 25 completed oil & gas installations",
-    pageLink: "/projects",
-    buttonText: "See Our Work"
-  },
-  {
-    id: 6,
-    src: '/images/hero-img/slider6.jpg',
-    alt: 'Suppliers',
-    title: "Industry-Leading Partnerships",
-    description: "Working with top-tier equipment and material providers",
-    pageLink: "/suppliers",
-    buttonText: "Our Network"
-  },
+  }
+
 ];
