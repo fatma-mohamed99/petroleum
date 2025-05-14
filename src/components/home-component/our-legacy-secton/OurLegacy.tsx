@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, Clock, Shield, Scale, LucideIcon } from 'lucide-react';
+import CardWithAnimatedBorder from './../../ui/card/card';
 interface FeatureCardProps {
     icon: LucideIcon;
     title: string;
@@ -50,35 +51,9 @@ export default function UnicoLegacySection() {
     ];
 
     return (
-        <section className="w-full py-12 bg-white">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-1">
-                    <p className="text-header-lg font-medium text-center  ">
-                        Our Legacy
-                    </p>
-                </div>
-
-                <div className="max-w-3xl mx-auto mb-12   p-6">
-                    <p className="text-desc-lg leading-relaxed text-center  font-normal text-textColor">
-                        Over the years, <span className='text-main font-bold'>Unico</span> petroleum developed a reputation across the region
-                        as a reliable provider of <b className='mx-1'>EPCC</b> services in the Oil and Gas industry.
-                        Its commitment to the highest standards of quality, safety, and service level has been evident
-                        in the variety of projects it has completed on time and within budget and continues to be
-                        at the heart of the company vision for the future.
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 lg:max-w-6xl mx-auto">
-                    {features.map((feature, index) => (
-                        <FeatureCard
-                            key={index}
-                            icon={feature.icon}
-                            title={feature.title}
-                            description={feature.description}
-                        />
-                    ))}
-                </div>
-            </div>
+        <section className="w-4xl mx-auto py-12 bg-main/25 flex justify-center">
+            <CardWithAnimatedBorder imageUrl="/images/hero-img/slider4.jpg" altText='img' title="web sites"
+                description="A modern fashonisstaaaa " />
         </section>
     );
 }

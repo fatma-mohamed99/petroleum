@@ -11,13 +11,18 @@ export default function Home() {
         <HeroCarousel />
       </div>
 
-        <WhoAreWeSection/>
-
       {/* ###################################### */}
       <div className=" py-12 my-5 ">
 
         <OurLegacy />
       </div>
+
+
+
+
+      <WhoAreWeSection />
+
+
 
 
       {/* ###################################### */}
