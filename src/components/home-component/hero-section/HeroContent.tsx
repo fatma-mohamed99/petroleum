@@ -111,14 +111,14 @@ export default function HeroContent({
                     <div className="content-wrapper text-secondary text-shadow-sm text-shadow-main ">
                         <h1
                             ref={titleRef}
-                            className="text-header-sm mt-8 md:text-header-lg brightness-110  lg:text-4xl font-bold mb-2 opacity-0   p-2 w-fit  "
+                            className="text-header-sm mt-8 md:text-header-lg   lg:text-4xl font-bold mb-2 opacity-0   p-2 w-fit  "
                         >
                             {title}
                         </h1>
                         {description && (
                             <p
                                 ref={descriptionRef}
-                                className="text-desc-sm md:text-desc-md  brightness-110 lg:text-title-md  font-light opacity-0 p-2 w-fit "
+                                className="text-desc-sm md:text-desc-md  lg:text-title-md  font-light opacity-0 p-2 w-fit "
                             >
                                 {description}
                             </p>
@@ -149,7 +149,7 @@ export default function HeroContent({
                         <Button
                             key={`dot-${index}`}
                             onClick={() => !isAnimating && setCurrentImageIndex(index)}
-                            className={`cursor-pointer w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-secondary bg-main text-title-sm   hover:hover:scale-110  brightness-125 contrast-100
+                            className={`cursor-pointer w-8 h-8   rounded-full flex items-center justify-center  text-secondary bg-main text-title-sm   hover:hover:scale-110  
                                 ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'} 
                                 ${currentImageIndex === index
                                     ? 'bg-main text-secondary scale-115'
@@ -172,7 +172,7 @@ export default function HeroContent({
                 >
                     <Button
                         onClick={onPrevious}
-                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center text-secondary cursor-pointer bg-main/80   hover:scale-110  transition-all duration-300 brightness-125 contrast-100
+                        className={`w-8 h-8   rounded-full flex items-center justify-center text-secondary cursor-pointer bg-main/80   hover:scale-110  transition-all duration-300 
                             ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Previous slide"
                         isDisable={isAnimating}
@@ -183,7 +183,7 @@ export default function HeroContent({
                     </Button>
                     <Button
                         onClick={onNext}
-                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-secondary cursor-pointer bg-main/80   hover:scale-110  brightness-125 contrast-100
+                        className={`w-8 h-8   rounded-full flex items-center justify-center  text-secondary cursor-pointer bg-main/80   hover:scale-110  
                             ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Next slide"
                         isDisable={isAnimating}

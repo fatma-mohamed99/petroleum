@@ -12,7 +12,7 @@ function NavLinks() {
             ))}  </div>
 
             <div className="
-               lg:text-header-md  md:text-header-sm   text-header-md space-x-6  md:space-x-4 text-shadow-secondary text-shadow-2xs  "> {pages.map((path) => (
+               lg:text-header-md  md:text-header-sm   text-header-md space-x-6  md:space-x-4 text-shadow-secondary   "> {pages.map((path) => (
 
                 <ActiveLink key={path.title} targetPath={path.target}>{path.title} </ActiveLink>
 
