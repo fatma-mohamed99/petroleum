@@ -148,7 +148,7 @@ export default function HeroContent({
                         <Button
                             key={`dot-${index}`}
                             onClick={() => !isAnimating && setCurrentImageIndex(index)}
-                            className={`cursor-pointer w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-secondary bg-main text-title-sm   hover:hover:scale-110  
+                            className={`cursor-pointer w-8 h-8   rounded-full flex items-center justify-center  text-secondary bg-main text-title-sm   hover:hover:scale-110  
                                 ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'} 
                                 ${currentImageIndex === index
                                     ? 'bg-main text-secondary scale-115'
@@ -171,7 +171,7 @@ export default function HeroContent({
                 >
                     <Button
                         onClick={onPrevious}
-                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center text-secondary cursor-pointer bg-main/80   hover:scale-110  transition-all duration-300 
+                        className={`w-8 h-8   rounded-full flex items-center justify-center text-secondary cursor-pointer bg-main/80   hover:scale-110  transition-all duration-300 
                             ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Previous slide"
                         isDisable={isAnimating}
@@ -182,7 +182,7 @@ export default function HeroContent({
                     </Button>
                     <Button
                         onClick={onNext}
-                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-secondary cursor-pointer bg-main/80   hover:scale-110  
+                        className={`w-8 h-8   rounded-full flex items-center justify-center  text-secondary cursor-pointer bg-main/80   hover:scale-110  
                             ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Next slide"
                         isDisable={isAnimating}
