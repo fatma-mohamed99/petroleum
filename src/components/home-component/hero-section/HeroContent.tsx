@@ -111,14 +111,14 @@ export default function HeroContent({
                     <div className="content-wrapper text-secondary text-shadow-sm text-shadow-main ">
                         <h1
                             ref={titleRef}
-                            className="text-header-sm mt-8 bg-main/40 md:text-header-lg  lg:text-4xl font-bold mb-2 opacity-0  backdrop-blur-xs p-2 w-fit brightness-125 contrast-125 "
+                            className="text-header-sm mt-8 md:text-header-lg brightness-110 bg-main/25  lg:text-4xl font-bold mb-2 opacity-0  backdrop-blur-xs p-2 w-fit  "
                         >
                             {title}
                         </h1>
                         {description && (
                             <p
                                 ref={descriptionRef}
-                                className="text-desc-sm md:text-desc-md bg-main/70 lg:text-title-md brightness-150  font-light opacity-0  backdrop-blur-xs p-2 w-fit "
+                                className="text-desc-sm md:text-desc-md bg-main/25 brightness-110 lg:text-title-md  font-light opacity-0  backdrop-blur-xs p-2 w-fit "
                             >
                                 {description}
                             </p>
@@ -127,7 +127,7 @@ export default function HeroContent({
                             <Button
                                 linkRef={pageLink}
                                 size='sm'
-                                className="inline-block px-3 py-2 bg-main/80 brightness-110 text-secondary text-title-md     "
+                                className="inline-block px-3 py-2    text-title-md bg-main/25  brightness-110 contrast-100 backdrop-blur-[2px] text-shadow-sm text-shadow-main"
                             >
                                 {/* Button text with clip-path animation */}
 
@@ -148,10 +148,10 @@ export default function HeroContent({
                         <Button
                             key={`dot-${index}`}
                             onClick={() => !isAnimating && setCurrentImageIndex(index)}
-                            className={`cursor-pointer w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-secondary bg-main text-title-sm   hover:bg-secondary/30
+                            className={`cursor-pointer w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-secondary bg-main text-title-sm   hover:hover:scale-110  brightness-125 contrast-100
                                 ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'} 
                                 ${currentImageIndex === index
-                                    ? 'bg-main text-main scale-110'
+                                    ? 'bg-main text-secondary scale-115'
                                     : 'bg-main/30 text-main hover:bg-main/60'
                                 }`}
                             isDisable={isAnimating}
@@ -170,7 +170,7 @@ export default function HeroContent({
                 >
                     <Button
                         onClick={onPrevious}
-                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center text-secondary cursor-pointer bg-main/80   hover:bg-secondary/30  transition-all duration-300 
+                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center text-secondary cursor-pointer bg-main/80   hover:scale-110  transition-all duration-300 brightness-125 contrast-100
                             ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Previous slide"
                         isDisable={isAnimating}
@@ -181,7 +181,7 @@ export default function HeroContent({
                     </Button>
                     <Button
                         onClick={onNext}
-                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-secondary cursor-pointer bg-main/80   hover:bg-secondary/30 
+                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-secondary cursor-pointer bg-main/80   hover:scale-110  brightness-125 contrast-100
                             ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Next slide"
                         isDisable={isAnimating}
