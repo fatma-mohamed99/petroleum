@@ -52,11 +52,9 @@ export default function Home() {
 
 
       </div>
-        <div className="w-full  sm:w-11/12 md:w-10/12   mx-auto py-12 my-7">
-          <CertificatesSection />
-        </div>
 
       </div>
+          <CertificatesSection />
       {/* ###################################### */}
 
 

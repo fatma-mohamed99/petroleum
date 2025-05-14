@@ -77,7 +77,8 @@ function Footer() {
                 onClick={() => openPdfInNewTab(brochurePath)}
                 className="flex gap-2 pr-2"
               >
-                <View size={18} /> <p>VIEW</p>
+
+                <View size={18} /> <a>VIEW</a>
               </Button>
               <Button
                               className="flex gap-2 pr-2"

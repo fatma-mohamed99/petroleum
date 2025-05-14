@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-helvetica">
+      <body className="font-helvetica overflow-x-hidden ">
 
 
         {children}

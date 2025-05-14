@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award, Clock, Shield, Scale, LucideIcon } from 'lucide-react';
 import CardWithAnimatedBorder from './../../ui/card/card';
+import SectionContainer from '@/components/styles-wrappers/SectionContainer';
 interface FeatureCardProps {
     icon: LucideIcon;
     title: string;
@@ -51,9 +52,20 @@ export default function UnicoLegacySection() {
     ];
 
     return (
-        <section className="w-4xl mx-auto py-12 bg-main/25 flex justify-center">
+        <SectionContainer title='mock'            description= "Building lasting partnerships through dependable service and unwavering commitment to client satisfaction">
+          
+          <div className='flex gap-2'>
+            
+             <CardWithAnimatedBorder imageUrl="/images/hero-img/slider4.jpg" altText='img' title="web sites"
+                description="A modern fashonisstaaaa " />
+                            <CardWithAnimatedBorder imageUrl="/images/hero-img/slider4.jpg" altText='img' title="web sites"
+                description="A modern fashonisstaaaa " />
+
             <CardWithAnimatedBorder imageUrl="/images/hero-img/slider4.jpg" altText='img' title="web sites"
                 description="A modern fashonisstaaaa " />
-        </section>
+
+            
+            </div> 
+        </SectionContainer>
     );
 }
