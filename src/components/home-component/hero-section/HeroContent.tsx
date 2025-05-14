@@ -111,7 +111,7 @@ export default function HeroContent({
                     <div className="content-wrapper text-secondary text-shadow-sm text-shadow-main ">
                         <h1
                             ref={titleRef}
-                            className="text-header-sm mt-8 bg-main/40 md:text-header-lg  lg:text-4xl font-bold mb-2 opacity-0  backdrop-blur-xs p-2 w-fit brightness-125 "
+                            className="text-header-sm mt-8 bg-main/40 md:text-header-lg  lg:text-4xl font-bold mb-2 opacity-0  backdrop-blur-xs p-2 w-fit brightness-125 contrast-125 "
                         >
                             {title}
                         </h1>
