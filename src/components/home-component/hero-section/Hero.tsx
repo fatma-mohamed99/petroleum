@@ -35,7 +35,7 @@ const HeroCarousel: React.FC = () => {
             if (!isAnimating) {
                 goToNext();
             }
-        }, 8000); // Slightly longer interval for better user experience
+        }, 15000); // Slightly longer interval for better user experience
 
         return () => clearInterval(interval);
     }, [isAnimating, currentImageIndex]);
