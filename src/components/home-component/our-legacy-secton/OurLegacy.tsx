@@ -48,24 +48,34 @@ export default function UnicoLegacySection() {
             icon: Scale,
             title: "Reliability",
             description: "Building lasting partnerships through dependable service and unwavering commitment to client satisfaction."
+        },
+        {
+            icon: Scale,
+            title: "Reliability",
+            description: "Building lasting partnerships through dependable service and unwavering commitment to client satisfaction."
+        },
+        {
+            icon: Scale,
+            title: "Reliability",
+            description: "Building lasting partnerships through dependable service and unwavering commitment to client satisfaction."
         }
     ];
 
     return (
-        <SectionContainer title='mock'            description= "Building lasting partnerships through dependable service and unwavering commitment to client satisfaction">
-          
-          <div className='flex gap-2'>
-            
-             <CardWithAnimatedBorder imageUrl="/images/hero-img/slider4.jpg" altText='img' title="web sites"
-                description="A modern fashonisstaaaa " />
-                            <CardWithAnimatedBorder imageUrl="/images/hero-img/slider4.jpg" altText='img' title="web sites"
-                description="A modern fashonisstaaaa " />
+        <SectionContainer title='mock' description="Building lasting partnerships through dependable service and unwavering commitment to client satisfaction">
 
-            <CardWithAnimatedBorder imageUrl="/images/hero-img/slider4.jpg" altText='img' title="web sites"
-                description="A modern fashonisstaaaa " />
+            <div className='flex gap-2'>
 
-            
-            </div> 
+                <CardWithAnimatedBorder imageUrl="/images/hero-img/slider4.jpg" altText='img' title="web sites"
+                    description="A modern fashonisstaaaa " />
+                <CardWithAnimatedBorder imageUrl="/images/hero-img/slider4.jpg" altText='img' title="web sites"
+                    description="A modern fashonisstaaaa " />
+
+                <CardWithAnimatedBorder imageUrl="/images/hero-img/slider4.jpg" altText='img' title="web sites"
+                    description="A modern fashonisstaaaa " />
+
+
+            </div>
         </SectionContainer>
     );
 }

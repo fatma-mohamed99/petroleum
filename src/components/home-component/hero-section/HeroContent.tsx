@@ -111,14 +111,14 @@ export default function HeroContent({
                     <div className="content-wrapper text-secondary text-shadow-sm text-shadow-main ">
                         <h1
                             ref={titleRef}
-                            className="text-header-sm mt-8 md:text-header-lg brightness-110 bg-main/25  lg:text-4xl font-bold mb-2 opacity-0  backdrop-blur-xs p-2 w-fit  "
+                            className="text-header-sm mt-8 md:text-header-lg brightness-110  lg:text-4xl font-bold mb-2 opacity-0   p-2 w-fit  "
                         >
                             {title}
                         </h1>
                         {description && (
                             <p
                                 ref={descriptionRef}
-                                className="text-desc-sm md:text-desc-md bg-main/25 brightness-110 lg:text-title-md  font-light opacity-0  backdrop-blur-xs p-2 w-fit "
+                                className="text-desc-sm md:text-desc-md  brightness-110 lg:text-title-md  font-light opacity-0 p-2 w-fit "
                             >
                                 {description}
                             </p>
@@ -127,7 +127,7 @@ export default function HeroContent({
                             <Button
                                 linkRef={pageLink}
                                 size='sm'
-                                className="inline-block px-3 py-2    text-title-md bg-main/25  brightness-110 contrast-100 backdrop-blur-[2px] text-shadow-sm text-shadow-main"
+                                className="inline-block px-3 py-2    text-title-md bg-main/25  brightness-110 contrast-100  text-shadow-sm text-shadow-main"
                             >
                                 {/* Button text with clip-path animation */}
 
@@ -157,6 +157,7 @@ export default function HeroContent({
                             isDisable={isAnimating}
                             aria-label={`Go to slide ${index + 1}`}
                             fullRounded="true"
+                            bgColor='main'
 
                         >
                             {index + 1}
