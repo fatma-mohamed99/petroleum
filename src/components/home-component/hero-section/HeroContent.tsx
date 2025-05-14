@@ -127,8 +127,8 @@ export default function HeroContent({
                             <Button
                                 linkRef={pageLink}
                                 size='sm'
-                                bgColor='#2563eb'
-                                className="inline-block px-3 py-2    text-title-md bg-main/25  brightness-110 contrast-100  text-shadow-sm text-shadow-main"
+                                bgColor='#213448'
+                                className="inline-block px-2 py-3    text-title-md bg-main/25  brightness-110 contrast-100  text-shadow-sm text-shadow-main"
                             >
                                 {/* Button text with clip-path animation */}
 
