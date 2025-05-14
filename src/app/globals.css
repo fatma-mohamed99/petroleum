@@ -9,9 +9,12 @@
 /* --color-main: #003b5c; الازرق*/
 --color-bgCard:#43434300 ;       
 /* --color-main: #4e6e5d; /الزيتى يا فاطمة*/
+--color-main: #142850; 
 
---color-main: #1c398e; 
---color-secondary: #dc931a;
+/* --color-main: #1c398e;  */
+--color-secondary: #AD7942;
+/* --color-secondary: #dc931a; */
+
   --color-fixedComponentBg:#ffffff;  
   --color-textColor:#1e1e1e;
   --text-header-sm: 1.25rem;   

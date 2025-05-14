@@ -21,11 +21,11 @@ function ActiveLink({
       onClick={onClickFun}
       className={`
         px-1 py-1 text-nowrap
-      
+      hover:border-y-2 border-main rounded-md p-4
         z-30   
         transition-all
         duration-200
-        font-medium hover:-translate-y-0.5
+        font-bold hover:-translate-y-0.5
         
          ${isActiveLink &&
         "font-bold  border-b-2  border-Text  scale-y-110   "
