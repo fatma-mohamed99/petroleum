@@ -142,29 +142,23 @@ const HeroCarousel: React.FC = () => {
             <Navbar />
 
             <div className="relative w-full h-full" ref={slideContainerRef}>
-                {/* Dark background to prevent white flashes */}
-                <div className="absolute inset-0 bg-black"></div>
 
-                {/* Transition overlay element */}
-                <div
-                    ref={overlayRef}
-                    className="absolute inset-0 bg-black opacity-0 z-10"
-                    style={{ pointerEvents: 'none' }}
-                ></div>
 
-                {/* Create all slides upfront but only show current one */}
+
                 {carouselImages.map((image, index) => (
                     <div
                         key={index}
                         ref={(el) => createSlideRefs(index, el)}
-                        className="absolute inset-0 bg-cover bg-center transition-transform"
+                        className="absolute inset-0 bg-cover bg-center  transition-transform"
                         style={{
                             backgroundImage: `url(${image.src})`,
                             opacity: index === currentImageIndex ? 1 : 0,
                             zIndex: index === currentImageIndex ? 1 : 0,
                             display: index === currentImageIndex ? 'block' : 'none'
                         }}
-                    ></div>
+                    >                <div className="absolute inset-0 bg-main/25 -z-40"></div>
+                    </div>
+
                 ))}
 
                 {/* Content */}
