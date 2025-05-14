@@ -15,7 +15,7 @@ function WhoAreWeSection() {
       rows.push(
         <div
           className="row  
-         min-w-full  flex justify-center items-center  "
+         min-w-full  flex justify-center items-center  gap-2.5 "
           key={i}
         >
           <div
@@ -37,7 +37,7 @@ function WhoAreWeSection() {
           </div>
           <div
             className="card card-right
-            relative w-[300px] h-[250px]
+          relative w-[300px] h-[300px]
           overflow-hidden
           will-change-transform
            shadow-md
@@ -77,9 +77,10 @@ function WhoAreWeSection() {
           x: leftXValues[index],
           y: yValues[index],
           rotation: leftRotationValues[index],
+          ease: "power2.out",
           scrollTrigger: {
             trigger: ".main",
-            start: "5% bottom",
+            start: "30% bottom",
             end: "120% bottom",
             scrub: true,
           },
@@ -89,9 +90,10 @@ function WhoAreWeSection() {
           x: rightXValues[index],
           y: yValues[index],
           rotation: rightRotationValues[index],
+          ease: "power2.out",
           scrollTrigger: {
             trigger: ".main",
-            start: "5% bottom",
+            start: "30% bottom",
             end: "120% bottom",
             scrub: true,
           },
@@ -107,7 +109,7 @@ function WhoAreWeSection() {
           stagger: 0.2,
           scrollTrigger: {
             trigger: ".main-content",
-            start: "top 60%",
+            start: "top 100%",
             toggleActions: "play none none reverse",
           },
         }
@@ -117,51 +119,48 @@ function WhoAreWeSection() {
   );
 
   return (
-    <SectionContainer title={"Who Are We"} description={""}>
+    <SectionContainer title={"Who Are We"} description={""} sectionClass="bg-main/5 w-full">
       <div
         ref={containerRef}
         className="main
       relative
       w-full
-       flex justify-center items-center
+       flex justify-center 
       flex-col
       
     "
       >
-        <div
-          className="main-content w-2/4 mx-auto absolute
-        top-1/2 left-1/2 translate-x-[-50%] 
-        translate-y-[-50%] bg-main/30 backdrop-blur-sm  "
+       <div
+  className="main-content w-3/4 mx-auto absolute
+top-1/2 left-1/2 translate-x-[-50%] 
+translate-y-[-50%]  backdrop-blur-sm p-8 "
+>
+  <div className="copy max-w-5xl text-lg  text-justify">
+    <div className="line mb-6">
+      <p className="text-textColor leading-relaxed font-medium">
+        For over two decades,
+        <span
+          className="text-main font-semibold mx-1"
         >
-  
-          <div className="copy max-w-5xl">
-            <div className="line mb-5">
-              <p className="text-textColor leading-relaxed font-medium">
-                Over the years,
-                <span
-                  className="text-textColor/80 font-semibold
-              "
-                >
-                  Unico petroleum
-                </span>
-                developed a reputation across the region as a reliable provider
-                of services in the Oil and Gas industry.
-              </p>
-            </div>
+          Unico Petroleum
+        </span>
+        has established itself as the premier provider of 
+        specialized services across the Oil and Gas industry
+         throughout the region, earning the trust of major industry players.
+      </p>
+    </div>
 
-            <div className="line">
-              <p className="text-textColor leading-relaxed font-medium">
-                Its commitment to the
-                <span className="text-main mx-0.5 ">
-                  highest standards of quality, safety, and service level
-                </span>
-                has been evident in the variety of projects it has completed on
-                time and within budget and continues to be at the heart of the
-                company vision for the future.
-              </p>
-            </div>
-          </div>
-        </div>
+    <div className="line">
+      <p className="text-textColor leading-relaxed font-medium">
+        Our unwavering dedication to
+        <span className="text-main mx-1 font-semibold">
+          exceptional quality standards, rigorous safety protocols, and unparalleled service excellence
+        </span>
+        is demonstrated through our impressive portfolio of projects delivered precisely on schedule and within budgetary constraints. This commitment remains the cornerstone of our corporate vision as we continue to innovate and lead the industry forward.
+      </p>
+    </div>
+  </div>
+</div>
         {generateRows()}
       </div>
     </SectionContainer>

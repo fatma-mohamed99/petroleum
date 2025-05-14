@@ -95,7 +95,6 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
       className={`relative overflow-hidden text-textColor
          pt-10 pb-20 min-h-screen max-h-[120vh]  flex flex-col
           justify-center ${sectionClass}`}
-      data-scroll-section
     >
 
       <div className={`container mx-auto px-6 max-w-4xl ${containerClass} pt-10`}>
@@ -111,7 +110,7 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
         </div>
         <div className="mb-12">
           <div className="overflow-hidden text-4xl md:text-5xl">
-            <h2 ref={titleRef} className={` font-bold mb-6`}>
+            <h2 ref={titleRef} className={` font-bold mb-6 text-main `}>
               {title}
             </h2>
           </div>
