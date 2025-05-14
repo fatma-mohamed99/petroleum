@@ -7,136 +7,107 @@ import gsap from 'gsap';
 
 const HeroCarousel: React.FC = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-    const [nextImageIndex, setNextImageIndex] = useState<number>(1);
     const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
     const slideContainerRef = useRef<HTMLDivElement>(null);
-    const currentSlideRef = useRef<HTMLDivElement>(null);
-    const nextSlideRef = useRef<HTMLDivElement>(null);
-    const nextSlideWrapperRef = useRef<HTMLDivElement>(null);
+    const slidesRef = useRef<(HTMLDivElement | null)[]>([]);
+    const overlayRef = useRef<HTMLDivElement>(null);
     const contentContainerRef = useRef<HTMLDivElement>(null);
 
+    // Create refs for all possible slides
+    const createSlideRefs = (index: number, el: HTMLDivElement | null) => {
+        slidesRef.current[index] = el;
+    };
+
     useEffect(() => {
+        // Initialize the first slide
+        if (slidesRef.current[currentImageIndex]) {
+            gsap.set(slidesRef.current[currentImageIndex], {
+                opacity: 1,
+                display: 'block',
+                zIndex: 1,
+                scale: 1
+            });
+        }
+
+        // Auto-play carousel only if not paused
         const interval = setInterval(() => {
             if (!isAnimating) {
                 goToNext();
             }
-        }, 5000);
+        }, 8000); // Slightly longer interval for better user experience
 
         return () => clearInterval(interval);
-    }, [isAnimating]);
+    }, [isAnimating, currentImageIndex]);
 
-    const animateRectangularTransition = (targetIndex: number) => {
-        if (isAnimating) return;
+    const animateTransition = (targetIndex: number) => {
+        if (isAnimating || targetIndex === currentImageIndex) return;
         setIsAnimating(true);
 
-        setNextImageIndex(targetIndex);
+        // Get current and next slides
+        const currentSlide = slidesRef.current[currentImageIndex];
+        const nextSlide = slidesRef.current[targetIndex];
 
-        if (nextSlideWrapperRef.current && nextSlideRef.current) {
-            nextSlideRef.current.style.backgroundImage = `url(${carouselImages[targetIndex].src})`;
-            nextSlideRef.current.style.backgroundSize = 'cover';
-            nextSlideRef.current.style.backgroundPosition = 'center';
+        if (!currentSlide || !nextSlide) return;
 
-            nextSlideWrapperRef.current.style.display = 'block';
-            nextSlideWrapperRef.current.style.width = '0px';
-            nextSlideWrapperRef.current.style.height = '0px';
-            nextSlideWrapperRef.current.style.borderRadius = '16px';
-            nextSlideWrapperRef.current.style.overflow = 'hidden';
-            nextSlideWrapperRef.current.style.position = 'absolute';
-            nextSlideWrapperRef.current.style.left = '50%';
-            nextSlideWrapperRef.current.style.top = '50%';
-            nextSlideWrapperRef.current.style.transform = 'translate(-50%, -50%)';
-            nextSlideWrapperRef.current.style.zIndex = '2';
-            nextSlideWrapperRef.current.style.boxShadow = '0 0 50px 25px rgba(255,255,255,0.3)';
-        }
-
-        if (currentSlideRef.current) {
-            currentSlideRef.current.style.zIndex = '1';
-        }
-
-        if (contentContainerRef.current) {
-            const content = contentContainerRef.current.querySelector('.content-to-animate');
-            if (content) {
-                gsap.to(content, {
-                    opacity: 0,
-                    y: -15,
-                    duration: 0.5,
-                    ease: 'power2.out'
-                });
-            }
-        }
-
-        const viewportWidth = window.innerWidth;
-        const viewportHeight = window.innerHeight;
-        const maxDimensionWidth = viewportWidth * 1.5;
-        const maxDimensionHeight = viewportHeight * 1.5;
-
+        // Create a master timeline for coordinated animations
         const tl = gsap.timeline({
             onComplete: () => {
                 setCurrentImageIndex(targetIndex);
-
-                if (currentSlideRef.current) {
-                    currentSlideRef.current.style.backgroundImage = `url(${carouselImages[targetIndex].src})`;
-                    currentSlideRef.current.style.zIndex = '1';
-                }
-
-                if (nextSlideWrapperRef.current) {
-                    nextSlideWrapperRef.current.style.zIndex = '3';
-                    setTimeout(() => {
-                        if (nextSlideWrapperRef.current) {
-                            nextSlideWrapperRef.current.style.display = 'none';
-                        }
-                    }, 50);
-                }
-
-                if (contentContainerRef.current) {
-                    const content = contentContainerRef.current.querySelector('.content-to-animate');
-                    if (content) {
-                        gsap.fromTo(
-                            content,
-                            { opacity: 0, y: 15 },
-                            { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }
-                        );
-                    }
-                }
-
                 setIsAnimating(false);
             }
         });
 
-        tl.to(nextSlideWrapperRef.current, {
-            width: '240px',
-            height: '160px',
-            duration: 0.7,
-            ease: 'power1.out'
+        // Prepare overlay for transition effect
+        if (overlayRef.current) {
+            tl.set(overlayRef.current, { opacity: 0 });
+
+            // Use overlay for smoother transition
+            tl.to(overlayRef.current, {
+                opacity: 0.3,
+                duration: 0.4,
+                ease: 'power1.inOut'
+            }, 0);
+        }
+
+        // Prepare next slide with initial state
+        gsap.set(nextSlide, {
+            opacity: 0,
+            display: 'block',
+            zIndex: 2,
+            scale: 1.05
         });
 
-        tl.to(nextSlideWrapperRef.current, {
-            width: `${maxDimensionWidth}px`,
-            height: `${maxDimensionHeight}px`,
-            borderRadius: '8px',
+        // Very subtle zoom effect on current slide
+        tl.to(currentSlide, {
+            opacity: 0,
+            scale: 1,
             duration: 1.2,
-            ease: 'power2.inOut',
-            onStart: () => {
+            ease: 'power2.inOut'
+        }, 0);
 
-                if (nextSlideWrapperRef.current && currentSlideRef.current) {
-                    nextSlideWrapperRef.current.style.zIndex = '2';
-                    currentSlideRef.current.style.zIndex = '1';
-                }
-            }
+        // Smooth transition to next slide
+        tl.to(nextSlide, {
+            opacity: 1,
+            scale: 1,
+            duration: 1.2,
+            ease: 'power2.inOut'
+        }, 0);
+
+        // Fade out overlay after transition
+        if (overlayRef.current) {
+            tl.to(overlayRef.current, {
+                opacity: 0,
+                duration: 0.5,
+                ease: 'power1.inOut'
+            }, 0.8);
+        }
+
+        // Reset current slide after animation
+        tl.set(currentSlide, {
+            display: 'none',
+            zIndex: 0
         });
-
-        tl.to(nextSlideWrapperRef.current, {
-            borderRadius: '0px',
-            duration: 0.4,
-            ease: 'power1.inOut',
-        }, "-=0.6");
-
-        tl.to(nextSlideWrapperRef.current, {
-            boxShadow: '0 0 0 0 rgba(255,255,255,0)',
-            duration: 0.3,
-            ease: 'power2.in'
-        }, "-=0.2");
     };
 
     const goToPrevious = () => {
@@ -146,7 +117,7 @@ const HeroCarousel: React.FC = () => {
             ? carouselImages.length - 1
             : currentImageIndex - 1;
 
-        animateRectangularTransition(prevIndex);
+        animateTransition(prevIndex);
     };
 
     const goToNext = () => {
@@ -156,61 +127,53 @@ const HeroCarousel: React.FC = () => {
             ? 0
             : currentImageIndex + 1;
 
-        animateRectangularTransition(nextIndex);
+        animateTransition(nextIndex);
     };
 
     const goToSlide = (index: number) => {
         if (isAnimating || index === currentImageIndex) return;
-        animateRectangularTransition(index);
+        animateTransition(index);
     };
+
+
 
     return (
         <div className="relative h-screen max-h-[70rem] w-full overflow-hidden">
             <Navbar />
 
             <div className="relative w-full h-full" ref={slideContainerRef}>
+                {/* Dark background to prevent white flashes */}
+                <div className="absolute inset-0 bg-black"></div>
+
+                {/* Transition overlay element */}
                 <div
-                    ref={currentSlideRef}
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{
-                        backgroundImage: `url(${carouselImages[currentImageIndex].src})`,
-                        zIndex: 1
-                    }}
+                    ref={overlayRef}
+                    className="absolute inset-0 bg-black opacity-0 z-10"
+                    style={{ pointerEvents: 'none' }}
                 ></div>
 
-                <div
-                    ref={nextSlideWrapperRef}
-                    style={{
-                        display: 'none',
-                        position: 'absolute',
-                        width: '0',
-                        height: '0',
-                        borderRadius: '16px',
-                        overflow: 'hidden',
-                        zIndex: 2,
-                        left: '50%',
-                        top: '50%',
-                        transform: 'translate(-50%, -50%)',
-                        boxShadow: '0 0 50px 25px rgba(255,255,255,0.3)'
-                    }}
-                >
+                {/* Create all slides upfront but only show current one */}
+                {carouselImages.map((image, index) => (
                     <div
-                        ref={nextSlideRef}
-                        className="absolute inset-0 bg-contain bg-center w-full h-full"
+                        key={index}
+                        ref={(el) => createSlideRefs(index, el)}
+                        className="absolute inset-0 bg-cover bg-center transition-transform"
                         style={{
-                            backgroundImage: nextImageIndex !== null ?
-                                `url(${carouselImages[nextImageIndex].src})` :
-                                'none'
+                            backgroundImage: `url(${image.src})`,
+                            opacity: index === currentImageIndex ? 1 : 0,
+                            zIndex: index === currentImageIndex ? 1 : 0,
+                            display: index === currentImageIndex ? 'block' : 'none'
                         }}
                     ></div>
-                </div>
+                ))}
 
+                {/* Content */}
                 <div
                     ref={contentContainerRef}
-                    className="absolute inset-0 flex items-center justify-center"
-                    style={{ zIndex: 10 }}
+                    className="absolute inset-0 flex items-center justify-center pointer-events-none"
+                    style={{ zIndex: 20 }}
                 >
-                    <div className="w-full max-w-[90%] md:max-w-[85%] xl:max-w-[75%] 2xl:max-w-[70%] h-full">
+                    <div className="w-full max-w-[90%] md:max-w-[85%] xl:max-w-[75%] 2xl:max-w-[70%] h-full pointer-events-auto">
                         <HeroContent
                             title={carouselImages[currentImageIndex].title}
                             description={carouselImages[currentImageIndex].description}
@@ -225,6 +188,8 @@ const HeroCarousel: React.FC = () => {
                         />
                     </div>
                 </div>
+
+
             </div>
         </div>
     );

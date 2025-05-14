@@ -5,14 +5,14 @@ function NavLinks() {
     return (
         <div className="flex flex-col items-end gap-4 text-white  ">
             <div className="font-extralight text-secondary font-serif
-                   text-desc-md space-x-6  md:space-x-4 text-shadow-main text-shadow-md "> {suppages.map((path) => (
+                   text-desc-md space-x-6  md:space-x-4 text-shadow-main text-shadow-sm "> {suppages.map((path) => (
 
                 <ActiveLink key={path.title} targetPath={path.target}>{path.title} </ActiveLink>
 
             ))}  </div>
 
             <div className="font-medium   font-helvetica
-               lg:text-header-md  md:text-header-sm   text-header-md space-x-6  md:space-x-4 text-shadow-main text-shadow-md "> {pages.map((path) => (
+               lg:text-header-md  md:text-header-sm   text-header-md space-x-6  md:space-x-4 text-shadow-secondary text-shadow-md "> {pages.map((path) => (
 
                 <ActiveLink key={path.title} targetPath={path.target}>{path.title} </ActiveLink>
 
