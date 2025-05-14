@@ -106,19 +106,19 @@ export default function HeroContent({
             <div className="flex-1 flex items-center">
                 <div
                     ref={contentWrapperRef}
-                    className="w-full max-w-6xl mx-2 text-white z-10 p-4 md:p-6 lg:p-8 overflow-hidden"
+                    className="w-full max-w-6xl mx-2 text-secondary z-10 p-4 md:p-6 lg:p-8 overflow-hidden"
                 >
-                    <div className="content-wrapper text-white text-shadow-md text-shadow-main ">
+                    <div className="content-wrapper text-secondary text-shadow-sm text-shadow-main ">
                         <h1
                             ref={titleRef}
-                            className="text-header-sm mt-8 bg-main/40 md:text-header-lg  lg:text-4xl font-bold mb-2 opacity-0  backdrop-blur-xs p-2 w-fit "
+                            className="text-header-sm mt-8 bg-main/40 md:text-header-lg  lg:text-4xl font-bold mb-2 opacity-0  backdrop-blur-xs p-2 w-fit brightness-125 "
                         >
                             {title}
                         </h1>
                         {description && (
                             <p
                                 ref={descriptionRef}
-                                className="text-desc-sm md:text-desc-md bg-main/70 lg:text-desc-lg font-light opacity-0  backdrop-blur-xs p-2 w-fit "
+                                className="text-desc-sm md:text-desc-md bg-main/70 lg:text-title-md brightness-150  font-light opacity-0  backdrop-blur-xs p-2 w-fit "
                             >
                                 {description}
                             </p>
@@ -127,7 +127,7 @@ export default function HeroContent({
                             <Button
                                 linkRef={pageLink}
                                 size='sm'
-                                className="inline-block px-3 py-2 bg-main/80 text-white text-title-md     "
+                                className="inline-block px-3 py-2 bg-main/80 brightness-110 text-secondary text-title-md     "
                             >
                                 {/* Button text with clip-path animation */}
 
@@ -148,7 +148,7 @@ export default function HeroContent({
                         <Button
                             key={`dot-${index}`}
                             onClick={() => !isAnimating && setCurrentImageIndex(index)}
-                            className={`cursor-pointer w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-white bg-main text-title-sm   hover:bg-secondary/30
+                            className={`cursor-pointer w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-secondary bg-main text-title-sm   hover:bg-secondary/30
                                 ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'} 
                                 ${currentImageIndex === index
                                     ? 'bg-main text-main scale-110'
@@ -170,7 +170,7 @@ export default function HeroContent({
                 >
                     <Button
                         onClick={onPrevious}
-                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center text-white cursor-pointer bg-main/80   hover:bg-secondary/30  transition-all duration-300 
+                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center text-secondary cursor-pointer bg-main/80   hover:bg-secondary/30  transition-all duration-300 
                             ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Previous slide"
                         isDisable={isAnimating}
