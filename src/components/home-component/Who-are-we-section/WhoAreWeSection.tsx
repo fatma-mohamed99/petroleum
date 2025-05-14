@@ -128,16 +128,9 @@ function WhoAreWeSection() {
         <div
           className="main-content w-3/4 mx-auto absolute
         top-1/2 left-1/2 translate-x-[-50%] 
-        translate-y-[-50%] bg-white/80 backdrop-blur-sm  p-6 shadow-lg"
+        translate-y-[-50%] bg-main/30 backdrop-blur-sm  p-6 shadow-lg"
         >
-          <div className="text-center">
-            <p
-              className="text-3xl font-bold mb-6 text-textColor border-b border-indigo-300
-           pb-2"
-            >
-              Who Are We
-            </p>
-          </div>
+  
           <div className="copy max-w-5xl">
             <div className="line mb-5">
               <p className="text-textColor leading-relaxed font-medium">
