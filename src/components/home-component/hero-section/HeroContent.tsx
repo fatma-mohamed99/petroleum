@@ -181,7 +181,7 @@ export default function HeroContent({
                     </Button>
                     <Button
                         onClick={onNext}
-                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-white cursor-pointer bg-main/80   hover:bg-secondary/30 
+                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-secondary cursor-pointer bg-main/80   hover:bg-secondary/30 
                             ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Next slide"
                         isDisable={isAnimating}
