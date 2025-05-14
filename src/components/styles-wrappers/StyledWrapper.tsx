@@ -97,8 +97,10 @@ export const StyledWrapper = styled.div<{
     transition: width 0.5s ease-out, right 0.3s ease-out;
   }
   .fancy:hover::before {
-    width: ${props => props.$noBefore || props.$fullRounded ? '0' : '0.9375rem'};
-    background: ${props => props.$bgColor};
+    width: ${props => props.$noBefore || props.$fullRounded ? '0' : 
+      props.$size === 'sm' ? '0.675em' :
+      props.$size === 'lg' ? '1.125em' : '.875em'};
+    
   }
   .fancy:hover .text {
     padding-left: ${props => props.$fullRounded ? '0' : '1.5em'};

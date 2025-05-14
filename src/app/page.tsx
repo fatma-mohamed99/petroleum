@@ -28,7 +28,7 @@ export default function Home() {
 
 
       {/* ###################################### */}
-      <div className="flex justify-around">
+      <div className="flex justify-around items-center">
 
       <Button fullRounded={true} >
         
