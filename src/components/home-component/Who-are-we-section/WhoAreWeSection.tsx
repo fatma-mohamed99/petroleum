@@ -20,7 +20,7 @@ function WhoAreWeSection() {
         >
           <div
             className="card card-left
-          relative w-[200px] h-[200px]
+          relative w-[250px] h-[250px]
           overflow-hidden
           will-change-transform
            shadow-md
@@ -37,7 +37,7 @@ function WhoAreWeSection() {
           </div>
           <div
             className="card card-right
-          relative w-[200px] h-[200px]
+          relative w-[250px] h-[250px]
           overflow-hidden
           will-change-transform
            shadow-md
@@ -63,10 +63,10 @@ function WhoAreWeSection() {
     () => {
       gsap.registerPlugin(ScrollTrigger);
 
-      const leftXValues = [-350, -400,-450];
-      const rightXValues = [350, 400,450];
-      const leftRotationValues = [-20, -20,-20];
-      const rightRotationValues = [20, 20,20];
+      const leftXValues = [-500, -400,-300];
+      const rightXValues = [500, 400,300];
+      const leftRotationValues = [-15, -15,-15];
+      const rightRotationValues = [15, 15,15];
       const yValues = [100, 0,-50];
 
       gsap.utils.toArray(".row").forEach((row, index) => {

@@ -43,8 +43,7 @@ export const Button = ({
     >
       <button disabled={isDisable} onClick={clickHandler} className={`fancy `}>
         {!noBefore && <span className="top-key" />}
-        <div className={`text  ${className}`}>
-          {}
+        <div className={`text  `}>
           <p className={`${className}`}>{children}</p>
         </div>
         {!noBefore && (

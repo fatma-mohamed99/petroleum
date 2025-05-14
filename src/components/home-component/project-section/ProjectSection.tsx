@@ -59,7 +59,7 @@ const handleShow = () => {
         UNICO has delivered 25+ projects across the Levant region, specializing in storage tanks, pipelines,
         and pumping stations with international standards`}
     >
-      <div  className="grid grid-cols-1 sm:grid-cols-2  gap-5 w-full">
+      <div  className="grid grid-cols-1 sm:grid-cols-2  gap-8 w-full">
         {showingProject.map((project) => (
           <div key={project.id}>
             <CardWithAnimatedBorder
