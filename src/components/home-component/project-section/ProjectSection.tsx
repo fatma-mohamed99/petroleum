@@ -13,22 +13,24 @@ function ProjectSection() {
   const [showAll, setShowAll] = useState(false);
   const arrowRef = useRef<HTMLSpanElement>(null);
 
-  const sectionRef = useRef<HTMLDivElement>(null);
+const sectionRef = useRef<HTMLDivElement>(null);
 
-  const handleShow = () => {
-    setShowAll((prev) => {
-      const newState = !prev;
+const handleShow = () => {
+  setShowAll((prev) => {
+    const newState = !prev;
 
+    if (prev === true && newState === false) {
       setTimeout(() => {
         sectionRef.current?.scrollIntoView({
           behavior: "smooth",
           block: "start",
         });
       }, 0);
+    }
 
-      return newState;
-    });
-  };
+    return newState;
+  });
+};
 
   const showingProject = showAll ? projects : shortProjectsArray;
 
@@ -57,7 +59,7 @@ function ProjectSection() {
         UNICO has delivered 25+ projects across the Levant region, specializing in storage tanks, pipelines,
         and pumping stations with international standards`}
     >
-      <div  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
+      <div  className="grid grid-cols-1 sm:grid-cols-2  gap-5 w-full">
         {showingProject.map((project) => (
           <div key={project.id}>
             <CardWithAnimatedBorder
@@ -72,9 +74,9 @@ function ProjectSection() {
         ))}
       </div>
 
-      <div className="w-full flex justify-end mt-2">
+      <div className="w-full flex justify-end mt-2 md:text-lg lg:text-xl">
         <button
-          className="flex outline-0 gap-1 text-secondary cursor-pointer"
+          className="flex outline-0 gap-1 text-secondary cursor-pointer border-b-2 border-transparent hover:border-secondary transition-all duration-300"
           onClick={handleShow}
         >
           {showAll ? "Show less" : "Show more"}

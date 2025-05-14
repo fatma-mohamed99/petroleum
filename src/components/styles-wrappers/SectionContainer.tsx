@@ -107,7 +107,7 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
             style={{ width: "0%" }}
           />
         </div>
-        <div className="mb-12">
+        <div className={`${description===""?"mb-0":"mb-12"}`}>
           <div className="overflow-hidden text-4xl md:text-5xl">
             <h2 ref={titleRef} className={` font-bold mb-6 text-main `}>
               {title}
