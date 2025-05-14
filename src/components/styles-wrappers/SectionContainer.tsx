@@ -93,11 +93,10 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
     <section
       ref={sectionRef}
       className={`relative overflow-hidden text-textColor
-         pt-10 pb-20 min-h-screen max-h-[120vh]  flex flex-col
-          justify-center ${sectionClass}`}
+         pt-10 pb-20 min-h-screen   mx-auto ${sectionClass}`}
     >
 
-      <div className={`container mx-auto px-6 max-w-4xl ${containerClass} pt-10`}>
+      <div className={`container mx-auto px-6 max-w-6xl ${containerClass} pt-10`}>
         <div
           className="
         w-full h-1 z-50"
