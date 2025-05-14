@@ -1,6 +1,8 @@
 "use client";
-import React from 'react';
-import { StyledWrapper } from '../styles-wrappers/StyledWrapper';
+import React from "react";
+import { StyledWrapper } from "../styles-wrappers/StyledWrapper";
+import { Router, useRouter } from "next/router";
+import { link } from "fs";
 
 export const Button = ({
   children,
@@ -8,31 +10,44 @@ export const Button = ({
   onClick = () => {},
   bgColor = "#ffffff",
   fullRounded = false,
-  size = 'md',
-  noBefore = false
+  size = "md",
+  linkRef = "",
+  noBefore = false,
+  isDisable=false
 }: {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
   bgColor?: string;
   fullRounded?: boolean;
-  size?: 'sm' | 'md' | 'lg';
+  size?: "sm" | "md" | "lg";
   noBefore?: boolean;
+  linkRef?: string;
+  isDisable?: boolean;
 }) => {
+  const router = useRouter();
+
+  const clickHandler = () => {
+    if (linkRef) {
+      router.push(linkRef);
+    } else if (onClick) {
+      onClick();
+    }
+  };
+
   return (
-    <StyledWrapper 
-      $bgColor={bgColor} 
+    <StyledWrapper
+      $bgColor={bgColor}
       $fullRounded={fullRounded}
       $size={size}
       $noBefore={noBefore}
     >
-      <button onClick={onClick} className={`fancy `}>
+      <button disabled={isDisable} onClick={clickHandler} className={`fancy `}>
         {!noBefore && <span className="top-key" />}
-        <div  className={`text  ${className}`} >
-            <p className={`${className}`}>
-{children}
-            </p>
-            </div>
+        <div className={`text  ${className}`}>
+          {}
+          <p className={`${className}`}>{children}</p>
+        </div>
         {!noBefore && (
           <>
             <span className="bottom-key-1" />
