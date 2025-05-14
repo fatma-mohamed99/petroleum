@@ -80,46 +80,24 @@ export default function HeroContent({
             );
         }
 
-        // Animation for button text similar to title
-        tl.fromTo(
-            buttonTextRef.current,
-            {
-                opacity: 0,
-                clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"
-            },
-            {
-                opacity: 1,
-                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                duration: 0.8
-            },
-            1.0 // Start slightly after description begins
-        );
 
         // Animation for button container after text appears
         tl.fromTo(
             buttonRef.current,
             {
                 opacity: 0,
-                scale: 0.95,
+                scale: 0.6
             },
             {
                 opacity: 1,
                 scale: 1,
+
                 duration: 1.2,
                 ease: "power2.out"
             },
             1.3 // Start after text animation begins
         );
 
-        // Subtle animation for navigation controls
-        if (paginationRef.current && navigationRef.current) {
-            tl.fromTo(
-                [paginationRef.current, navigationRef.current],
-                { opacity: 0, y: 10 },
-                { opacity: 1, y: 0, duration: 0.5 },
-                0.6
-            );
-        }
 
     }, [currentImageIndex, description]);
 
@@ -133,14 +111,14 @@ export default function HeroContent({
                     <div className="content-wrapper text-white text-shadow-sm text-shadow-secondary ">
                         <h1
                             ref={titleRef}
-                            className="text-header-sm mt-8 md:text-header-lg lg:text-4xl font-bold mb-2 opacity-0 bg-main/25 p-2"
+                            className="text-header-sm mt-8 md:text-header-lg lg:text-4xl font-bold mb-2 opacity-0  backdrop-blur-xs p-2 w-fit"
                         >
                             {title}
                         </h1>
                         {description && (
                             <p
                                 ref={descriptionRef}
-                                className="text-desc-sm md:text-desc-md lg:text-text-desc-lg font-light opacity-0 bg-main/25 p-2"
+                                className="text-desc-sm md:text-desc-md lg:text-text-desc-lg font-light opacity-0  backdrop-blur-xs p-2 w-fit "
                             >
                                 {description}
                             </p>
@@ -151,12 +129,12 @@ export default function HeroContent({
                                     window.location.href = pageLink;
                                 }}
                                 size='sm'
-                                className="inline-block px-6 py-3 bg-transparent   font-semibold text-title-md transition-all duration-300 "
+                                className="inline-block px-3 py-2 bg-secondary text-white text-title-md     "
                             >
                                 {/* Button text with clip-path animation */}
-                                <span ref={buttonTextRef} className="inline-block opacity-0">
-                                    {buttonText}
-                                </span>
+
+                                {buttonText}
+
                             </Button>
                         </div>
                     </div>
@@ -166,20 +144,21 @@ export default function HeroContent({
                 {/* Pagination */}
                 <div
                     ref={paginationRef}
-                    className="flex space-x-2 order-2 md:order-1 opacity-0"
+                    className="flex space-x-2 order-2 md:order-1"
                 >
                     {Array.from({ length: totalImages }).map((_, index) => (
                         <Button
                             key={`dot-${index}`}
                             onClick={() => !isAnimating && setCurrentImageIndex(index)}
-                            className={`cursor-pointer text-header-lg w-8 h-8 md:w-10 md:h-10 lg:w-10 lg:h-14 flex items-center justify-center transition-all duration-300 
-                                ${isAnimating ? 'pointer-events-none opacity-70' : ''} 
+                            className={`cursor-pointer w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-white bg-main text-title-sm   hover:bg-secondary/30
+                                ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'} 
                                 ${currentImageIndex === index
                                     ? 'bg-secondary text-main scale-110'
-                                    : 'bg-main/30 text-secondary hover:bg-main/60'
+                                    : 'bg-main/30 text-main hover:bg-main/60'
                                 }`}
-                            // disabled={isAnimating}
+                            isDisable={isAnimating}
                             aria-label={`Go to slide ${index + 1}`}
+                            fullRounded="true"
 
                         >
                             {index + 1}
@@ -187,29 +166,32 @@ export default function HeroContent({
                     ))}
                 </div>
                 {/* Navigation arrows */}
-                {/* <div
+                <div
                     ref={navigationRef}
-                    className="hidden sm:flex space-x-2 order-1 md:order-2 opacity-0"
+                    className="hidden sm:flex space-x-2 order-1 md:order-2 "
                 >
-                    <button
+                    <Button
                         onClick={onPrevious}
-                        className={`w-8 h-8 md:w-10 md:h-10 lg:w-16 lg:h-16 border shadow-sm shadow-main rounded-full flex items-center justify-center bg-main/40 hover:bg-main text-white cursor-pointer transition-all duration-300 
-                            ${isAnimating ? 'pointer-events-none opacity-70' : ''}`}
+                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center text-white cursor-pointer bg-secondary   hover:bg-secondary/30  transition-all duration-300 
+                            ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Previous slide"
-                        disabled={isAnimating}
+                        isDisable={isAnimating}
+                        fullRounded="true"
+
                     >
                         <ChevronLeft size={40} />
-                    </button>
-                    <button
+                    </Button>
+                    <Button
                         onClick={onNext}
-                        className={`w-8 h-8 md:w-10 md:h-10 lg:w-16 lg:h-16 border shadow-sm shadow-main rounded-full flex items-center justify-center bg-main/40 hover:bg-main text-white cursor-pointer transition-all duration-300 
-                            ${isAnimating ? 'pointer-events-none opacity-70' : ''}`}
+                        className={`w-8 h-8 md:w-10 md:h-10  rounded-full flex items-center justify-center  text-white cursor-pointer bg-secondary   hover:bg-secondary/30 
+                            ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Next slide"
-                        disabled={isAnimating}
+                        isDisable={isAnimating}
+                        fullRounded="true"
                     >
                         <ChevronRight size={40} />
-                    </button>
-                </div> */}
+                    </Button>
+                </div>
             </div>
         </div>
     );

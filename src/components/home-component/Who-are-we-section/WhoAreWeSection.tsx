@@ -7,6 +7,7 @@ import Image from "next/image";
 import SectionContainer from "@/components/styles-wrappers/SectionContainer";
 
 function WhoAreWeSection() {
+
   const containerRef = useRef(null);
 
   const generateRows = () => {
@@ -15,12 +16,12 @@ function WhoAreWeSection() {
       rows.push(
         <div
           className="row  
-         min-w-full  flex justify-center items-center  gap-2.5 "
+         min-w-full  flex justify-center items-center gap-x-2 gap-y-3 "
           key={i}
         >
           <div
             className="card card-left
-          relative w-[300px] h-[300px]
+          relative w-[300px] h-[400px]
           overflow-hidden
           will-change-transform
            shadow-md
@@ -131,7 +132,7 @@ function WhoAreWeSection() {
     "
       >
        <div
-  className="main-content w-3/4 mx-auto absolute
+  className="main-content w-3/5 mx-auto absolute
 top-1/2 left-1/2 translate-x-[-50%] 
 translate-y-[-50%]  backdrop-blur-sm p-8 "
 >
