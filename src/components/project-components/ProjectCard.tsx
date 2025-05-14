@@ -1,14 +1,14 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import { ProjectCardStyledWrapper } from '../styles-wrappers/ProjectCardStyledWrapper';
+// import { ProjectCardStyledWrapper } from '../styles-wrappers/ProjectCardStyledWrapper';
 import { Project } from '@/types/project';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 const ProjectCard = ({projectData}:{projectData:Project}) => {
   return (
-    <ProjectCardStyledWrapper>
+    // <ProjectCardStyledWrapper>
       <div className="card">
         <div className="card__body">
           <Image 
@@ -31,7 +31,7 @@ const ProjectCard = ({projectData}:{projectData:Project}) => {
           </Link>
         </div>
       </div>
-    </ProjectCardStyledWrapper>
+    // </ProjectCardStyledWrapper>
   );
 }
 
