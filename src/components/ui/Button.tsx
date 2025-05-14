@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { StyledWrapper } from "../styles-wrappers/StyledWrapper";
-import { Router, useRouter } from "next/router";
-import { link } from "fs";
+import { useRouter } from "next/navigation";
 
 export const Button = ({
   children,
