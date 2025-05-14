@@ -15,15 +15,16 @@ function WhoAreWeSection() {
       rows.push(
         <div
           className="row  
-         min-w-full mb-[1em] flex justify-center items-center gap-[2em]"
+         min-w-full  flex justify-center items-center  "
           key={i}
         >
           <div
             className="card card-left
-          relative w-[300px] h-[250px]
+          relative w-[300px] h-[300px]
           overflow-hidden
           will-change-transform
            shadow-md
+           border-secondary  border-2
           "
           >
             <Image
@@ -40,6 +41,8 @@ function WhoAreWeSection() {
           overflow-hidden
           will-change-transform
            shadow-md
+                      border-secondary  border-2
+
           "
           >
             <Image
@@ -60,11 +63,11 @@ function WhoAreWeSection() {
     () => {
       gsap.registerPlugin(ScrollTrigger);
 
-      const leftXValues = [-800, -900, -400];
-      const rightXValues = [800, 900, 400];
-      const leftRotationValues = [-30, -20, -35];
-      const rightRotationValues = [30, 20, 35];
-      const yValues = [100, -150, -400];
+      const leftXValues = [-500, -600];
+      const rightXValues = [500, 600 ];
+      const leftRotationValues = [-30, -30 ];
+      const rightRotationValues = [30, 30];
+      const yValues = [100, -50];
 
       gsap.utils.toArray(".row").forEach((row, index) => {
         const cardLeft = row.querySelector(".card-left");
@@ -76,7 +79,7 @@ function WhoAreWeSection() {
           rotation: leftRotationValues[index],
           scrollTrigger: {
             trigger: ".main",
-            start: "top center",
+            start: "5% bottom",
             end: "120% bottom",
             scrub: true,
           },
@@ -88,7 +91,7 @@ function WhoAreWeSection() {
           rotation: rightRotationValues[index],
           scrollTrigger: {
             trigger: ".main",
-            start: "top center",
+            start: "5% bottom",
             end: "120% bottom",
             scrub: true,
           },
@@ -126,9 +129,9 @@ function WhoAreWeSection() {
     "
       >
         <div
-          className="main-content w-3/4 mx-auto absolute
+          className="main-content w-2/4 mx-auto absolute
         top-1/2 left-1/2 translate-x-[-50%] 
-        translate-y-[-50%] bg-main/30 backdrop-blur-sm  p-6 shadow-lg"
+        translate-y-[-50%] bg-main/30 backdrop-blur-sm  "
         >
   
           <div className="copy max-w-5xl">
