@@ -3,6 +3,7 @@ import Link from "next/link";
 import { openPdfInNewTab, downloadPdf } from "../../utils/footerUtils";
 import { FileDown, FileText, View, Mail, MapPin, Phone } from "lucide-react";
 import { aboutUsLinks } from "@/consts/aboutUs";
+import { Button } from "../ui/Button";
 
 function Footer() {
   const brochurePath = "/assets/brochure/brochureFromPetroleum.pdf";
@@ -71,21 +72,21 @@ function Footer() {
               <FileText size={24} />
               Brochure
             </h3>
-            <div className="flex flex-col gap-3">
-              <button
+            <div className="flex flex-col gap-3 items-center">
+              <Button
                 onClick={() => openPdfInNewTab(brochurePath)}
-                className="bg-black/40 hover:bg-black/80 text-white px-5 py-2.5 text-sm transition duration-300 flex gap-2 items-center shadow-md hover:shadow-xl"
-                aria-label="View brochure"
+                className="flex gap-2 pr-2"
               >
-                <View size={18} /> View
-              </button>
-              <button
+                <View size={18} /> <p>VIEW</p>
+              </Button>
+              <Button
+                              className="flex gap-2 pr-2"
+
+
                 onClick={() => downloadPdf(brochurePath, "brochure")}
-                className="border-2 text-white px-5 py-2.5 text-sm transition duration-300 flex gap-2 items-center shadow-md hover:shadow-xl hover:bg-black/40"
-                aria-label="Download brochure"
               >
                 <FileDown size={18} /> Download
-              </button>
+              </Button>
             </div>
           </div>
 

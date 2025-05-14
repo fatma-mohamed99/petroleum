@@ -1,7 +1,7 @@
-import CustomButton from "@/components/ui/CustomButton";
 import Image from "next/image";
 import React from "react";
 import type { SpecialtyCard as SpecialtyCardType } from "@/types/SpecialtyCard ";
+import { Button } from "@/components/ui/Button";
 
 function SpecialtyCard({ cardData, }: { cardData: SpecialtyCardType }) {
   const { title, imageSrc, shortDescription } = cardData;
@@ -49,9 +49,9 @@ function SpecialtyCard({ cardData, }: { cardData: SpecialtyCardType }) {
         </p>
       </div>
       <div className="p-6 pt-0 text-center sm:text-start">
-        <CustomButton className="text-white">
+        <Button >
           More Detail
-        </CustomButton>
+        </Button>
       </div>
     </div>
   );

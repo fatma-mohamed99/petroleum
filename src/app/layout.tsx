@@ -9,7 +9,7 @@ export const metadata = {
     icon: '/logo.jpg',
   }
 }
-import { IBM_Plex_Sans } from 'next/font/google';
+// import { IBM_Plex_Sans } from 'next/font/google';
 
 // const ibmPlex = IBM_Plex_Sans({
 //   subsets: ['latin'],
