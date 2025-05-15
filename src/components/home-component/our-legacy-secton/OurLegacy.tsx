@@ -11,7 +11,7 @@ export default function UnicoLegacySection() {
     const [animationComplete, setAnimationComplete] = useState([]);
     const [animationStarted, setAnimationStarted] = useState(false);
     const totalCards = 5;
-    const animationDuration = 1200;
+    const animationDuration = 800;
 
     useEffect(() => {
         if (typeof window === 'undefined') return;

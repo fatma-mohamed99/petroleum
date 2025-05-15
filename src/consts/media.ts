@@ -36,7 +36,7 @@ export const media = [
 export const carouselImages = [
   {
     id: 1,
-    src: '/images/hero-img/slider1.jpg',
+    src: '/images/hero-img/slider1.webp',
     alt: 'About Us',
     title: "Engineering Excellence Since 2005",
     description: "Trusted EPCC partner across the Levant region",
