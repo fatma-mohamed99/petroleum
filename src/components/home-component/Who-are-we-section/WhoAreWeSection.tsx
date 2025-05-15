@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -7,109 +7,89 @@ import Image from "next/image";
 import SectionContainer from "@/components/styles-wrappers/SectionContainer";
 
 function WhoAreWeSection() {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const mainContentRef = useRef<HTMLDivElement>(null);
+  const [positions, setPositions] = useState<Array<{x: number, y: number, rotation: number, scale: number}>>([]);
+  
+  const generateGridPositions = (count: number, columns = 3, spacingX = 500, spacingY = 800) => {
+    const positions = [];
+    
+    for (let i = 0; i < count; i++) {
+      const row = Math.floor(i / columns);
+      const col = i % columns;
 
-  const generateRows = () => {
-    const rows = [];
-    for (let i = 1; i <=3; i++) {
-      rows.push(
-        <div
-          className="row  
-         min-w-full  flex justify-center items-start gap-2 "
-          key={i}
-        >
-          <div
-            className="card card-left
-          relative w-[250px] h-[250px]
-          overflow-hidden
-          will-change-transform
-           shadow-md
-           border-secondary  border-2
-          "
-          >
-            <Image
-              src={`/images/hero-img/slider${1}.webp`}
-              alt={`slideImage ${i}`}
-              fill
-              objectFit="cover"
-              className="object-center"
-            />
-          </div>
-          <div
-            className="card card-right
-          relative w-[250px] h-[250px]
-          overflow-hidden
-          will-change-transform
-           shadow-md
-          border-secondary  border-2
+      const x = (col - (columns - 1) / 2) * spacingX;
+      const y = (row - 0.5) * spacingY;
 
-          "
-          >
-            <Image
-              src={`/images/hero-img/slider${1}.webp`}
-              alt={`slideImage ${2 * i}`}
-              fill
-              objectFit="cover"
-              className="object-center"
-            />
-          </div>
-        </div>
-      );
+      positions.push({
+        x,
+        y,
+        rotation: Math.random() * 10 - 5, 
+        scale: 0.9 + Math.random() * 0.2,  
+      });
     }
-    return rows;
+    
+    return positions;
+  };
+
+  useEffect(() => {
+    setPositions(generateGridPositions(6));
+  }, []);
+
+  const generateCards = () => {
+    if (positions.length === 0) return null;
+    
+    return positions.map((pos, i) => (
+      <div
+        key={i}
+        className={`card card-${i} absolute w-[200px] h-[300px] md:w-[250px] md:h-[350px] overflow-hidden will-change-transform shadow-lg border-secondary border-2 rounded-lg transition-all duration-300 hover:z-10 hover:scale-105`}
+        style={{
+          left: "50%",
+          top: "50%",
+          transform: `translate(-50%, -50%) translate(${pos.x}px, ${pos.y}px) rotate(${pos.rotation}deg) scale(${pos.scale})`,
+          zIndex: 1,
+        }}
+      >
+        <Image
+          src={`/images/hero-img/slider${(i % 6) + 1}.jpg`}
+          alt={`Slide image ${i + 1}`}
+          fill
+          sizes="(max-width: 768px) 200px, 250px"
+          style={{ objectFit: "cover" }}
+          className="object-center brightness-90 hover:brightness-100 transition-all duration-300"
+          priority={i < 3} 
+        />
+      </div>
+    ));
   };
 
   useGSAP(
     () => {
+      if (positions.length === 0) return;
+
       gsap.registerPlugin(ScrollTrigger);
 
-      const leftXValues = [-500, -400,-300];
-      const rightXValues = [500, 400,300];
-      const leftRotationValues = [-15, -15,-15];
-      const rightRotationValues = [15, 15,15];
-      const yValues = [100, 0,-50];
-
-      gsap.utils.toArray(".row").forEach((row, index) => {
-        const cardLeft = row.querySelector(".card-left");
-        const cardRight = row.querySelector(".card-right");
-
-        gsap.to(cardLeft, {
-          x: leftXValues[index],
-          y: yValues[index],
-          rotation: leftRotationValues[index],
-          scrollTrigger: {
-            trigger: ".main",
-            scrub: true,
-          },
-        });
-
-        gsap.to(cardRight, {
-          x: rightXValues[index],
-          y: yValues[index],
-          rotation: rightRotationValues[index],
-          scrollTrigger: {
-            trigger: ".main",
-             scrub: true,
-          },
-        });
-      });
-
+  
       gsap.fromTo(
         ".copy .line",
-        { y: 50, opacity: 0 },
+        { y: 30, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          stagger: 0.2,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power2.out",
           scrollTrigger: {
-            trigger: ".main-content",
-            start: "top 100%",
-            toggleActions: "play none none reverse",
+            trigger: mainContentRef.current,
+            start: "top 70%",
+            toggleActions: "play none none none",
           },
         }
       );
+
+      
     },
-    { scope: containerRef }
+    { scope: containerRef, dependencies: [positions] }
   );
 
   return (
@@ -117,25 +97,21 @@ function WhoAreWeSection() {
       title={"Who Are We"}
       description={""}
       containerClass="main"
-      sectionClass="bg-main/5 w-full"
+      sectionClass="bg-main/5 w-full overflow-hidden"
     >
       <div
         ref={containerRef}
-        className="
-      relative
-      w-full
-       flex justify-center  
-       flex-col
-       min-h-96
-      
-    "
+        className="relative w-full flex justify-center flex-col min-h-[800px] md:min-h-[1000px] py-12"
       >
+        {/* Background cards */}
+        {generateCards()}
+
+        {/* Content overlay */}
         <div
-          className="main-content w-3/7 mx-auto absolute
-                     top-1/2 left-1/2 translate-x-[-50%]  
-                     translate-y-[-50%]  backdrop-blur-sm p-8 "
+          ref={mainContentRef}
+          className="main-content w-full md:w-2/3 mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop-blur-md bg-white/80 p-6 md:p-10 rounded-xl z-10 shadow-xl"
         >
-          <div className="copy max-w-5xl text-lg  text-justify">
+          <div className="copy max-w-5xl text-lg md:text-xl text-justify">
             <div className="line mb-6">
               <p className="text-textColor leading-relaxed font-medium">
                 For over two decades,
@@ -164,7 +140,6 @@ function WhoAreWeSection() {
             </div>
           </div>
         </div>
-        {generateRows()}
       </div>
     </SectionContainer>
   );
