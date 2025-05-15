@@ -3,7 +3,7 @@ import ActiveLink from "./ActiveLink";
 
 function NavLinks() {
     return (
-        <div className="flex flex-col items-end gap-4 text-main  ">
+        <div className="flex flex-col items-end gap-4 text-white  ">
             <div className="font-extralight text-secondary font-serif
                    text-desc-md space-x-6  md:space-x-4 text-shadow-main text-shadow-sm  "> {suppages.map((path) => (
 

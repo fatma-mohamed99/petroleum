@@ -18,8 +18,39 @@ function WhoAreWeSection() {
       const row = Math.floor(i / columns);
       const col = i % columns;
 
-      const x = (col - (columns - 1) / 2) * spacingX;
-      const y = (row - 0.5) * spacingY;
+  const generateRows = () => {
+    const rows = [];
+    for (let i = 1; i <= 3; i++) {
+      rows.push(
+        <div
+          className="row  
+         min-w-full  flex justify-center items-start gap-2 "
+          key={i}
+        >
+          <div
+            className="card card-left
+          relative w-[250px] h-[250px]
+          overflow-hidden
+          will-change-transform
+           shadow-md
+           border-secondary  border-2
+          "
+          >
+            <Image
+              src={`/images/hero-img/slider${1}.webp`}
+              alt={`slideImage ${i}`}
+              fill
+              objectFit="cover"
+              className="object-center"
+            />
+          </div>
+          <div
+            className="card card-right
+          relative w-[250px] h-[250px]
+          overflow-hidden
+          will-change-transform
+           shadow-md
+          border-secondary  border-2
 
       positions.push({
         x,
@@ -69,7 +100,37 @@ function WhoAreWeSection() {
 
       gsap.registerPlugin(ScrollTrigger);
 
-  
+      const leftXValues = [-500, -400, -300];
+      const rightXValues = [500, 400, 300];
+      const leftRotationValues = [-15, -15, -15];
+      const rightRotationValues = [15, 15, 15];
+      const yValues = [100, 0, -50];
+
+      gsap.utils.toArray(".row").forEach((row, index) => {
+        const cardLeft = row.querySelector(".card-left");
+        const cardRight = row.querySelector(".card-right");
+
+        gsap.to(cardLeft, {
+          x: leftXValues[index],
+          y: yValues[index],
+          rotation: leftRotationValues[index],
+          scrollTrigger: {
+            trigger: ".main",
+            scrub: true,
+          },
+        });
+
+        gsap.to(cardRight, {
+          x: rightXValues[index],
+          y: yValues[index],
+          rotation: rightRotationValues[index],
+          scrollTrigger: {
+            trigger: ".main",
+            scrub: true,
+          },
+        });
+      });
+
       gsap.fromTo(
         ".copy .line",
         { y: 30, opacity: 0 },

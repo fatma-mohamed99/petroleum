@@ -60,28 +60,29 @@ function Footer() {
           <div>
             <h3 className="text-xl md:text-2xl font-semibold mb-4">Certification</h3>
             <div className="flex flex-col gap-3 ">
-              <img src="/images/certificates/cert1.png" alt="Certification 1" className="w-32 h-12 " />
-              <img src="/images/certificates/cert1.png" alt="Certification 2" className="w-32 h-12 " />
-              <img src="/images/certificates/cert1.png" alt="Certification 3" className="w-32 h-12 " />
+              <img src="/images/certificates/cert1.png" alt="Certification 1" className="w-32 h-12 brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500" />
+              <img src="/images/certificates/cert1.png" alt="Certification 2" className="w-32 h-12 brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500" />
+              <img src="/images/certificates/cert1.png" alt="Certification 3" className="w-32 h-12 brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500" />
             </div>
           </div>
 
 
           <div>
-            <h3 className="text-xl md:text-2xl font-semibold mb-4 flex items-center gap-x-2">
+            <h3 className="text-xs  font-semibold mb-4 flex items-center gap-x-2">
               <FileText size={24} />
               Brochure
             </h3>
-            <div className="flex flex-col gap-3 items-center">
+            <div className="flex flex-col gap-3 items-start">
               <Button
                 onClick={() => openPdfInNewTab(brochurePath)}
                 className="flex gap-2 pr-2"
+                bgColor=""
               >
 
                 <View size={18} /> <a>VIEW</a>
               </Button>
               <Button
-                              className="flex gap-2 pr-2"
+                className="flex gap-2 pr-2"
 
 
                 onClick={() => downloadPdf(brochurePath, "brochure")}

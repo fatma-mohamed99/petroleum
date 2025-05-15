@@ -20,7 +20,6 @@ const HeroCarousel: React.FC = () => {
     };
 
     useEffect(() => {
-        // Initialize the first slide
         if (slidesRef.current[currentImageIndex]) {
             gsap.set(slidesRef.current[currentImageIndex], {
                 opacity: 1,
@@ -30,12 +29,11 @@ const HeroCarousel: React.FC = () => {
             });
         }
 
-        // Auto-play carousel only if not paused
         const interval = setInterval(() => {
             if (!isAnimating) {
                 goToNext();
             }
-        }, 15000); // Slightly longer interval for better user experience
+        }, 15000);
 
         return () => clearInterval(interval);
     }, [isAnimating, currentImageIndex]);
@@ -44,13 +42,11 @@ const HeroCarousel: React.FC = () => {
         if (isAnimating || targetIndex === currentImageIndex) return;
         setIsAnimating(true);
 
-        // Get current and next slides
         const currentSlide = slidesRef.current[currentImageIndex];
         const nextSlide = slidesRef.current[targetIndex];
 
         if (!currentSlide || !nextSlide) return;
 
-        // Create a master timeline for coordinated animations
         const tl = gsap.timeline({
             onComplete: () => {
                 setCurrentImageIndex(targetIndex);
@@ -58,11 +54,9 @@ const HeroCarousel: React.FC = () => {
             }
         });
 
-        // Prepare overlay for transition effect
         if (overlayRef.current) {
             tl.set(overlayRef.current, { opacity: 0 });
 
-            // Use overlay for smoother transition
             tl.to(overlayRef.current, {
                 opacity: 0.3,
                 duration: 0.4,
@@ -70,7 +64,6 @@ const HeroCarousel: React.FC = () => {
             }, 0);
         }
 
-        // Prepare next slide with initial state
         gsap.set(nextSlide, {
             opacity: 0,
             display: 'block',
@@ -78,7 +71,6 @@ const HeroCarousel: React.FC = () => {
             scale: 1.05
         });
 
-        // Very subtle zoom effect on current slide
         tl.to(currentSlide, {
             opacity: 0,
             scale: 1,
@@ -86,7 +78,6 @@ const HeroCarousel: React.FC = () => {
             ease: 'power2.inOut'
         }, 0);
 
-        // Smooth transition to next slide
         tl.to(nextSlide, {
             opacity: 1,
             scale: 1,
@@ -94,7 +85,6 @@ const HeroCarousel: React.FC = () => {
             ease: 'power2.inOut'
         }, 0);
 
-        // Fade out overlay after transition
         if (overlayRef.current) {
             tl.to(overlayRef.current, {
                 opacity: 0,
@@ -103,7 +93,6 @@ const HeroCarousel: React.FC = () => {
             }, 0.8);
         }
 
-        // Reset current slide after animation
         tl.set(currentSlide, {
             display: 'none',
             zIndex: 0
@@ -156,12 +145,11 @@ const HeroCarousel: React.FC = () => {
                             zIndex: index === currentImageIndex ? 1 : 0,
                             display: index === currentImageIndex ? 'block' : 'none'
                         }}
-                    >                <div className="absolute inset-0 bg-main/25 -z-40"></div>
+                    >                <div className="absolute inset-0 bg-black/15 -z-40"></div>
                     </div>
 
                 ))}
 
-                {/* Content */}
                 <div
                     ref={contentContainerRef}
                     className="absolute inset-0 flex items-center justify-center pointer-events-none"

@@ -93,7 +93,7 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
     <section
       ref={sectionRef}
       className={`relative overflow-hidden text-textColor
-         pt-10 pb-20 min-h-screen   mx-auto ${sectionClass}`}
+         pt-10 pb-20   mx-auto ${sectionClass}`}
     >
 
       <div className={`container mx-auto px-6 max-w-6xl ${containerClass} pt-10`}>
@@ -103,13 +103,13 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
         >
           <div
             ref={progressRef}
-            className={`h-full bg-gradient-to-r bg-secondary`}
+            className={`h-full bg-gradient-to-r bg-secondary ml-4`}
             style={{ width: "0%" }}
           />
         </div>
-        <div className={`${description===""?"mb-0":"mb-12"}`}>
+        <div className={`${description === "" ? "mb-0" : "mb-12"}`}>
           <div className="overflow-hidden text-4xl md:text-5xl">
-            <h2 ref={titleRef} className={` font-bold mb-6 text-main `}>
+            <h2 ref={titleRef} className={` font-bold mb-6 text-main ml-4 `}>
               {title}
             </h2>
           </div>
@@ -117,7 +117,7 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
           <div className="overflow-hidden">
             <p
               ref={descRef}
-              className={`  text-lg md:text-xl leading-relaxed text-opacity-80`}
+              className={`  text-lg md:text-xl leading-relaxed text-opacity-80 ml-4`}
             >
               {description}
             </p>
