@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function UnicoLegacySection() {
     const sectionRef = useRef(null);
-    const [animatedCards, setAnimatedCards] = useState<Number[]>([]);
+    const [animatedCards, setAnimatedCards] = useState<number[]>([]);
     const [animationStarted, setAnimationStarted] = useState(false);
     const totalCards = 5;
     const animationDuration = 700;
@@ -64,7 +64,7 @@ export default function UnicoLegacySection() {
     }, [animationStarted]);
 
 
-    const getAnimationClass = (index: Number) => {
+    const getAnimationClass = (index: number) => {
         if (!animationStarted) {
             switch (index) {
                 case 0: return "opacity-10 translate-y-32 transition-all duration-700 ease-in-out";
