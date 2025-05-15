@@ -69,12 +69,14 @@ export default function ReusablePage({
                                 <>
                                     {selectedItem.displayType === 'organization-chart' ? (
                                         <div className="p-6 overflow-hidden">
-                                            <Image
-                                                src={selectedItem.images.main || selectedItem.images.left}
-                                                fill
-                                                alt="Organization Chart"
-                                                className="w-full h-auto shadow-sm"
-                                            />
+                                            {(selectedItem.images.main || selectedItem.images.left) && (
+                                                <Image
+                                                    src={selectedItem.images.main || selectedItem.images.left!}
+                                                    fill
+                                                    alt="Organization Chart"
+                                                    className="w-full h-auto shadow-sm"
+                                                />
+                                            )}
                                         </div>
                                     ) : (
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
