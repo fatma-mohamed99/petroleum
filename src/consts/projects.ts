@@ -3,7 +3,7 @@ import { Project } from "@/types/project";
 
 import VitolTankTerminalVasilikoVTTVCyprus from "../../public/images/projects/VitolTankTerminalVasilikoVTTVCyprus.jpg"
 import IncreasingCapacityofHeavyCrudeOilPipeline from "../../public/images/projects/IncreasingCapacityofHeavyCrudeOilPipeline.jpg"
-import HomsAdraGasoilpipelinewithtwotankterminals from "../../public/images/projects/HomsAdraGasoilpipelinewithtwotankterminals.jpg"
+import HomsAdraGasoilpipelinewithtwotankterminals from "../../public/images/projects/HomsAdraGasoilpipelinewithtwotankterminals.jpeg"
 import FiscalMeteringStationforAGPPhaseII from "../../public/images/projects/FiscalMeteringStationforAGPPhaseII.jpg"
 import ArabGasPipelinePhaseIIPart1 from "../../public/images/projects/ArabGasPipelinePhaseIIPart1.jpg"
 import IntermediatePumpingStationinTalkalakh from "../../public/images/projects/IntermediatePumpingStationinTalkalakh.jpg"
