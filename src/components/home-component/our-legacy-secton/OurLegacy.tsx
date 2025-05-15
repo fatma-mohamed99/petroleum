@@ -82,15 +82,15 @@ export default function UnicoLegacySection() {
 
         if (!animatedCards.includes(index)) {
             switch (index) {
-                case 0: return "opacity-0 translate-y-32 transition-all duration-1200 ease-out";
-                case 1: return "opacity-0 -translate-x-32 transition-all duration-1200 ease-out";
-                case 2: return "opacity-0 scale-85 transition-all duration-1200 ease-out";
-                case 3: return "opacity-0 -translate-y-32 transition-all duration-1200 ease-out";
-                case 4: return "opacity-0 translate-x-32 transition-all duration-1200 ease-out";
-                default: return "opacity-0 transition-all duration-1200 ease-out";
+                case 0: return "opacity-0 translate-y-32 transition-all duration-700 ease-out";
+                case 1: return "opacity-0 -translate-x-32 transition-all duration-700 ease-out";
+                case 2: return "opacity-0 scale-85 transition-all duration-700 ease-out";
+                case 3: return "opacity-0 -translate-y-32 transition-all duration-700 ease-out";
+                case 4: return "opacity-0 translate-x-32 transition-all duration-700 ease-out";
+                default: return "opacity-0 transition-all duration-700 ease-out";
             }
         } else {
-            return "opacity-100 translate-x-0 translate-y-0 scale-100 transition-all duration-1200 ease-out";
+            return "opacity-100 translate-x-0 translate-y-0 scale-100 transition-all duration-700 ease-out";
         }
     };
 

@@ -196,7 +196,7 @@ function ProjectSection() {
   };
 
   return (
-    <div className="w-full mt-20" ref={sectionRef}>
+    <div className="w-full pt-20" ref={sectionRef}>
       <SectionContainer
         containerClass="max-w-[75%] 3xl:max-w-[70%] "
         sectionClass="min-w-full"
