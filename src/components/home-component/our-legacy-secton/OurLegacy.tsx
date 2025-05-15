@@ -9,8 +9,10 @@ export default function UnicoLegacySection() {
     const [isVisible, setIsVisible] = useState(false);
     const [animatedCards, setAnimatedCards] = useState([]);
     const [animationComplete, setAnimationComplete] = useState([]);
+    const [animationStarted, setAnimationStarted] = useState(false);
     const totalCards = 5;
     const animationDuration = 1200;
+
     useEffect(() => {
         if (typeof window === 'undefined') return;
 
@@ -18,11 +20,11 @@ export default function UnicoLegacySection() {
             (entries) => {
                 if (entries[0].isIntersecting) {
                     setIsVisible(true);
+                    if (!animationStarted) {
+                        setAnimationStarted(true);
+                    }
                 } else {
                     setIsVisible(false);
-                    // ممكن كمان ترجّع الحركات لو حبيت توقف الأنيمشن لما يختفي
-                    setAnimatedCards([]);
-                    setAnimationComplete([]);
                 }
             },
             { threshold: 0.2 }
@@ -37,11 +39,10 @@ export default function UnicoLegacySection() {
                 observer.unobserve(sectionRef.current);
             }
         };
-    }, []);
-
+    }, [animationStarted]);
 
     useEffect(() => {
-        if (isVisible && animatedCards.length === 0) {
+        if (animationStarted && animatedCards.length === 0) {
             setAnimatedCards([0]);
 
             const timer = setTimeout(() => {
@@ -50,7 +51,7 @@ export default function UnicoLegacySection() {
 
             return () => clearTimeout(timer);
         }
-    }, [isVisible]);
+    }, [animationStarted]);
 
     useEffect(() => {
         const lastCompleted = animationComplete.length ? animationComplete[animationComplete.length - 1] : -1;
@@ -69,7 +70,7 @@ export default function UnicoLegacySection() {
     }, [animationComplete, totalCards]);
 
     const getAnimationClass = (index) => {
-        if (!isVisible) {
+        if (!animationStarted) {
             switch (index) {
                 case 0: return "opacity-10 translate-y-32 transition-all duration-700 ease-in-out";
                 case 1: return "opacity-10 -translate-x-32 transition-all duration-700 ease-in-out";
@@ -94,23 +95,22 @@ export default function UnicoLegacySection() {
         }
     };
 
-
     return (
         <SectionContainer
-            containerClass='max-w-[70%]'
+            containerClass=''
             sectionClass='  '
             title='Our Services'
             description="UNICO Petroleum offers  reliable EPCC services in oil and gas, covering pipelines, tank farms, metering, pressure stations, and crude oil gathering"
         >
             <div className="relative -z-50">
-                <div className="absolute  inset-0 left-0 bg-main/10 -ml-[560px] -mt-[320px]">
+                <div className="absolute  inset-0 left-0 bg-main/10 -ml-[660px] -mt-[320px]">
                     <Image
-                        src="/bgtank.png"
+                        src="/bgfinal2.png"
                         alt="Legacy Background"
                         width={1000}
-                        height={600}
+                        height={2000}
                         priority
-                        className="object-cover"
+                        className="object-cover opacity-20"
                     />
                 </div>
             </div>

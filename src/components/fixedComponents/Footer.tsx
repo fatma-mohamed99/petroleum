@@ -12,7 +12,7 @@ function Footer() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
 
-  const openImageModal = (imageSrc:string) => {
+  const openImageModal = (imageSrc: string) => {
     setSelectedImage(imageSrc);
     setModalOpen(true);
   };
@@ -72,22 +72,22 @@ function Footer() {
           <div>
             <h3 className="text-xl md:text-2xl font-semibold mb-4">Certification</h3>
             <div className="flex flex-col gap-3">
-              <img 
-                src="/images/certificates/cert1.png" 
-                alt="Certification 1" 
-                className="w-40 h-16 brightness-[80%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500" 
+              <img
+                src="/images/certificates/cert1.png"
+                alt="Certification 1"
+                className="w-40 h-16 brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500"
                 onClick={() => openImageModal("/images/certificates/cert1.png")}
               />
-              <img 
-                src="/images/certificates/cert1.png" 
-                alt="Certification 2" 
-                className="w-40 h-16 brightness-[80%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500" 
+              <img
+                src="/images/certificates/cert1.png"
+                alt="Certification 2"
+                className="w-40 h-16 brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500"
                 onClick={() => openImageModal("/images/certificates/cert1.png")}
               />
-              <img 
-                src="/images/certificates/cert1.png" 
-                alt="Certification 3" 
-                className="w-40 h-16 brightness-[80%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500" 
+              <img
+                src="/images/certificates/cert1.png"
+                alt="Certification 3"
+                className="w-40 h-16 brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500"
                 onClick={() => openImageModal("/images/certificates/cert1.png")}
               />
             </div>
@@ -99,7 +99,7 @@ function Footer() {
               Brochure
             </h3>
             <p className="text-sm mb-3 text-gray-300 leading-relaxed">
-            You can Download Or View our comprehensive company brochure to learn more about our products, services, and industry expertise.
+              You can Download Or View our comprehensive company brochure to learn more about our products, services, and industry expertise.
             </p>
 
             <div className="flex  gap-3 items-center">
@@ -137,17 +137,17 @@ function Footer() {
       {modalOpen && (
         <div className="fixed inset-0 bg-black/20 flex items-center justify-center z-50 p-4">
           <div className="relative bg-fixedComponentBg p-4 rounded-lg max-w-4xl w-96 h-72 ">
-            <button 
+            <button
               onClick={closeModal}
               className="absolute top-2 right-2 font-bold text-main  hover:bg-main hover:text-white rounded-full cursor-pointer transition-colors"
             >
               <X size={24} />
             </button>
             <div className="flex justify-center items-center  min-h-60 ">
-              <img 
-                src={selectedImage} 
-                alt="Certificate" 
-                className=" max-w-full object-cover w-72 h-56" 
+              <img
+                src={selectedImage}
+                alt="Certificate"
+                className=" max-w-full object-cover w-72 h-56"
               />
             </div>
           </div>

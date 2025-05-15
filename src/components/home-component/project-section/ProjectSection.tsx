@@ -57,8 +57,8 @@ function ProjectSection() {
           gsap.to(card, {
             y: cardIndex % 2 === 0 ? -40 : 40,
             opacity: 0,
-            duration: 0.8,
-            delay: (3 - colIndex) * 0.5 + (column.length - 1 - cardIndex) * 0.2,
+            duration: 0.3,
+            delay: (3 - colIndex) * 0.3 + (column.length - 1 - cardIndex) * 0.11,
             ease: "power2.in",
             onComplete: () => {
               completedAnimations++;
@@ -84,11 +84,11 @@ function ProjectSection() {
       const tl = gsap.timeline({ repeat: -1 });
       tl.to(arrow, {
         x: 3,
-        duration: 0.5,
+        duration: 0.3,
         ease: "power1.inOut",
       }).to(arrow, {
         x: 0,
-        duration: 0.5,
+        duration: 0.3,
         ease: "power1.inOut",
       });
     }
@@ -107,8 +107,8 @@ function ProjectSection() {
     gsap.to(cards, {
       opacity: 1,
       y: 0,
-      duration: 1.5,
-      delay: (i) => 0.6 + i * 0.8,
+      duration: 1,
+      delay: (i) => i * 0.3,
       ease: "power1.out",
       stagger: 0.2,
       scrollTrigger: {
@@ -131,8 +131,8 @@ function ProjectSection() {
     gsap.to(cards, {
       opacity: 1,
       y: 0,
-      duration: 1.5,
-      delay: (i) => i * 0.8,
+      duration: 1,
+      delay: (i) => i * 0.3,
       ease: "power1.out",
       stagger: 0.2,
     });
@@ -171,8 +171,8 @@ function ProjectSection() {
           gsap.to(card, {
             opacity: 1,
             y: 0,
-            duration: 1.5,
-            delay: colIndex * 1.2 + cardIndex * 0.8,
+            duration: 1,
+            delay: colIndex * 1.2 + cardIndex * 0.5,
             ease: "power1.out",
             onComplete: () => {
               if (colIndex === columns.length - 1 && cardIndex === column.length - 1) {
@@ -213,7 +213,7 @@ function ProjectSection() {
               width={1000}
               height={2000}
               priority
-              className="object-cover ml-[860px] 3xl:ml-[1100px] opacity-35"
+              className="object-cover ml-[860px] 3xl:ml-[1100px] opacity-20"
             />
           </div>
         </div>

@@ -80,7 +80,7 @@ const CardWithAnimatedBorder = ({
                 className="object-cover z-0"
             />
 
-            <div className="overlay absolute inset-0 bg-white/70 z-10 "></div>
+            <div className="overlay absolute inset-0 bg-main/45 z-10 "></div>
 
             <div className="default-title absolute bottom-0 left-0 p-3 bg-main/60 text-white z-20">
                 <h3 className="text-lg font-semibold">{title}</h3>
