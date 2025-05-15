@@ -73,37 +73,37 @@ function Footer() {
           <div>
             <h3 className="text-xl md:text-2xl font-semibold mb-4">Certification</h3>
             <div className="flex flex-col gap-3">
-
-              <div className="relative w-40 h-16">
+              <div className="relative w-[160px] h-[60px]">
                 <Image
                   src="/images/certificates/cert1.png"
                   alt="Certification 1"
                   fill
-                  className="brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500 object-cover"
+                  className="brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500 object-contain"
                   onClick={() => openImageModal("/images/certificates/cert1.png")}
                 />
               </div>
 
-              <div className="relative w-40 h-16">
+              <div className="relative w-[160px] h-[60px]">
                 <Image
                   src="/images/certificates/cert1.png"
                   alt="Certification 1"
                   fill
-                  className="brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500 object-cover"
+                  className="brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500 object-contain"
                   onClick={() => openImageModal("/images/certificates/cert1.png")}
                 />
               </div>
 
-              <div className="relative w-40 h-16">
+              <div className="relative w-[160px] h-[60px]">
                 <Image
                   src="/images/certificates/cert1.png"
                   alt="Certification 1"
                   fill
-                  className="brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500 object-cover"
+                  className="brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500 object-contain"
                   onClick={() => openImageModal("/images/certificates/cert1.png")}
                 />
               </div>
             </div>
+
           </div>
 
           <div>

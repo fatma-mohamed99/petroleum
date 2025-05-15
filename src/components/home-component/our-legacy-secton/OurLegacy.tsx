@@ -46,20 +46,25 @@ export default function UnicoLegacySection() {
     }, [animationStarted, animatedCards.length]);
 
     useEffect(() => {
-        const lastCompleted = animationComplete.length ? animationComplete[animationComplete.length - 1] : -1;
+        if (!animationStarted) return;
 
-        if (lastCompleted >= 0 && lastCompleted < totalCards - 1) {
-            const nextCardIndex = lastCompleted + 1;
+        let currentIndex = 0;
 
-            setAnimatedCards(prev => [...prev, nextCardIndex]);
+        const animateNextCard = () => {
+            if (currentIndex >= totalCards) return;
 
-            const timer = setTimeout(() => {
-                setAnimationComplete(prev => [...prev, nextCardIndex]);
+            setAnimatedCards(prev => [...prev, currentIndex]);
+
+            setTimeout(() => {
+                setAnimationComplete(prev => [...prev, currentIndex]);
+                currentIndex += 1;
+                animateNextCard(); // Recursively animate next
             }, animationDuration);
+        };
 
-            return () => clearTimeout(timer);
-        }
-    }, [animationComplete, totalCards]);
+        animateNextCard(); // Start the animation
+    }, [animationStarted]);
+
 
     const getAnimationClass = (index) => {
         if (!animationStarted) {

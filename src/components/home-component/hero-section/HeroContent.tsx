@@ -149,7 +149,7 @@ export default function HeroContent({
                                 }`}
                             isDisable={isAnimating}
                             aria-label={`Go to slide ${index + 1}`}
-                            fullRounded="true"
+                            fullRounded={true}
 
 
                         >
@@ -167,7 +167,7 @@ export default function HeroContent({
                             ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Previous slide"
                         isDisable={isAnimating}
-                        fullRounded="true"
+                        fullRounded={true}
                         bgColor='white'
 
                     >
@@ -179,7 +179,7 @@ export default function HeroContent({
                             ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Next slide"
                         isDisable={isAnimating}
-                        fullRounded="true"
+                        fullRounded={true}
                     >
                         <ChevronRight size={40} />
                     </Button>
