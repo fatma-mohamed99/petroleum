@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Link from 'next/link';
-import { ArrowRight, DecimalsArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 type Props = {
     imageUrl: string;

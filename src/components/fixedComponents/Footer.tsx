@@ -5,6 +5,7 @@ import { FileDown, FileText, View, Mail, MapPin, Phone, X } from "lucide-react";
 import { aboutUsLinks } from "@/consts/aboutUs";
 import { Button } from "../ui/Button";
 import { useState } from "react";
+import Image from "next/image";
 
 function Footer() {
   const brochurePath = "/assets/brochure/brochureFromPetroleum.pdf";
@@ -72,24 +73,36 @@ function Footer() {
           <div>
             <h3 className="text-xl md:text-2xl font-semibold mb-4">Certification</h3>
             <div className="flex flex-col gap-3">
-              <img
-                src="/images/certificates/cert1.png"
-                alt="Certification 1"
-                className="w-40 h-16 brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500"
-                onClick={() => openImageModal("/images/certificates/cert1.png")}
-              />
-              <img
-                src="/images/certificates/cert1.png"
-                alt="Certification 2"
-                className="w-40 h-16 brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500"
-                onClick={() => openImageModal("/images/certificates/cert1.png")}
-              />
-              <img
-                src="/images/certificates/cert1.png"
-                alt="Certification 3"
-                className="w-40 h-16 brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500"
-                onClick={() => openImageModal("/images/certificates/cert1.png")}
-              />
+
+              <div className="relative w-40 h-16">
+                <Image
+                  src="/images/certificates/cert1.png"
+                  alt="Certification 1"
+                  fill
+                  className="brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500 object-cover"
+                  onClick={() => openImageModal("/images/certificates/cert1.png")}
+                />
+              </div>
+
+              <div className="relative w-40 h-16">
+                <Image
+                  src="/images/certificates/cert1.png"
+                  alt="Certification 1"
+                  fill
+                  className="brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500 object-cover"
+                  onClick={() => openImageModal("/images/certificates/cert1.png")}
+                />
+              </div>
+
+              <div className="relative w-40 h-16">
+                <Image
+                  src="/images/certificates/cert1.png"
+                  alt="Certification 1"
+                  fill
+                  className="brightness-[30%] hover:brightness-100 contrast-125 cursor-pointer transition-all duration-500 object-cover"
+                  onClick={() => openImageModal("/images/certificates/cert1.png")}
+                />
+              </div>
             </div>
           </div>
 

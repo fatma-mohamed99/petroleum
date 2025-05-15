@@ -75,11 +75,11 @@ const WhoAreWeSection = () => {
     <SectionContainer
       title={"Who Are We"}
       description={""}
-      sectionClass="w-full bg-textColor/70   text-center  whoAreWeBg"
+      sectionClass="w-full bg-textColor/70   text-center  whoAreWeBg bg-main"
       containerClass="text-secondary"
 
     >
-      <div className="mx-auto w-full relative md:min-h-[600px] " ref={containerRef}>
+      <div className="mx-auto w-full relative md:min-h-[600px]  " ref={containerRef}>
         <div
           ref={addToRefs}
           className="absolute z-1 top-0 left-0 w-32 h-32 md:w-70 md:h-70  border-secondary/70 border-2"

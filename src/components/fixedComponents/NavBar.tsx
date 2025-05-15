@@ -7,16 +7,16 @@ import Link from 'next/link';
 
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-    const [scrolled, setScrolled] = useState<boolean>(false);
+
     const menuRef = useRef<HTMLDivElement>(null);
 
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
-                setScrolled(true);
+
             } else {
-                setScrolled(false);
+
             }
         };
 

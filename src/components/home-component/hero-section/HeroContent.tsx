@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import gsap from 'gsap';
 import { Button } from '@/components/ui/Button';
@@ -32,7 +31,6 @@ export default function HeroContent({
     const contentWrapperRef = useRef<HTMLDivElement>(null);
     const titleRef = useRef<HTMLHeadingElement>(null);
     const descriptionRef = useRef<HTMLParagraphElement>(null);
-    const buttonTextRef = useRef<HTMLSpanElement>(null);
     const buttonRef = useRef<HTMLDivElement>(null);
     const paginationRef = useRef<HTMLDivElement>(null);
     const navigationRef = useRef<HTMLDivElement>(null);
