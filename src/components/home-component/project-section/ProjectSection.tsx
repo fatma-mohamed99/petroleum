@@ -32,6 +32,7 @@ function ProjectSection() {
           sectionRef.current?.scrollIntoView({
             behavior: "smooth",
             block: "start",
+            animating:true,
           });
         }, 100);
       });
