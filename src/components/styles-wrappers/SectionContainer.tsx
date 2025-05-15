@@ -11,7 +11,7 @@ interface SectionContainerProps {
   progressColors?: string;
   titleSize?: string;
   descriptionSize?: string;
- sectionClass ?: string;
+  sectionClass?: string;
   containerClass?: string;
   children: React.ReactNode;
 }
@@ -40,7 +40,7 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
 
     if (!section || !progress || !title || !desc) return;
 
-   gsap.fromTo(
+    gsap.fromTo(
       progress,
       { width: "0%" },
       {
@@ -48,14 +48,14 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
         ease: "none",
         scrollTrigger: {
           trigger: section,
-          start: "top bottom", 
+          start: "top bottom",
           end: "bottom bottom",
-          scrub: 1, 
+          scrub: 1,
           invalidateOnRefresh: true,
-          onLeaveBack: () => {  
+          onLeaveBack: () => {
             gsap.to(progress, {
               width: "0%",
-              duration: 0.3, 
+              duration: 0.3,
               ease: "power1.out"
             });
           }
@@ -67,7 +67,7 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
       scrollTrigger: {
         trigger: section,
         start: "top 75%",
-        toggleActions: "play none none reverse", 
+        toggleActions: "play none none reverse",
       },
     });
 
@@ -109,12 +109,12 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
       ref={sectionRef}
       className={`relative overflow-hidden text-textColor pt-15 pb-25 mx-auto ${sectionClass}`}
     >
-      <div className={`container mx-auto px-6 max-w-6xl ${containerClass} pt-10`}>
+      <div className={`container mx-auto px-6 max-w-6xl text-main ${containerClass} pt-10`}>
         <div className="w-full h-1 z-50 bg-gray-200 overflow-hidden mb-8 rounded-full">
           <div
             ref={progressRef}
             className="h-full bg-secondary rounded-full"
-            style={{ 
+            style={{
               width: "0%",
             }}
           />
@@ -122,7 +122,7 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
 
         <div className={`${description === "" ? "mb-0" : "mb-12"}`}>
           <div className="overflow-hidden text-4xl md:text-5xl">
-            <h2 ref={titleRef} className="font-bold mb-6 text-main ml-4">
+            <h2 ref={titleRef} className="font-bold mb-6  ml-4">
               {title}
             </h2>
           </div>

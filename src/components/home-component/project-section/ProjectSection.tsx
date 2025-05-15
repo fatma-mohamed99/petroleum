@@ -32,7 +32,7 @@ function ProjectSection() {
           sectionRef.current?.scrollIntoView({
             behavior: "smooth",
             block: "start",
-            animating:true,
+            animating: true,
           });
         }, 100);
       });
@@ -197,9 +197,9 @@ function ProjectSection() {
   };
 
   return (
-    <div className="w-full pt-20 " ref={sectionRef}>
+    <div className="w-full  " ref={sectionRef}>
       <SectionContainer
-        containerClass="max-w-[75%] 3xl:max-w-[70%] mb-20 mt-20 "
+        containerClass="max-w-[75%] 3xl:max-w-[70%] mb-20 mt-28 "
         sectionClass="min-w-full"
         title={"Unico projects"}
         description={`With 20+ years in Oil & Gas, 

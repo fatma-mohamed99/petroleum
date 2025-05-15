@@ -75,7 +75,9 @@ const WhoAreWeSection = () => {
     <SectionContainer
       title={"Who Are We"}
       description={""}
-      sectionClass="w-full bg-main/65 text-center "
+      sectionClass="w-full bg-main/90  text-center "
+      containerClass="text-secondary"
+
     >
       <div className="mx-auto w-full relative md:min-h-[600px] " ref={containerRef}>
         {/* Top Left Image */}
