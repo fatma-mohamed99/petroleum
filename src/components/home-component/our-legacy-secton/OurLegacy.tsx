@@ -9,7 +9,7 @@ export default function UnicoLegacySection() {
     const [animatedCards, setAnimatedCards] = useState<number[]>([]);
     const [animationStarted, setAnimationStarted] = useState(false);
     const totalCards = 5;
-    const animationDuration = 700;
+    const animationDuration = 500;
     useEffect(() => {
         if (typeof window === 'undefined') return;
 
@@ -67,26 +67,26 @@ export default function UnicoLegacySection() {
     const getAnimationClass = (index: number) => {
         if (!animationStarted) {
             switch (index) {
-                case 0: return "opacity-10 translate-y-32 transition-all duration-700 ease-in-out";
-                case 1: return "opacity-10 -translate-x-32 transition-all duration-700 ease-in-out";
-                case 2: return "opacity-10 scale-50 transition-all duration-700 ease-in-out";
-                case 3: return "opacity-10 -translate-y-32 transition-all duration-700 ease-in-out";
-                case 4: return "opacity-10 translate-x-32 transition-all duration-700 ease-in-out";
-                default: return "opacity-10 transition-all duration-700 ease-in-out";
+                case 0: return "opacity-10 translate-y-32 transition-all duration-500 ease-in-out";
+                case 1: return "opacity-10 -translate-x-32 transition-all duration-500 ease-in-out";
+                case 2: return "opacity-10 scale-50 transition-all duration-500 ease-in-out";
+                case 3: return "opacity-10 -translate-y-32 transition-all duration-500 ease-in-out";
+                case 4: return "opacity-10 translate-x-32 transition-all duration-500 ease-in-out";
+                default: return "opacity-10 transition-all duration-500 ease-in-out";
             }
         }
 
         if (!animatedCards.includes(index)) {
             switch (index) {
-                case 0: return "opacity-0 translate-y-32 transition-all duration-700 ease-out";
-                case 1: return "opacity-0 -translate-x-32 transition-all duration-700 ease-out";
-                case 2: return "opacity-0 scale-85 transition-all duration-700 ease-out";
-                case 3: return "opacity-0 -translate-y-32 transition-all duration-700 ease-out";
-                case 4: return "opacity-0 translate-x-32 transition-all duration-700 ease-out";
-                default: return "opacity-0 transition-all duration-700 ease-out";
+                case 0: return "opacity-0 translate-y-32 transition-all duration-500 ease-out";
+                case 1: return "opacity-0 -translate-x-32 transition-all duration-500 ease-out";
+                case 2: return "opacity-0 scale-85 transition-all duration-500 ease-out";
+                case 3: return "opacity-0 -translate-y-32 transition-all duration-500 ease-out";
+                case 4: return "opacity-0 translate-x-32 transition-all duration-500 ease-out";
+                default: return "opacity-0 transition-all duration-500 ease-out";
             }
         } else {
-            return "opacity-100 translate-x-0 translate-y-0 scale-100 transition-all duration-700 ease-out";
+            return "opacity-100 translate-x-0 translate-y-0 scale-100 transition-all duration-500 ease-out";
         }
     };
 
