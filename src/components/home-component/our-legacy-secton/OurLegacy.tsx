@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function UnicoLegacySection() {
     const sectionRef = useRef(null);
-    const [animatedCards, setAnimatedCards] = useState([]);
+    const [animatedCards, setAnimatedCards] = useState<Number[]>([]);
     const [animationStarted, setAnimationStarted] = useState(false);
     const totalCards = 5;
     const animationDuration = 700;
@@ -37,7 +37,7 @@ export default function UnicoLegacySection() {
             setAnimatedCards([0]);
 
             const timer = setTimeout(() => {
-                setAnimationComplete([0]);
+
             }, animationDuration);
 
             return () => clearTimeout(timer);
@@ -55,7 +55,6 @@ export default function UnicoLegacySection() {
             setAnimatedCards(prev => [...prev, currentIndex]);
 
             setTimeout(() => {
-                setAnimationComplete(prev => [...prev, currentIndex]);
                 currentIndex += 1;
                 animateNextCard();
             }, animationDuration);
@@ -65,7 +64,7 @@ export default function UnicoLegacySection() {
     }, [animationStarted]);
 
 
-    const getAnimationClass = (index) => {
+    const getAnimationClass = (index: Number) => {
         if (!animationStarted) {
             switch (index) {
                 case 0: return "opacity-10 translate-y-32 transition-all duration-700 ease-in-out";

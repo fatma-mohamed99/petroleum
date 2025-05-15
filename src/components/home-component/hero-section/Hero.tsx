@@ -99,7 +99,7 @@ const HeroCarousel: React.FC = () => {
             : currentImageIndex + 1;
 
         animateTransition(nextIndex);
-    }, [isAnimating, currentImageIndex, carouselImages.length, animateTransition]);
+    }, [isAnimating, currentImageIndex, animateTransition]);
 
     const goToSlide = (index: number) => {
         if (isAnimating || index === currentImageIndex) return;

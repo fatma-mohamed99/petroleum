@@ -1,31 +1,20 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
+import { useEffect, useState, useCallback } from "react";
 
 export function useProjectCarousel(totalProjects: number, autoRotateInterval = 5000) {
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
   const [isSmallScreen, setIsSmallScreen] = useState(true);
 
-  const handleNextProject = () => {
-    if (activeProjectIndex === totalProjects - 1) {
-      setActiveProjectIndex(0);
-    } else {
-      setActiveProjectIndex((prev) => prev + 1);
-    }
-  };
+  const handleNextProject = useCallback(() => {
+    setActiveProjectIndex(prev => (prev === totalProjects - 1 ? 0 : prev + 1));
+  }, [totalProjects]);
 
-  const handlePrevProject = () => {
-    if (activeProjectIndex === 0) {
-      setActiveProjectIndex(totalProjects - 1);
-    } else {
-      setActiveProjectIndex((prev) => prev - 1);
-    }
-  };
+  const handlePrevProject = useCallback(() => {
+    setActiveProjectIndex(prev => (prev === 0 ? totalProjects - 1 : prev - 1));
+  }, [totalProjects]);
 
-  const handleActiveProject = (indexOfActiveProject: number) => {
-    setActiveProjectIndex(indexOfActiveProject);
-  };
+  const handleActiveProject = useCallback((index: number) => {
+    setActiveProjectIndex(index);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -33,11 +22,8 @@ export function useProjectCarousel(totalProjects: number, autoRotateInterval = 5
     };
 
     handleResize();
-
     window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -46,7 +32,7 @@ export function useProjectCarousel(totalProjects: number, autoRotateInterval = 5
     }, autoRotateInterval);
 
     return () => clearInterval(intervalId);
-  }, [activeProjectIndex, autoRotateInterval, handleNextProject]);
+  }, [handleNextProject, autoRotateInterval]);
 
   return {
     activeProjectIndex,
