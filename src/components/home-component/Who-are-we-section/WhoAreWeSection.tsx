@@ -75,15 +75,14 @@ const WhoAreWeSection = () => {
     <SectionContainer
       title={"Who Are We"}
       description={""}
-      sectionClass="w-full bg-main/90  text-center "
+      sectionClass="w-full bg-textColor/70   text-center  whoAreWeBg"
       containerClass="text-secondary"
 
     >
       <div className="mx-auto w-full relative md:min-h-[600px] " ref={containerRef}>
-        {/* Top Left Image */}
         <div
           ref={addToRefs}
-          className="absolute z-1 top-0 left-0 w-32 h-32 md:w-70 md:h-70 border-secondary/70 border-2"
+          className="absolute z-1 top-0 left-0 w-32 h-32 md:w-70 md:h-70  border-secondary/70 border-2"
         >
           <Image
             src="/images/hero-img/slider1.jpg"
