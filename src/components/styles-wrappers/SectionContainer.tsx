@@ -11,7 +11,7 @@ interface SectionContainerProps {
   progressColors?: string;
   titleSize?: string;
   descriptionSize?: string;
-  sectionClass?: string;
+ sectionClass ?: string;
   containerClass?: string;
   children: React.ReactNode;
 }
@@ -40,21 +40,23 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
 
     if (!section || !progress || !title || !desc) return;
 
-    gsap.fromTo(
+   gsap.fromTo(
       progress,
       { width: "0%" },
       {
         width: "100%",
-        ease: "power1.inOut",
+        ease: "none",
         scrollTrigger: {
           trigger: section,
           start: "top bottom", 
-          end: "bottom bottom",  
-          scrub:0,          
+          end: "bottom bottom",
+          scrub: 1, 
+          invalidateOnRefresh: true,
           onLeaveBack: () => {  
             gsap.to(progress, {
               width: "0%",
-              ease: "power1.inOut"
+              duration: 0.3, 
+              ease: "power1.out"
             });
           }
         },
@@ -108,16 +110,16 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
       className={`relative overflow-hidden text-textColor pt-15 pb-25 mx-auto ${sectionClass}`}
     >
       <div className={`container mx-auto px-6 max-w-6xl ${containerClass} pt-10`}>
-        {/* Enhanced Progress Bar */}
         <div className="w-full h-1 z-50 bg-gray-200 overflow-hidden mb-8 rounded-full">
           <div
             ref={progressRef}
-            className="h-full bg-secondary transition-all duration-300 rounded-full"
-            style={{ width: "0%" }}
+            className="h-full bg-secondary rounded-full"
+            style={{ 
+              width: "0%",
+            }}
           />
         </div>
 
-        {/* Title & Description */}
         <div className={`${description === "" ? "mb-0" : "mb-12"}`}>
           <div className="overflow-hidden text-4xl md:text-5xl">
             <h2 ref={titleRef} className="font-bold mb-6 text-main ml-4">

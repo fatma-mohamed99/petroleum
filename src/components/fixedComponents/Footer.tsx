@@ -23,8 +23,8 @@ function Footer() {
 
   return (
     <footer className="footerBg text-white pt-8 pb-4 w-full bg-fixedComponentBg relative">
-      <div className="absolute left-18.5 -top-1 h-4 w-4 rounded-full
-        bg-secondary  animate-pulse " />
+      <div className="absolute left-17.5 -top-1 h-6 w-6 rounded-full
+        bg-main  animate-ping " />
 
       <div className="w-11/12 max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
