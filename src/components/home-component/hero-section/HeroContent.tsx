@@ -32,21 +32,18 @@ export default function HeroContent({
     const contentWrapperRef = useRef<HTMLDivElement>(null);
     const titleRef = useRef<HTMLHeadingElement>(null);
     const descriptionRef = useRef<HTMLParagraphElement>(null);
-    const buttonTextRef = useRef<HTMLSpanElement>(null);  // Reference for the button text
-    const buttonRef = useRef<HTMLDivElement>(null);       // Reference for the button container
+    const buttonTextRef = useRef<HTMLSpanElement>(null);
+    const buttonRef = useRef<HTMLDivElement>(null);
     const paginationRef = useRef<HTMLDivElement>(null);
     const navigationRef = useRef<HTMLDivElement>(null);
 
-    // Animation for content when slide changes
     useEffect(() => {
         if (!contentWrapperRef.current) return;
 
-        // Create a master timeline for coordinated animations
         const tl = gsap.timeline({
             defaults: { ease: "power3.out" }
         });
 
-        // Staggered entrance for title with creative effect
         tl.fromTo(
             titleRef.current,
             {
@@ -73,15 +70,14 @@ export default function HeroContent({
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 1.2, // Longer for smoother appearance
-                    ease: "power1.inOut" // Smoother easing
+                    duration: 1.2,
+                    ease: "power1.inOut"
                 },
-                1.0 // Start after title completes
+                1.0
             );
         }
 
 
-        // Animation for button container after text appears
         tl.fromTo(
             buttonRef.current,
             {
@@ -95,7 +91,7 @@ export default function HeroContent({
                 duration: 1.2,
                 ease: "power2.out"
             },
-            1.3 // Start after text animation begins
+            1.3
         );
 
 
@@ -106,9 +102,9 @@ export default function HeroContent({
             <div className="flex-1 flex items-center">
                 <div
                     ref={contentWrapperRef}
-                    className="w-full max-w-6xl mx-2 text-secondary z-10 p-4 md:p-6 lg:p-8 overflow-hidden"
+                    className="w-full max-w-6xl mx-2 text-white z-10 p-4 md:p-6 lg:p-8 overflow-hidden"
                 >
-                    <div className="content-wrapper text-secondary text-shadow-sm text-shadow-main ">
+                    <div className="content-wrapper text-white text-shadow-sm text-shadow-main ">
                         <h1
                             ref={titleRef}
                             className="text-header-sm mt-8 md:text-header-lg   lg:text-4xl font-bold mb-2 opacity-0   p-2 w-fit  "
@@ -127,10 +123,9 @@ export default function HeroContent({
                             <Button
                                 linkRef={pageLink}
                                 size='sm'
-                                bgColor='#213448'
-                                className="inline-block px-2 py-3    text-title-md bg-main/25  brightness-110 contrast-100  text-shadow-sm text-shadow-main"
+
+                                className="inline-block px-2 py-3    text-title-md bg-main/25  brightness-110 contrast-100 text-white  text-shadow-sm text-shadow-main"
                             >
-                                {/* Button text with clip-path animation */}
 
                                 {buttonText}
 
@@ -140,7 +135,6 @@ export default function HeroContent({
                 </div>
             </div>
             <div className="w-full flex flex-col-reverse md:flex-row justify-between items-center gap-4 p-4 mb-8 md:p-6 lg:p-8">
-                {/* Pagination */}
                 <div
                     ref={paginationRef}
                     className="flex space-x-2 order-2 md:order-1"
@@ -149,41 +143,41 @@ export default function HeroContent({
                         <Button
                             key={`dot-${index}`}
                             onClick={() => !isAnimating && setCurrentImageIndex(index)}
-                            className={`cursor-pointer w-8 h-8   rounded-full flex items-center justify-center  text-secondary bg-main text-title-sm   hover:hover:scale-110  
+                            className={`cursor-pointer w-8 h-8   rounded-full flex items-center justify-center  text-main  text-title-sm   hover:hover:scale-110  
                                 ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'} 
                                 ${currentImageIndex === index
                                     ? 'bg-main text-secondary scale-115'
-                                    : 'bg-main/30 text-main hover:bg-main/60'
+                                    : 'bg-white  text-main hover:bg-main/40'
                                 }`}
                             isDisable={isAnimating}
                             aria-label={`Go to slide ${index + 1}`}
                             fullRounded="true"
-                            bgColor='main'
+
 
                         >
                             {index + 1}
                         </Button>
                     ))}
                 </div>
-                {/* Navigation arrows */}
                 <div
                     ref={navigationRef}
                     className="hidden sm:flex space-x-2 order-1 md:order-2 "
                 >
                     <Button
                         onClick={onPrevious}
-                        className={`w-8 h-8   rounded-full flex items-center justify-center text-secondary cursor-pointer bg-main/80   hover:scale-110  transition-all duration-300 
+                        className={`w-8 h-8   rounded-full flex items-center justify-center text-main cursor-pointer bg-white  hover:bg-main hover:text-secondary hover:scale-110  transition-all duration-300 
                             ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Previous slide"
                         isDisable={isAnimating}
                         fullRounded="true"
+                        bgColor='white'
 
                     >
                         <ChevronLeft size={40} />
                     </Button>
                     <Button
                         onClick={onNext}
-                        className={`w-8 h-8   rounded-full flex items-center justify-center  text-secondary cursor-pointer bg-main/80   hover:scale-110  
+                        className={`w-8 h-8   rounded-full flex items-center justify-center  text-main cursor-pointer bg-white hover:bg-main hover:text-secondary    hover:scale-110  
                             ${isAnimating ? 'pointer-events-none opacity-70' : 'opacity-100'}`}
                         aria-label="Next slide"
                         isDisable={isAnimating}

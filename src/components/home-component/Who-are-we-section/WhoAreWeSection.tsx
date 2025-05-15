@@ -11,7 +11,7 @@ function WhoAreWeSection() {
 
   const generateRows = () => {
     const rows = [];
-    for (let i = 1; i <=3; i++) {
+    for (let i = 1; i <= 3; i++) {
       rows.push(
         <div
           className="row  
@@ -63,11 +63,11 @@ function WhoAreWeSection() {
     () => {
       gsap.registerPlugin(ScrollTrigger);
 
-      const leftXValues = [-500, -400,-300];
-      const rightXValues = [500, 400,300];
-      const leftRotationValues = [-15, -15,-15];
-      const rightRotationValues = [15, 15,15];
-      const yValues = [100, 0,-50];
+      const leftXValues = [-500, -400, -300];
+      const rightXValues = [500, 400, 300];
+      const leftRotationValues = [-15, -15, -15];
+      const rightRotationValues = [15, 15, 15];
+      const yValues = [100, 0, -50];
 
       gsap.utils.toArray(".row").forEach((row, index) => {
         const cardLeft = row.querySelector(".card-left");
@@ -89,7 +89,7 @@ function WhoAreWeSection() {
           rotation: rightRotationValues[index],
           scrollTrigger: {
             trigger: ".main",
-             scrub: true,
+            scrub: true,
           },
         });
       });
