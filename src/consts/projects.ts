@@ -1,6 +1,4 @@
 import { Project } from "@/types/project";
-
-
 import VitolTankTerminalVasilikoVTTVCyprus from "../../public/images/projects/VitolTankTerminalVasilikoVTTVCyprus.jpg"
 import IncreasingCapacityofHeavyCrudeOilPipeline from "../../public/images/projects/IncreasingCapacityofHeavyCrudeOilPipeline.jpg"
 import HomsAdraGasoilpipelinewithtwotankterminals from "../../public/images/projects/HomsAdraGasoilpipelinewithtwotankterminals.jpeg"
@@ -13,8 +11,6 @@ import PRMSatBaniasPowerPlant from "../../public/images/projects/PRMSatBaniasPow
 import AreekaTankFarm from "../../public/images/projects/AreekaTankFarm.png"
 import EzraTankFarm from "../../public/images/projects/EzraTankFarm.jpg"
 import FiscalMeteringStationforSLGP from "../../public/images/projects/FiscalMeteringStationforSLGP.jpeg"
-
-
 export const projects: Project[] = [
   { id:"1",
     title: "Vitol Tank Terminal Vasiliko",

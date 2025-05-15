@@ -9,16 +9,16 @@ export default function Home() {
 
       <div className="relative z-10">
         <OurLegacy />
-        <div className="absolute right-20 top-0 h-full w-1 bg-gradient-to-b bg-secondary  z-0 " />
+        <div className="absolute hidden lg:block right-20 top-0 h-full w-1 bg-gradient-to-b bg-secondary  z-0 " />
       </div>
       <div className="relative z-10">
 <div className="absolute right-20 top-0 w-[calc(100%-160px)] h-1 bg-gradient-to-b bg-secondary  z-4" />
-        <div className="absolute left-20 top-0 h-full w-1 bg-gradient-to-b bg-secondary  z-4 " />
+        <div className="absolute hidden lg:block left-20 top-0 h-full w-1 bg-gradient-to-b bg-secondary  z-4 " />
 
         <WhoAreWeSection />
       </div>
       <div className="relative z-10">
-                <div className="absolute left-20 top-0 h-full w-1 bg-gradient-to-b bg-secondary  z-0 " />
+                <div className="absolute hidden lg:block left-20 top-0 h-full w-1 bg-gradient-to-b bg-secondary  z-0 " />
         <ProjectSection />
       </div>
     </div>
