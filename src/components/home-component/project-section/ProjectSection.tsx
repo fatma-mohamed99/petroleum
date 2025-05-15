@@ -39,7 +39,7 @@ function ProjectSection() {
   };
 
   const animateOut = () => {
-    return new Promise((resolve) => {
+    return new Promise<void>((resolve) => {
       const additionalCards = additionalCardsRef.current.filter(card => card);
 
       const columns = [];
