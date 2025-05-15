@@ -59,7 +59,7 @@ function ProjectSection() {
             y: cardIndex % 2 === 0 ? -40 : 40,
             opacity: 0,
             duration: 0.3,
-            delay: (3 - colIndex) * 0.3 + (column.length - 1 - cardIndex) * 0.11,
+            delay: (3 - colIndex) * 0.1 + (column.length - 1 - cardIndex) * 0.11,
             ease: "power2.in",
             onComplete: () => {
               completedAnimations++;
@@ -85,11 +85,11 @@ function ProjectSection() {
       const tl = gsap.timeline({ repeat: -1 });
       tl.to(arrow, {
         x: 3,
-        duration: 0.3,
+        duration: 0.2,
         ease: "power1.inOut",
       }).to(arrow, {
         x: 0,
-        duration: 0.3,
+        duration: 0.2,
         ease: "power1.inOut",
       });
     }
@@ -109,7 +109,7 @@ function ProjectSection() {
       opacity: 1,
       y: 0,
       duration: 1,
-      delay: (i) => i * 0.3,
+      delay: (i) => i * 0.2,
       ease: "power1.out",
       stagger: 0.2,
       scrollTrigger: {
@@ -133,7 +133,7 @@ function ProjectSection() {
       opacity: 1,
       y: 0,
       duration: 1,
-      delay: (i) => i * 0.3,
+      delay: (i) => i * 0.2,
       ease: "power1.out",
       stagger: 0.2,
     });
@@ -173,7 +173,7 @@ function ProjectSection() {
             opacity: 1,
             y: 0,
             duration: 1,
-            delay: colIndex * 1.2 + cardIndex * 0.5,
+            delay: colIndex * 0.3 + cardIndex * 0.2,
             ease: "power1.out",
             onComplete: () => {
               if (colIndex === columns.length - 1 && cardIndex === column.length - 1) {
