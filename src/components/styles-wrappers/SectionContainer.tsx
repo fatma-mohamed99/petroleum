@@ -32,37 +32,51 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const progressAnimation = gsap.fromTo(
-      progressRef.current,
+    const section = sectionRef.current;
+    const progress = progressRef.current;
+    const title = titleRef.current;
+    const desc = descRef.current;
+    const children = contentRef.current?.children || [];
+
+    if (!section || !progress || !title || !desc) return;
+
+    gsap.fromTo(
+      progress,
       { width: "0%" },
       {
         width: "100%",
-        ease: "none",
+        ease: "power1.inOut",
         scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top bottom",
-          end: "top top",
-          scrub: 0.5,
+          trigger: section,
+          start: "top bottom", 
+          end: "bottom bottom",  
+          scrub:0,          
+          onLeaveBack: () => {  
+            gsap.to(progress, {
+              width: "0%",
+              ease: "power1.inOut"
+            });
+          }
         },
       }
     );
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: sectionRef.current,
+        trigger: section,
         start: "top 75%",
-        toggleActions: "play none none none",
+        toggleActions: "play none none reverse", 
       },
     });
 
-    tl.from(titleRef.current, {
+    tl.from(title, {
       y: 50,
       opacity: 0,
       duration: 0.8,
       ease: "power3.out",
     })
       .from(
-        descRef.current,
+        desc,
         {
           y: 50,
           opacity: 0,
@@ -72,7 +86,7 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
         "-=0.4"
       )
       .from(
-        contentRef.current?.children || [],
+        children,
         {
           y: 30,
           opacity: 0,
@@ -84,7 +98,6 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
       );
 
     return () => {
-      progressAnimation.kill();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
@@ -92,39 +105,36 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
   return (
     <section
       ref={sectionRef}
-      className={`relative overflow-hidden text-textColor
-         pt-10 pb-20   mx-auto ${sectionClass}`}
+      className={`relative overflow-hidden text-textColor pt-15 pb-25 mx-auto ${sectionClass}`}
     >
-
       <div className={`container mx-auto px-6 max-w-6xl ${containerClass} pt-10`}>
-        <div
-          className="
-        w-full h-1 z-50"
-        >
+        {/* Enhanced Progress Bar */}
+        <div className="w-full h-1 z-50 bg-gray-200 overflow-hidden mb-8 rounded-full">
           <div
             ref={progressRef}
-            className={`h-full bg-gradient-to-r bg-secondary ml-4`}
+            className="h-full bg-secondary transition-all duration-300 rounded-full"
             style={{ width: "0%" }}
           />
         </div>
+
+        {/* Title & Description */}
         <div className={`${description === "" ? "mb-0" : "mb-12"}`}>
           <div className="overflow-hidden text-4xl md:text-5xl">
-            <h2 ref={titleRef} className={` font-bold mb-6 text-main ml-4 `}>
+            <h2 ref={titleRef} className="font-bold mb-6 text-main ml-4">
               {title}
             </h2>
           </div>
-
           <div className="overflow-hidden">
             <p
               ref={descRef}
-              className={`  text-lg md:text-xl leading-relaxed text-opacity-80 ml-4`}
+              className="text-lg md:text-xl leading-relaxed text-opacity-80 ml-4"
             >
               {description}
             </p>
           </div>
         </div>
 
-        <div ref={contentRef} className="flex-1 flex flex-col ">
+        <div ref={contentRef} className="flex-1 flex flex-col">
           {children}
         </div>
       </div>

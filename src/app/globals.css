@@ -4,14 +4,17 @@
 
 }
 /* {4e6e5d,} */
-
+html {
+  scroll-behavior: smooth;
+}
 @theme {
 /* --color-main: #003b5c; الازرق*/
 --color-bgCard:#43434300 ;       
 /* --color-main: #4e6e5d; /الزيتى يا فاطمة*/
 
---color-main: #253c8f; 
+/* --color-main: #253c8f;  */
 --color-secondary: #F09E23;
+--color-main: #131E48; 
 
 /* --color-secondary: #AD7942; */
 
