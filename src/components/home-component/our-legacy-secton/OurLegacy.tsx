@@ -7,7 +7,6 @@ import Image from 'next/image';
 export default function UnicoLegacySection() {
     const sectionRef = useRef(null);
     const [animatedCards, setAnimatedCards] = useState([]);
-    const [animationComplete, setAnimationComplete] = useState([]);
     const [animationStarted, setAnimationStarted] = useState(false);
     const totalCards = 5;
     const animationDuration = 700;
@@ -58,11 +57,11 @@ export default function UnicoLegacySection() {
             setTimeout(() => {
                 setAnimationComplete(prev => [...prev, currentIndex]);
                 currentIndex += 1;
-                animateNextCard(); // Recursively animate next
+                animateNextCard();
             }, animationDuration);
         };
 
-        animateNextCard(); // Start the animation
+        animateNextCard();
     }, [animationStarted]);
 
 

@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 
-export function useProjectCarousel(totalProjects :number, autoRotateInterval = 5000) {
+export function useProjectCarousel(totalProjects: number, autoRotateInterval = 5000) {
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
   const [isSmallScreen, setIsSmallScreen] = useState(true);
 
- const handleNextProject = () => {
+  const handleNextProject = () => {
     if (activeProjectIndex === totalProjects - 1) {
       setActiveProjectIndex(0);
     } else {
@@ -33,7 +33,7 @@ export function useProjectCarousel(totalProjects :number, autoRotateInterval = 5
     };
 
     handleResize();
-    
+
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -46,7 +46,7 @@ export function useProjectCarousel(totalProjects :number, autoRotateInterval = 5
     }, autoRotateInterval);
 
     return () => clearInterval(intervalId);
-  }, [activeProjectIndex, autoRotateInterval]);
+  }, [activeProjectIndex, autoRotateInterval, handleNextProject]);
 
   return {
     activeProjectIndex,

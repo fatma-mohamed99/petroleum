@@ -20,7 +20,7 @@ const HeroCarousel: React.FC = () => {
 
 
 
-    const animateTransition = (targetIndex: number) => {
+    const animateTransition = useCallback((targetIndex: number) => {
         if (isAnimating || targetIndex === currentImageIndex) return;
         setIsAnimating(true);
 
@@ -79,7 +79,7 @@ const HeroCarousel: React.FC = () => {
             display: 'none',
             zIndex: 0
         });
-    };
+    }, [isAnimating, currentImageIndex]);
 
     const goToPrevious = () => {
         if (isAnimating) return;
@@ -99,7 +99,7 @@ const HeroCarousel: React.FC = () => {
             : currentImageIndex + 1;
 
         animateTransition(nextIndex);
-    }, [isAnimating, currentImageIndex, carouselImages.length]);
+    }, [isAnimating, currentImageIndex, carouselImages.length, animateTransition]);
 
     const goToSlide = (index: number) => {
         if (isAnimating || index === currentImageIndex) return;
