@@ -196,9 +196,9 @@ function ProjectSection() {
   };
 
   return (
-    <div className="w-full pt-20" ref={sectionRef}>
+    <div className="w-full pt-20 " ref={sectionRef}>
       <SectionContainer
-        containerClass="max-w-[75%] 3xl:max-w-[70%] "
+        containerClass="max-w-[75%] 3xl:max-w-[70%] mb-20 mt-20 "
         sectionClass="min-w-full"
         title={"Unico projects"}
         description={`With 20+ years in Oil & Gas, 
@@ -213,7 +213,7 @@ function ProjectSection() {
               width={1000}
               height={2000}
               priority
-              className="object-cover ml-[860px] 3xl:ml-[1100px] opacity-20"
+              className="object-cover ml-[860px] 3xl:ml-[1100px] opacity-10"
             />
           </div>
         </div>

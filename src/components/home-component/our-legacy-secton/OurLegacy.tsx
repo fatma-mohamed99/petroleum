@@ -11,7 +11,7 @@ export default function UnicoLegacySection() {
     const [animationComplete, setAnimationComplete] = useState([]);
     const [animationStarted, setAnimationStarted] = useState(false);
     const totalCards = 5;
-    const animationDuration = 800;
+    const animationDuration = 700;
 
     useEffect(() => {
         if (typeof window === 'undefined') return;
@@ -97,7 +97,7 @@ export default function UnicoLegacySection() {
 
     return (
         <SectionContainer
-            containerClass=''
+            containerClass='mb-20 mt-28'
             sectionClass='  '
             title='Our Services'
             description="UNICO Petroleum offers  reliable EPCC services in oil and gas, covering pipelines, tank farms, metering, pressure stations, and crude oil gathering"
@@ -110,7 +110,7 @@ export default function UnicoLegacySection() {
                         width={1000}
                         height={2000}
                         priority
-                        className="object-cover opacity-20"
+                        className="object-cover opacity-10"
                     />
                 </div>
             </div>

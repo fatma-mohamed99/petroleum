@@ -36,7 +36,7 @@ export const media = [
 export const carouselImages = [
   {
     id: 1,
-    src: '/images/hero-img/slider3.jpg',
+    src: '/images/hero-img/slider2.jpg',
     alt: 'About Us',
     title: "Engineering Excellence Since 2005",
     description: "Trusted EPCC partner across the Levant region",
@@ -45,7 +45,7 @@ export const carouselImages = [
   },
   {
     id: 2,
-    src: '/images/hero-img/slider2.jpg',
+    src: '/images/hero-img/slider3.jpg',
     alt: 'Specialties',
     title: "Complete Oil & Gas Solutions",
     description: "From pipelines to tank farms and metering stations",
@@ -54,7 +54,7 @@ export const carouselImages = [
   },
   {
     id: 3,
-    src: '/images/hero-img/slider3.jpg',
+    src: '/images/hero-img/slider4.jpg',
     alt: 'Expertise',
     title: "End-to-End Project Management",
     description: "Design, procurement, construction, and commissioning",
@@ -63,7 +63,7 @@ export const carouselImages = [
   },
   {
     id: 4,
-    src: '/images/hero-img/slider4.jpg',
+    src: '/images/hero-img/slider3.jpg',
     alt: 'Principle',
     title: "Values That Drive Success",
     description: "Honesty, accountability, and continuous improvement",

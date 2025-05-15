@@ -23,9 +23,9 @@ const WhoAreWeSection = () => {
 
   useGSAP(() => {
     // Set initial position for all images (above their final position, off-screen)
-    gsap.set(imagesRef.current, { 
-      opacity:0,
-      y: -200, 
+    gsap.set(imagesRef.current, {
+      opacity: 0,
+      y: -200,
       scale: 1
     });
 
@@ -42,7 +42,7 @@ const WhoAreWeSection = () => {
 
     // Add each image to the timeline with a staggered effect
     tl.to(imagesRef.current, {
-      opacity:1,
+      opacity: 1,
       y: 0,            // Move to final position
       scale: 1.1,        // Scale to final size
       ease: "power3.out", // Easing function
@@ -51,13 +51,13 @@ const WhoAreWeSection = () => {
     // Animate text box separately
     gsap.fromTo(
       textBoxRef.current,
-      { 
-        
+      {
+
         scale: 0.9,
         y: 50
       },
-      { 
-        
+      {
+
         scale: 1,
         y: 0,
         duration: 1,
@@ -72,96 +72,96 @@ const WhoAreWeSection = () => {
   }, []);
 
   return (
-    <SectionContainer 
-      title={"Who Are We"} 
-      description={""}  
-      sectionClass="w-full bg-main/5 text-center "
+    <SectionContainer
+      title={"Who Are We"}
+      description={""}
+      sectionClass="w-full bg-main/65 text-center "
     >
       <div className="mx-auto w-full relative md:min-h-[600px] " ref={containerRef}>
-          {/* Top Left Image */}
-          <div
-            ref={addToRefs}
-            className="absolute z-1 top-0 left-0 w-32 h-32 md:w-70 md:h-70"
-          >
-            <Image
-              src="/images/hero-img/slider1.jpg"
-              alt="Oil rig"
-              fill
-              className="object-cover shadow-md"
-              priority
-            />
-          </div>
+        {/* Top Left Image */}
+        <div
+          ref={addToRefs}
+          className="absolute z-1 top-0 left-0 w-32 h-32 md:w-70 md:h-70 border-secondary/70 border-2"
+        >
+          <Image
+            src="/images/hero-img/slider1.jpg"
+            alt="Oil rig"
+            fill
+            className="object-cover shadow-md"
+            priority
+          />
+        </div>
 
-          {/* Top Right Image */}
-          <div
-            ref={addToRefs}
-            className="absolute z-1 top-0 right-0 w-32 h-32 md:w-70 md:h-70"
-          >
-            <Image
-              src="/images/hero-img/slider1.jpg"
-              alt="Oil workers"
-              fill
-              className="object-cover shadow-md"
-              priority
-            />
-          </div>
+        {/* Top Right Image */}
+        <div
+          ref={addToRefs}
+          className="absolute z-1 top-0 right-0 w-32 h-32 md:w-70 md:h-70 border-secondary/70 border-2"
+        >
+          <Image
+            src="/images/hero-img/slider1.jpg"
+            alt="Oil workers"
+            fill
+            className="object-cover shadow-md"
+            priority
+          />
+        </div>
 
-          {/* Bottom Left Image */}
-          <div
-            ref={addToRefs}
-            className="absolute z-1 bottom-0 left-0 w-32 h-32 md:w-70 md:h-70"
-          >
-            <Image
-              src="/images/hero-img/slider1.jpg"
-              alt="Petroleum tank"
-              fill
-              className="object-cover shadow-md"
-              priority
-            />
-          </div>
+        {/* Bottom Left Image */}
+        <div
+          ref={addToRefs}
+          className="absolute z-1 bottom-0 left-0 w-32 h-32 md:w-70 md:h-70 border-secondary/70 border-2"
+        >
+          <Image
+            src="/images/hero-img/slider1.jpg"
+            alt="Petroleum tank"
+            fill
+            className="object-cover shadow-md"
+            priority
+          />
+        </div>
 
-          {/* Bottom Right Image */}
-          <div
-            ref={addToRefs}
-            className="absolute z-1 bottom-0 right-0 w-32 h-32 md:w-70 md:h-70"
-          >
-            <Image
-              src="/images/hero-img/slider1.jpg"
-              alt="Refinery"
-              fill
-              className="object-cover shadow-md"
-              priority
-            />
-          </div>
+        {/* Bottom Right Image */}
+        <div
+          ref={addToRefs}
+          className="absolute z-1 bottom-0 right-0 w-32 h-32 md:w-70 md:h-70 border-secondary/70 border-2"
+        >
+          <Image
+            src="/images/hero-img/slider1.jpg"
+            alt="Refinery"
+            fill
+            className="object-cover shadow-md"
+            priority
+          />
+        </div>
 
-          {/* Text Box */}
-          <div
-            ref={textBoxRef}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+        {/* Text Box */}
+        <div
+          ref={textBoxRef}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
                      min-w-[600px] text-white bg-main/90 backdrop-blur-sm p-6  
                       z-10 will-change-transform  border-secondary/70 border-2"
-          >
-            <div className="text-lg md:text-xl">
-              <p className="leading-relaxed font-medium text-justify">
-                For over two decades,
-                <span className="text-secondary font-semibold mx-1">
-                  Unico Petroleum
-                </span>
-                has established itself as the premier provider of specialized
-                services across the Oil and Gas industry throughout the region,
-                earning the trust of major industry players.
-             
-                Our unwavering dedication to
-                  exceptional quality standards, rigorous safety protocols, and
-                  unparalleled service excellence
-                is demonstrated through our impressive portfolio of projects
-                delivered precisely on schedule and within budgetary
-                constraints. This commitment remains the cornerstone of our
-                corporate vision as we continue to innovate and lead the
-                industry forward.
-              </p>
-            </div>
+        >
+          <div className="text-lg md:text-xl">
+            <p className="leading-relaxed font-medium text-justify">
+              For over two decades,
+              <span className="text-secondary font-semibold mx-1">
+                Unico Petroleum
+              </span>
+              has established itself as the premier provider of specialized
+              services across the Oil and Gas industry throughout the region,
+              earning the trust of major industry players.
+
+              Our unwavering dedication to
+              exceptional quality standards, rigorous safety protocols, and
+              unparalleled service excellence
+              is demonstrated through our impressive portfolio of projects
+              delivered precisely on schedule and within budgetary
+              constraints. This commitment remains the cornerstone of our
+              corporate vision as we continue to innovate and lead the
+              industry forward.
+            </p>
           </div>
+        </div>
       </div>
     </SectionContainer>
   );
