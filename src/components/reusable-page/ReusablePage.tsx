@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import { useState } from 'react';
 
 export interface PageItemImage {
@@ -68,8 +69,9 @@ export default function ReusablePage({
                                 <>
                                     {selectedItem.displayType === 'organization-chart' ? (
                                         <div className="p-6 overflow-hidden">
-                                            <img
+                                            <Image
                                                 src={selectedItem.images.main || selectedItem.images.left}
+                                                fill
                                                 alt="Organization Chart"
                                                 className="w-full h-auto shadow-sm"
                                             />
@@ -78,7 +80,7 @@ export default function ReusablePage({
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                             {selectedItem.images.left && (
                                                 <div className="h-72 md:h-96 overflow-hidden">
-                                                    <img
+                                                    <Image
                                                         src={selectedItem.images.left}
                                                         alt={`${selectedItem.title} left image`}
                                                         className="w-full h-full object-cover hover:opacity-90 transition-opacity duration-300"
@@ -87,7 +89,7 @@ export default function ReusablePage({
                                             )}
                                             {selectedItem.images.right && (
                                                 <div className="h-72 md:h-96 overflow-hidden">
-                                                    <img
+                                                    <Image
                                                         src={selectedItem.images.right}
                                                         alt={`${selectedItem.title} right image`}
                                                         className="w-full h-full object-cover hover:opacity-90 transition-opacity duration-300"

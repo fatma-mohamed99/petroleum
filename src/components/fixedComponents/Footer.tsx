@@ -157,8 +157,10 @@ function Footer() {
               <X size={24} />
             </button>
             <div className="flex justify-center items-center  min-h-60 ">
-              <img
+              <Image
                 src={selectedImage}
+                height={224}
+                width={288}
                 alt="Certificate"
                 className=" max-w-full object-cover w-72 h-56"
               />

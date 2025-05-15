@@ -6,37 +6,29 @@ import Image from 'next/image';
 
 export default function UnicoLegacySection() {
     const sectionRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
     const [animatedCards, setAnimatedCards] = useState([]);
     const [animationComplete, setAnimationComplete] = useState([]);
     const [animationStarted, setAnimationStarted] = useState(false);
     const totalCards = 5;
     const animationDuration = 700;
-
     useEffect(() => {
         if (typeof window === 'undefined') return;
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                if (entries[0].isIntersecting) {
-                    setIsVisible(true);
-                    if (!animationStarted) {
-                        setAnimationStarted(true);
-                    }
-                } else {
-                    setIsVisible(false);
-                }
-            },
-            { threshold: 0.2 }
-        );
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !animationStarted) {
+                setAnimationStarted(true);
+            }
+        }, { threshold: 0.2 });
 
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
+        const currentSection = sectionRef.current;
+
+        if (currentSection) {
+            observer.observe(currentSection);
         }
 
         return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
+            if (currentSection) {
+                observer.unobserve(currentSection);
             }
         };
     }, [animationStarted]);
@@ -51,7 +43,7 @@ export default function UnicoLegacySection() {
 
             return () => clearTimeout(timer);
         }
-    }, [animationStarted]);
+    }, [animationStarted, animatedCards.length]);
 
     useEffect(() => {
         const lastCompleted = animationComplete.length ? animationComplete[animationComplete.length - 1] : -1;

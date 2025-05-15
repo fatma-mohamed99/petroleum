@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import Navbar from '@/components/fixedComponents/NavBar';
 import HeroContent from './HeroContent';
 import { carouselImages } from '@/consts/media';
@@ -14,29 +14,11 @@ const HeroCarousel: React.FC = () => {
     const overlayRef = useRef<HTMLDivElement>(null);
     const contentContainerRef = useRef<HTMLDivElement>(null);
 
-    // Create refs for all possible slides
     const createSlideRefs = (index: number, el: HTMLDivElement | null) => {
         slidesRef.current[index] = el;
     };
 
-    useEffect(() => {
-        if (slidesRef.current[currentImageIndex]) {
-            gsap.set(slidesRef.current[currentImageIndex], {
-                opacity: 1,
-                display: 'block',
-                zIndex: 1,
-                scale: 1
-            });
-        }
 
-        const interval = setInterval(() => {
-            if (!isAnimating) {
-                goToNext();
-            }
-        }, 15000);
-
-        return () => clearInterval(interval);
-    }, [isAnimating, currentImageIndex]);
 
     const animateTransition = (targetIndex: number) => {
         if (isAnimating || targetIndex === currentImageIndex) return;
@@ -109,7 +91,7 @@ const HeroCarousel: React.FC = () => {
         animateTransition(prevIndex);
     };
 
-    const goToNext = () => {
+    const goToNext = useCallback(() => {
         if (isAnimating) return;
 
         const nextIndex = currentImageIndex === carouselImages.length - 1
@@ -117,14 +99,31 @@ const HeroCarousel: React.FC = () => {
             : currentImageIndex + 1;
 
         animateTransition(nextIndex);
-    };
+    }, [isAnimating, currentImageIndex, carouselImages.length]);
 
     const goToSlide = (index: number) => {
         if (isAnimating || index === currentImageIndex) return;
         animateTransition(index);
     };
 
+    useEffect(() => {
+        if (slidesRef.current[currentImageIndex]) {
+            gsap.set(slidesRef.current[currentImageIndex], {
+                opacity: 1,
+                display: 'block',
+                zIndex: 1,
+                scale: 1
+            });
+        }
 
+        const interval = setInterval(() => {
+            if (!isAnimating) {
+                goToNext();
+            }
+        }, 15000);
+
+        return () => clearInterval(interval);
+    }, [isAnimating, currentImageIndex, goToNext]);
 
     return (
         <div className="relative h-screen max-h-[70rem] w-full overflow-hidden">
