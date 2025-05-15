@@ -40,12 +40,13 @@ function Suppliers() {
         flex
          font-medium
          items-center justify-center
+         text-4xl
           "
 
   >
     Unico projects
   </p>
-  <div className="w-full  mb-10 mt-5 md:mt-14 md:mb-14  mx-auto  ">
+  <div className="w-full  mb-10 mt-5 md:mt-14 md:mb-14  py-40 mx-auto bg-main/15  ">
     <div className=" card-3d">
       {projects.map((project) => (
         <ProjectCard
