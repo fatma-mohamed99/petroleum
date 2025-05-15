@@ -16,7 +16,7 @@ function ProjectSection() {
   const arrowRef = useRef(null);
   const cardsRef = useRef([]);
   const additionalCardsRef = useRef([]);
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
 
   const handleShow = () => {
     if (animating) return;
@@ -188,7 +188,7 @@ function ProjectSection() {
 
   const showingProjects = showAll ? projects : shortProjectsArray;
 
-  const assignCardRef = (element, index, isAdditional) => {
+  const assignCardRef = (element: HTMLDivElement | null, index: number, isAdditional: boolean) => {
     if (isAdditional) {
       additionalCardsRef.current[index - shortProjectsArray.length] = element;
     } else {
