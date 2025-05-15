@@ -14,9 +14,10 @@ function ProjectSection() {
   const [showAll, setShowAll] = useState(false);
   const [animating, setAnimating] = useState(true);
   const arrowRef = useRef(null);
-  const cardsRef = useRef([]);
-  const additionalCardsRef = useRef([]);
+
   const sectionRef = useRef<HTMLDivElement | null>(null);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const additionalCardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   const handleShow = () => {
     if (animating) return;
